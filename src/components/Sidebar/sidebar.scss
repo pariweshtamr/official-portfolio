@@ -1,0 +1,125 @@
+.sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.2);
+  width: 16rem;
+  height: 97.5%;
+  padding: 0rem 1rem;
+  left: 1%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(156, 156, 156, 0.37);
+  font-size: 1.8rem;
+
+  hr {
+    color: #000;
+  }
+
+  .toggles {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-white);
+
+    .sunToggle {
+      color: var(--color-white);
+
+      &:hover {
+        color: var(--color-secondaryLight);
+      }
+    }
+
+    .moonToggle {
+      color: var(--color-white);
+
+      &:hover {
+        color: var(--color-dark);
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    a {
+      background: transparent;
+      text-decoration: none;
+      padding: 0.8rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      color: var(--color-white);
+      font-size: 1.5rem;
+
+      &:hover {
+        background: rgba(46, 12, 121, 0.5);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    // margin-bottom: 4rem;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .sidebar-name {
+      font-size: 1.2rem;
+    }
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 2rem;
+  }
+}
+
+.collapsed {
+  width: max-content;
+
+  .links {
+    a {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .me {
+    gap: none;
+  }
+
+  .sidebar-toggle {
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white) !important;
+  }
+}
+
+.links a.active {
+  background: var(--color-purple);
+  color: var(--color-white);
+}

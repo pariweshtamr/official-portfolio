@@ -1,0 +1,25 @@
+.app.dark {
+  background: url("../assets/darkBackground.jpeg") no-repeat fixed center;
+  background-size: cover;
+  color: var(--color-white);
+
+  nav {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(85, 9, 9, 0.781);
+
+    hr {
+      color: var(--color-white);
+    }
+
+    a {
+      &:hover {
+        background: rgba(121, 12, 12, 0.5);
+      }
+    }
+  }
+
+  nav a.active {
+    background: var(--color-red);
+    color: var(--color-white);
+  }
+}
