@@ -19,7 +19,7 @@ body {
     url("/public/images/bg.jpeg") no-repeat fixed center;
   background-size: cover; */
 
-  background: url("./assets/lightBackground.jpeg") no-repeat center center;
+  background: url("./assets/lightBG.png") no-repeat center center;
   background-size: cover;
   height: 100vh;
 }
