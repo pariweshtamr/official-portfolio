@@ -1,11 +1,13 @@
 .app.dark {
-  background: url("../assets/darkBackground.jpeg") no-repeat fixed center;
+  transition: 1.5s ease;
+  background: url("../assets/darkBG.jpeg") no-repeat fixed center;
   background-size: cover;
   color: var(--color-white);
 
-  nav {
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 32px 0 rgba(85, 9, 9, 0.781);
+  .sidebar {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
 
     hr {
       color: var(--color-white);
@@ -13,13 +15,19 @@
 
     a {
       &:hover {
-        background: rgba(121, 12, 12, 0.5);
+        background: rgba(46, 12, 121, 0.5);
       }
     }
   }
 
+  .main {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+  }
+
   nav a.active {
-    background: var(--color-red);
+    background: var(--color-purple);
     color: var(--color-white);
   }
 }

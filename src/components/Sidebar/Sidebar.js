@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { AiOutlineClose, AiOutlineHome, AiOutlineUser } from "react-icons/ai"
-import { BiBook, BiMessageSquareDetail, BiMenuAltRight } from "react-icons/bi"
-import { BsMoon, BsSun } from "react-icons/bs"
+import { BiBook, BiMessageSquareDetail, BiMenuAltLeft } from "react-icons/bi"
 import { RiServiceLine } from "react-icons/ri"
 import { FaBoxes } from "react-icons/fa"
 import { dark, light } from "../../redux/DarkMode/DarkModeSlice"
@@ -13,7 +12,7 @@ import "./sidebar.scss"
 const Sidebar = () => {
   const dispatch = useDispatch()
   const { darkMode } = useSelector((state) => state.darkMode)
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
   const [activeTab, setActiveTab] = useState("#home")
   return (
     <>
@@ -24,9 +23,15 @@ const Sidebar = () => {
       >
         <div className="toggles ">
           {darkMode ? (
-            <BsSun className="sunToggle" onClick={() => dispatch(light())} />
+            <i
+              className="fas fa-sun sunToggle"
+              onClick={() => dispatch(light())}
+            ></i>
           ) : (
-            <BsMoon className="moonToggle" onClick={() => dispatch(dark())} />
+            <i
+              className="fas fa-moon moonToggle"
+              onClick={() => dispatch(dark())}
+            ></i>
           )}
         </div>
         <hr />
@@ -46,6 +51,7 @@ const Sidebar = () => {
             className={activeTab === "#about" ? "active" : ""}
           >
             <AiOutlineUser />
+            <span>About</span>
           </a>
           <a
             href="#experience"
@@ -53,6 +59,7 @@ const Sidebar = () => {
             className={activeTab === "#experience" ? "active" : ""}
           >
             <BiBook />
+            <span>Experience</span>
           </a>
           <a
             href="#services"
@@ -60,6 +67,7 @@ const Sidebar = () => {
             className={activeTab === "#services" ? "active" : ""}
           >
             <RiServiceLine />
+            <span>Services</span>
           </a>
           <a
             href="#projects"
@@ -67,6 +75,7 @@ const Sidebar = () => {
             className={activeTab === "#projects" ? "active" : ""}
           >
             <FaBoxes />
+            <span>Work</span>
           </a>
           <a
             href="#contact"
@@ -74,6 +83,7 @@ const Sidebar = () => {
             className={activeTab === "#contact" ? "active" : ""}
           >
             <BiMessageSquareDetail />
+            <span>Contact</span>
           </a>
         </div>
         <hr />
@@ -83,7 +93,7 @@ const Sidebar = () => {
               <img src={images.profile} alt="Pariwesh" />
             </div>
             <div className="sidebar-toggle">
-              <BiMenuAltRight onClick={() => setIsCollapsed(false)} />
+              <BiMenuAltLeft onClick={() => setIsCollapsed(false)} />
             </div>
           </>
         ) : (

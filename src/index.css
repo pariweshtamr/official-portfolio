@@ -1,7 +1,8 @@
 :root {
   --color-white: #fbfeff;
   --color-red: #b33f40;
-  --color-dark: #0a0a0a;
+  --color-dark: rgb(70, 70, 70);
+  --color-black: #232b2b;
   --color-purple: #6c5cd1;
   /* --color-light: #0eb8be; */
   --color-light: #9cbeab;
@@ -15,36 +16,28 @@ body {
 }
 
 .app {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("/public/images/bg.jpeg") no-repeat fixed center;
-  background-size: cover; */
-
   background: url("./assets/lightBG.png") no-repeat center center;
   background-size: cover;
+  transition: 1.5s ease;
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  padding: 0 0.8rem 0 0;
 }
 
 * {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
   box-sizing: border-box;
   font-family: "Montserrat Alternates", sans-serif;
 }
 ul {
   list-style: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
   display: none;
-}
-
-.app-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

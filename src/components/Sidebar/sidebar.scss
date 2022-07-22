@@ -1,12 +1,12 @@
 .sidebar {
-  position: fixed;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: rgba(255, 255, 255, 0.2);
-  width: 16rem;
+  background: rgba(255, 255, 255, 0.6);
+  width: 18rem;
   height: 97.5%;
   padding: 0rem 1rem;
   left: 1%;
@@ -16,9 +16,14 @@
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 8px 32px 0 rgba(156, 156, 156, 0.37);
   font-size: 1.8rem;
+  color: var(--color-dark);
+  transition: 1.5s ease;
 
   hr {
-    color: #000;
+    color: var(--color-white);
+    height: 2px;
+    width: 10rem;
+    margin: 0 auto;
   }
 
   .toggles {
@@ -27,7 +32,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--color-white);
 
     .sunToggle {
       color: var(--color-white);
@@ -38,10 +42,10 @@
     }
 
     .moonToggle {
-      color: var(--color-white);
+      color: var(--color-dark);
 
       &:hover {
-        color: var(--color-dark);
+        color: var(--color-purple);
       }
     }
   }
@@ -49,7 +53,7 @@
   .links {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
     padding: 1rem 0;
     a {
       background: transparent;
@@ -58,23 +62,25 @@
       border-radius: 10px;
       display: flex;
       align-items: center;
-      gap: 3rem;
-      color: var(--color-white);
-      font-size: 1.5rem;
+      gap: 1rem;
+      color: inherit;
 
       &:hover {
         background: rgba(46, 12, 121, 0.5);
         color: var(--color-white);
+      }
+
+      span {
+        font-size: 1.3rem;
       }
     }
   }
 
   .me {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
-    // margin-bottom: 4rem;
 
     img {
       width: 40px;
@@ -92,16 +98,22 @@
     justify-content: flex-end;
     align-items: flex-end;
     cursor: pointer;
-    color: var(--color-white);
+    color: var(--color-dark);
     font-size: 2rem;
   }
 }
 
 .collapsed {
   width: max-content;
+  transition: 1.5s ease;
+
+  hr {
+    width: 3rem;
+  }
 
   .links {
     a {
+      margin-bottom: 2px;
       span {
         display: none;
       }
@@ -115,7 +127,7 @@
   .sidebar-toggle {
     justify-content: center;
     align-items: center;
-    color: var(--color-white) !important;
+    color: var(--color-dark) !important;
   }
 }
 
