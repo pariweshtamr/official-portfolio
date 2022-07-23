@@ -18,7 +18,7 @@ const Sidebar = () => {
     <>
       <motion.nav
         className={isCollapsed ? "sidebar collapsed" : "sidebar"}
-        whileInView={{ left: [-100, 10], opacity: [0, 1] }}
+        whileInView={{ left: [-200, 10], opacity: [0, 1] }}
         transition={{ duration: 1.5, ease: "easeIn" }}
       >
         <div className="toggles ">
@@ -70,9 +70,9 @@ const Sidebar = () => {
             <span>Services</span>
           </a>
           <a
-            href="#projects"
-            onClick={() => setActiveTab("#projects")}
-            className={activeTab === "#projects" ? "active" : ""}
+            href="#work"
+            onClick={() => setActiveTab("#work")}
+            className={activeTab === "#work" ? "active" : ""}
           >
             <FaBoxes />
             <span>Work</span>

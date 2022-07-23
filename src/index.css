@@ -30,7 +30,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 ul {
   list-style: none;
@@ -40,4 +40,23 @@ html {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.app-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--black-color);
+  text-transform: capitalize;
+}
+
+.head-text span {
+  color: var(--color-purple);
+  margin-left: 0.5rem;
 }

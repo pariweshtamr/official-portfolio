@@ -1,3 +1,4 @@
 import images from "./images"
+import projects from "./projects"
 
-export { images }
+export { images, projects }

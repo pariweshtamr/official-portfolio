@@ -34,6 +34,7 @@ const Header = () => {
 
           <div className="tag app-flex">
             <p className="p-text">Full Stack Developer</p>
+            <p className="p-text">MERN Stack Developer</p>
           </div>
         </div>
       </motion.div>
@@ -44,15 +45,14 @@ const Header = () => {
         className="header-img"
       >
         <img src={images.profile} alt="profile_bg" />
-        <motion.img
+        <motion.div
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="overlay-circle"
-          src="/images/circle.svg"
-        ></motion.img>
+        ></motion.div>
       </motion.div>
 
-      <motion.dev
+      <motion.div
         variant={scaleVariants}
         whileInView={scaleVariants.whileInView}
         className="header-circles"
@@ -62,7 +62,7 @@ const Header = () => {
             <img src={circle} alt="circle" />
           </div>
         ))}
-      </motion.dev>
+      </motion.div>
 
       <div className="header-mouse">
         <span></span>

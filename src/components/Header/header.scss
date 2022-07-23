@@ -61,12 +61,14 @@
 
       .tag {
         margin-top: 1rem;
+        flex-direction: column;
 
         p {
           width: 100%;
           text-transform: uppercase;
           text-align: right;
           font-weight: 500;
+          width: 15rem;
         }
       }
 
