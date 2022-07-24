@@ -1,9 +1,8 @@
 import { useSelector } from "react-redux"
-import Header from "./components/Header/Header"
 import Main from "./components/Main/Main"
 import Sidebar from "./components/Sidebar/Sidebar"
-import Work from "./components/Work/Work"
 import "./style/dark.scss"
+import "./App.scss"
 
 function App() {
   const { darkMode } = useSelector((state) => state.darkMode)

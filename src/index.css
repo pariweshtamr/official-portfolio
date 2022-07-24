@@ -4,7 +4,6 @@
   --color-dark: rgb(70, 70, 70);
   --color-black: #232b2b;
   --color-purple: #6c5cd1;
-  /* --color-light: #0eb8be; */
   --color-light: #9cbeab;
   --color-secondaryDark: #1e4c48;
   --color-secondaryLight: #d0d280;
@@ -15,48 +14,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app {
-  background: url("./assets/lightBG.png") no-repeat center center;
-  background-size: cover;
-  transition: 1.5s ease;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  overflow-x: hidden;
-  padding: 0 0.8rem 0 0;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-}
-ul {
-  list-style: none;
-}
-html {
   scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar {
   display: none;
-}
-
-.app-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.head-text {
-  font-size: 2.75rem;
-  font-weight: 800;
-  text-align: center;
-  color: var(--black-color);
-  text-transform: capitalize;
-}
-
-.head-text span {
-  color: var(--color-purple);
-  margin-left: 0.5rem;
 }

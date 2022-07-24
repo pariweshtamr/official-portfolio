@@ -4,9 +4,15 @@
   background-size: cover;
   color: var(--color-white);
 
+  .main {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0 rgba(255, 255, 255, 0.5);
+    color: var(--color-white);
+  }
+
   .sidebar {
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0 rgba(255, 255, 255, 0.5);
     color: var(--color-white);
 
     hr {
@@ -14,20 +20,97 @@
     }
 
     a {
+      color: var(--color-white);
       &:hover {
-        background: rgba(46, 12, 121, 0.5);
+        background: rgba(110, 59, 221, 0.5);
+      }
+    }
+
+    .links a.active {
+      color: var(--color-white);
+      &:hover {
+        background: var(--color-purple);
       }
     }
   }
 
-  .main {
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.5);
-    color: var(--color-white);
+  .hero {
+    .hero-socials-menu {
+      i {
+        color: var(--color-white);
+
+        &:hover {
+          color: var(--color-purple);
+        }
+      }
+    }
   }
 
-  nav a.active {
-    background: var(--color-purple);
-    color: var(--color-white);
+  .hero-mouse {
+    border-color: var(--color-white);
+    transition: all 1.5s ease;
+
+    span {
+      background: var(--color-white);
+      transition: all 1.5s ease;
+    }
+  }
+
+  .services {
+    .services-content {
+      .services-left,
+      .services-right {
+        p {
+          color: rgb(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  .contacts {
+    .contact-cards {
+      .contact-card {
+        background-color: #2c2e30;
+        transition: all 1.5s ease;
+
+        a {
+          color: var(--color-white);
+          transition: all 1.5s ease;
+        }
+      }
+    }
+    .contact-bottom {
+      .contact-icons {
+        .contact-icon {
+          a {
+            background-color: #2c2e30;
+            color: var(--color-white);
+
+            &:hover {
+              background-color: var(--color-purple);
+              color: var(--color-white);
+            }
+          }
+        }
+      }
+
+      .contact-form {
+        div {
+          background-color: #2c2e30;
+          transition: all 1.5s ease;
+
+          &:hover {
+            box-shadow: 0 0 25px #2c2e30;
+          }
+
+          input,
+          textarea {
+            background-color: #2c2e30;
+            color: var(--color-white);
+            transition: all 1.5s ease;
+          }
+        }
+      }
+    }
   }
 }

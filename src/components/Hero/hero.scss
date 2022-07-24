@@ -1,5 +1,4 @@
-.header {
-  flex: 1;
+.hero {
   width: 100%;
   height: 100%;
   display: flex;
@@ -15,8 +14,8 @@
     padding: 6rem 1rem 2rem;
   }
 
-  .header-info {
-    flex: 0.65;
+  .hero-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -29,11 +28,11 @@
       margin-right: 0rem;
     }
 
-    .header-badge {
+    .hero-badge {
       width: 100%;
       display: flex;
-      justify-content: flex-end;
       align-items: flex-end;
+      justify-content: flex-end;
       flex-direction: column;
 
       .badge,
@@ -45,10 +44,17 @@
         align-items: center;
         width: auto;
         color: var(--color-dark);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       }
 
       .badge {
+        span {
+          font-size: 2.5rem;
+
+          @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+          }
+        }
         p {
           font-size: 18px;
         }
@@ -68,15 +74,6 @@
           text-transform: uppercase;
           text-align: right;
           font-weight: 500;
-          width: 15rem;
-        }
-      }
-
-      span {
-        font-size: 2.5rem;
-
-        @media screen and (min-width: 2000px) {
-          font-size: 5rem;
         }
       }
 
@@ -87,13 +84,12 @@
     }
   }
 
-  .header-img {
-    flex: 1;
+  .hero-img {
+    flex: 1.5;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 8rem;
 
     img {
@@ -102,28 +98,22 @@
       z-index: 1;
     }
 
-    .overlay-circle {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-    }
     @media screen and (max-width: 1200px) {
       margin: 2rem 0;
     }
+    @media screen and (min-width: 2000px) {
+      flex: 0.7;
+      margin: 0 2rem;
+    }
   }
 
-  .header-circles {
-    flex: 0.75;
+  .hero-circles {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
     height: 100%;
-    margin-left: 1rem;
     // margin-top: 8rem;
 
     div {
@@ -131,7 +121,7 @@
       height: 100px;
       border-radius: 50%;
       background: var(--color-white);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       position: relative;
 
       img {
@@ -151,7 +141,7 @@
     }
 
     div:nth-child(2) {
-      margin: 1.75rem;
+      margin: 0 2rem;
       width: 150px;
       height: 150px;
     }
@@ -163,19 +153,19 @@
 
     @media screen and (min-width: 2000px) {
       div:nth-child(1) {
-        width: 400px;
-        height: 400px;
+        width: 120px;
+        height: 120px;
       }
 
       div:nth-child(2) {
-        margin: 1.75rem;
+        margin: 2rem;
         width: 170px;
         height: 170px;
       }
 
       div:nth-child(3) {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
       }
     }
     @media screen and (max-width: 1200px) {
@@ -189,56 +179,55 @@
       }
     }
   }
-}
 
-.header-socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  position: absolute;
-  top: 50%;
-  right: 1%;
-  transform: translateY(-50%);
-  font-size: 3rem;
+  .hero-socials-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    font-size: 3rem;
 
-  i {
-    color: var(--color-white);
-    transition: 0.5s;
-
-    &:hover {
-      color: #1c2630;
+    i {
+      color: var(--color-dark);
       transition: 0.5s;
+
+      &:hover {
+        color: var(--color-purple);
+        transition: 0.5s;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 2px;
+      height: 2.5rem;
+      background: var(--color-purple);
     }
   }
-
-  &::after {
-    content: "";
-    width: 2px;
-    height: 2rem;
-    background: var(--color-dark);
-  }
 }
 
-.header-mouse {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%);
+.hero-mouse {
+  position: relative;
+  bottom: 5%;
+  margin: 0 auto;
   width: 35px;
-  height: 50px;
+  min-height: 50px !important;
   border-radius: 30px;
   border: 2px solid var(--color-dark);
   pointer-events: none;
-  z-index: 2;
+  margin-bottom: 2rem;
 
   span {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 7px;
     height: 7px;
-    transform: translate(-50%, -50%);
     border-radius: 50%;
     background: var(--color-secondaryDark);
     animation: upDown 1s infinite;

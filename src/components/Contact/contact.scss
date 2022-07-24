@@ -1,0 +1,146 @@
+#contact {
+  height: 100%;
+  width: 100%;
+}
+
+.contacts {
+  width: 100%;
+  flex-direction: column;
+
+  .contact-cards {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    &:last-child {
+      background-color: #f2f7fb;
+    }
+
+    .contact-card {
+      min-width: 300px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: var(--color-white);
+      transition: all 1.5s ease;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.7rem;
+        transition: all 1.5s ease;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--color-dark);
+        transition: all 1.5s ease;
+      }
+
+      &:hover {
+        box-shadow: 0 0 25px #fef4f5;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact-bottom {
+    position: relative;
+    width: 100%;
+
+    .contact-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 3rem;
+      position: absolute;
+      left: 10%;
+      top: 2%;
+
+      .contact-icon {
+        a {
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 1rem;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 1.8rem;
+          color: var(--color-dark);
+
+          &:hover {
+            background-color: var(--color-purple);
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+
+    .contact-form {
+      width: 50%;
+      margin: 0 auto;
+      flex-direction: column;
+      gap: 2rem;
+
+      div {
+        width: 100%;
+        margin: 0 0;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f2f7fb;
+        transition: all 1.5s ease;
+
+        &:hover {
+          box-shadow: 0 0 25px #edf2f8;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          border: none;
+          border-radius: 10px;
+          background-color: #edf2f8;
+          color: var(--color-dark);
+          outline: none;
+          transition: all 1.5s ease;
+        }
+
+        textarea {
+          height: 170px;
+        }
+      }
+
+      button {
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color-purple);
+        color: var(--color-white);
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+        margin: 2rem 0 0 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}

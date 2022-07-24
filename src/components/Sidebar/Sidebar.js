@@ -1,10 +1,12 @@
 import { useState } from "react"
-import { AiOutlineClose, AiOutlineHome, AiOutlineUser } from "react-icons/ai"
-import { BiBook, BiMessageSquareDetail, BiMenuAltLeft } from "react-icons/bi"
-import { RiServiceLine } from "react-icons/ri"
-import { FaBoxes } from "react-icons/fa"
+import { AiOutlineClose } from "react-icons/ai"
+import { BsFillChatRightTextFill } from "react-icons/bs"
+import { ImHome } from "react-icons/im"
+import { FaUser, FaBoxes } from "react-icons/fa"
+import { RiServiceFill } from "react-icons/ri"
+import { BiMenuAltLeft } from "react-icons/bi"
+import { MdWork } from "react-icons/md"
 import { dark, light } from "../../redux/DarkMode/DarkModeSlice"
-import { motion } from "framer-motion"
 import { useDispatch, useSelector } from "react-redux"
 import { images } from "../../constants"
 import "./sidebar.scss"
@@ -16,12 +18,8 @@ const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("#home")
   return (
     <>
-      <motion.nav
-        className={isCollapsed ? "sidebar collapsed" : "sidebar"}
-        whileInView={{ left: [-200, 10], opacity: [0, 1] }}
-        transition={{ duration: 1.5, ease: "easeIn" }}
-      >
-        <div className="toggles ">
+      <nav className={isCollapsed ? "sidebar collapsed" : "sidebar"}>
+        <div className="toggles">
           {darkMode ? (
             <i
               className="fas fa-sun sunToggle"
@@ -41,33 +39,32 @@ const Sidebar = () => {
             onClick={() => setActiveTab("#home")}
             className={activeTab === "#home" ? "active" : ""}
           >
-            <AiOutlineHome />
-
-            <span>Home</span>
+            <ImHome />
+            {isCollapsed ? "" : <span>Home</span>}
           </a>
           <a
             href="#about"
             onClick={() => setActiveTab("#about")}
             className={activeTab === "#about" ? "active" : ""}
           >
-            <AiOutlineUser />
-            <span>About</span>
+            <FaUser />
+            {isCollapsed ? "" : <span>About</span>}
           </a>
           <a
             href="#experience"
             onClick={() => setActiveTab("#experience")}
             className={activeTab === "#experience" ? "active" : ""}
           >
-            <BiBook />
-            <span>Experience</span>
+            <MdWork />
+            {isCollapsed ? "" : <span>Experience</span>}
           </a>
           <a
             href="#services"
             onClick={() => setActiveTab("#services")}
             className={activeTab === "#services" ? "active" : ""}
           >
-            <RiServiceLine />
-            <span>Services</span>
+            <RiServiceFill />
+            {isCollapsed ? "" : <span>Services</span>}
           </a>
           <a
             href="#work"
@@ -75,15 +72,15 @@ const Sidebar = () => {
             className={activeTab === "#work" ? "active" : ""}
           >
             <FaBoxes />
-            <span>Work</span>
+            {isCollapsed ? "" : <span>Work</span>}
           </a>
           <a
             href="#contact"
             onClick={() => setActiveTab("#contact")}
             className={activeTab === "#contact" ? "active" : ""}
           >
-            <BiMessageSquareDetail />
-            <span>Contact</span>
+            <BsFillChatRightTextFill />
+            {isCollapsed ? "" : <span>Contact</span>}
           </a>
         </div>
         <hr />
@@ -107,7 +104,7 @@ const Sidebar = () => {
             </div>
           </>
         )}
-      </motion.nav>
+      </nav>
     </>
   )
 }

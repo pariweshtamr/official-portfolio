@@ -25,8 +25,8 @@ const Work = () => {
   }
 
   return (
-    <div id="work" className="works">
-      <h2 className="head-text app-flex mt-5">
+    <section id="work" className="works">
+      <h2 className="head-text app-flex ">
         My Creative<span>Portfolio</span>
       </h2>
 
@@ -98,7 +98,7 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-    </div>
+    </section>
   )
 }
 

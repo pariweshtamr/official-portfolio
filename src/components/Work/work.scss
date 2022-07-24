@@ -1,5 +1,6 @@
 #work {
-  height: 100%;
+  padding: 5rem 0;
+  min-height: max-content;
 }
 
 .works {
@@ -13,7 +14,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    margin: 4rem 0 2rem;
+    margin: 1.5rem 0 2rem;
 
     .work-filter-item {
       padding: 0.5rem 1rem;
@@ -121,7 +122,7 @@
         }
       }
       .work-content {
-        flex: 1;
+        flex: 0.8;
         padding: 0.5rem 1rem;
         width: 100%;
         position: relative;
@@ -138,7 +139,7 @@
 
         .work-tag {
           position: absolute;
-          padding: 0.5rem 1rem;
+          padding: 0.5rem 1rem 0 1rem;
           border-radius: 10px;
           background: var(--color-white);
           top: -28px;

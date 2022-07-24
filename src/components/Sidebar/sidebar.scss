@@ -14,13 +14,12 @@
   border-radius: 20px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 8px 32px 0 rgba(156, 156, 156, 0.37);
+  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.5);
   font-size: 1.8rem;
   color: var(--color-dark);
-  transition: all 1.5s ease;
 
   hr {
-    color: var(--color-white);
+    color: var(--color-dark);
     height: 2px;
     width: 10rem;
     margin: 0 auto;
@@ -55,6 +54,7 @@
     flex-direction: column;
     gap: 1.2rem;
     padding: 1rem 0;
+
     a {
       background: transparent;
       text-decoration: none;
@@ -63,7 +63,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      color: inherit;
+      color: var(--color-dark);
 
       &:hover {
         background: rgba(46, 12, 121, 0.5);
@@ -78,18 +78,20 @@
 
   .me {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
 
     img {
-      width: 40px;
-      height: 40px;
+      width: 40px !important;
+      height: 40px !important;
       border-radius: 50%;
+      transition: all 1.5s ease;
     }
 
     .sidebar-name {
       font-size: 1.2rem;
+      transition: all 1.5s ease;
     }
   }
 
@@ -112,16 +114,15 @@
   }
 
   .links {
+    transition: all 1.5s ease;
+
     a {
       margin-bottom: 2px;
+
       span {
         display: none;
       }
     }
-  }
-
-  .me {
-    gap: none;
   }
 
   .sidebar-toggle {
@@ -134,4 +135,7 @@
 .links a.active {
   background: var(--color-purple);
   color: var(--color-white);
+  &:hover {
+    background: var(--color-purple);
+  }
 }
