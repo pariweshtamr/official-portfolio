@@ -1,3 +1,5 @@
+@import "../../style/mixins";
+
 .sidebar {
   position: relative;
   top: 50%;
@@ -137,5 +139,53 @@
   color: var(--color-white);
   &:hover {
     background: var(--color-purple);
+  }
+}
+
+@include mobile() {
+  .sidebar {
+    flex-direction: row;
+    height: 8%;
+    width: 98%;
+    position: fixed;
+    top: 96%;
+    z-index: 999;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0;
+    justify-content: space-between;
+
+    hr {
+      display: none;
+    }
+
+    .toggles {
+      font-size: 1.5rem;
+    }
+
+    .links {
+      flex-direction: row;
+      gap: 0.8rem;
+      padding: 0.8rem;
+
+      a {
+        padding: 0.4rem;
+        border-radius: 5px;
+        font-size: 1.5rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .me {
+      display: none;
+    }
+
+    .sidebar-toggle {
+      display: none;
+    }
   }
 }

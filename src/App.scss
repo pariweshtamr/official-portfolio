@@ -1,3 +1,5 @@
+@import "./style/mixins";
+
 .app {
   background: url("./assets/lightBG.png") no-repeat center center;
   background-size: cover;
@@ -7,6 +9,12 @@
   display: flex;
   overflow-x: hidden;
   padding: 0 0.8rem 0 0;
+
+  @include mobile() {
+    flex-direction: column-reverse;
+    padding: 0;
+    min-height: 100vh;
+  }
 }
 
 section {

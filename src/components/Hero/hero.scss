@@ -1,3 +1,4 @@
+@import "../../style/mixins";
 .hero {
   width: 100%;
   height: 100%;
@@ -9,9 +10,6 @@
   }
   @media screen and (max-width: 1200px) {
     flex-direction: column;
-  }
-  @media screen and (max-width: 400px) {
-    padding: 6rem 1rem 2rem;
   }
 
   .hero-info {
@@ -168,16 +166,16 @@
         height: 100px;
       }
     }
-    @media screen and (max-width: 1200px) {
-      width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-left: 0;
+    // @media screen and (max-width: 1200px) {
+    //   width: 100%;
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    //   margin-left: 0;
 
-      div {
-        margin: 1rem;
-      }
-    }
+    //   div {
+    //     margin: 1rem;
+    //   }
+    // }
   }
 
   .hero-socials-menu {
@@ -246,5 +244,86 @@
         transform: translateY(-13px) translateX(-50%) scale(1);
       }
     }
+  }
+}
+
+@include mobile() {
+  .hero {
+    padding: 0;
+
+    .hero-info {
+      margin: 0;
+
+      .hero-badge {
+        .badge,
+        .tag {
+          padding: 0.5rem 1rem;
+        }
+        .badge {
+          span {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+          h1 {
+            font-size: 1.8rem;
+          }
+        }
+        .tag {
+          margin-top: 0.6rem;
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .hero-img {
+      padding: 0;
+      margin-left: 1rem;
+      img {
+        width: 90%;
+      }
+    }
+
+    .hero-circles {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      div {
+        width: 60px;
+        height: 60px;
+      }
+
+      // circles with different height and width
+      div:nth-child(1) {
+        width: 60px;
+        height: 60px;
+      }
+
+      div:nth-child(2) {
+        margin: 0 2rem;
+        width: 110px;
+        height: 110px;
+      }
+
+      div:nth-child(3) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .hero-socials-menu {
+      gap: 0.5rem;
+      top: 16.5%;
+      right: 3% !important;
+      font-size: 2rem;
+    }
+  }
+
+  .hero-mouse {
+    display: none !important;
   }
 }
