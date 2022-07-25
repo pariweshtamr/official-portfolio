@@ -102,10 +102,10 @@
         border-radius: 10px;
         cursor: pointer;
         background-color: #f2f7fb;
-        transition: all 1.5s ease;
 
         &:hover {
           box-shadow: 0 0 25px #edf2f8;
+          transition: all 0.5s ease;
         }
 
         input,
@@ -117,7 +117,7 @@
           background-color: #edf2f8;
           color: var(--color-dark);
           outline: none;
-          transition: all 1.5s ease;
+          transition: all 0.5s ease;
         }
 
         textarea {

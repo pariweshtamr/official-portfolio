@@ -9,7 +9,7 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1.5,
-      delay: 1.5,
+      delay: 2.5,
       ease: "easeInOut",
     },
   },
@@ -37,6 +37,14 @@ const Hero = () => {
               <p className="p-text">Full Stack Developer</p>
             </div>
           </div>
+
+          <div className="hero-circles-left">
+            {[images.html, images.css, images.javascript].map((circle, i) => (
+              <div className="circle-left app-flex" key={`circle-${i}`}>
+                <img src={circle} alt="circle" />
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
@@ -50,9 +58,9 @@ const Hero = () => {
         <motion.div
           variant={scaleVariants}
           whileInView={scaleVariants.whileInView}
-          className="hero-circles"
+          className="hero-circles-right"
         >
-          {[images.redux, images.react, images.mongo].map((circle, i) => (
+          {[images.node, images.react, images.mongo].map((circle, i) => (
             <div className="circle app-flex" key={`circle-${i}`}>
               <img src={circle} alt="circle" />
             </div>

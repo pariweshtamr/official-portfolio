@@ -32,6 +32,7 @@
       align-items: flex-end;
       justify-content: flex-end;
       flex-direction: column;
+      margin: 0 0 2rem 0;
 
       .badge,
       .tag {
@@ -82,6 +83,52 @@
     }
   }
 
+  .hero-circles-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--color-white);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+
+      img {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    // circles with different height and width
+    div:nth-child(1) {
+      width: 70px;
+      height: 70px;
+      margin: 0 5rem 0 0;
+    }
+
+    div:nth-child(2) {
+      margin: 0 8rem 0 0;
+      width: 120px;
+      height: 120px;
+    }
+
+    div:nth-child(3) {
+      margin: 0 2rem 3.5rem 0;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
   .hero-img {
     flex: 1.5;
     height: 100%;
@@ -105,7 +152,7 @@
     }
   }
 
-  .hero-circles {
+  .hero-circles-right {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -114,7 +161,7 @@
     height: 100%;
     // margin-top: 8rem;
 
-    div {
+    .circle {
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -134,8 +181,8 @@
 
     // circles with different height and width
     div:nth-child(1) {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
     }
 
     div:nth-child(2) {
