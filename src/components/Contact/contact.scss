@@ -1,5 +1,5 @@
 #contact {
-  height: 100%;
+  height: max-content;
   width: 100%;
 }
 
@@ -19,10 +19,6 @@
       width: 100%;
     }
 
-    &:last-child {
-      background-color: #f2f7fb;
-    }
-
     .contact-card {
       min-width: 300px;
       display: flex;
@@ -33,24 +29,21 @@
       border-radius: 10px;
       cursor: pointer;
       background-color: var(--color-white);
-      transition: all 1.5s ease;
 
       img {
         width: 40px;
         height: 40px;
         margin: 0 0.7rem;
-        transition: all 1.5s ease;
       }
 
       a {
         text-decoration: none;
         font-weight: 500;
         color: var(--color-dark);
-        transition: all 1.5s ease;
       }
 
       &:hover {
-        box-shadow: 0 0 25px #fef4f5;
+        box-shadow: 0 0 10px #fef4f5;
       }
 
       @media screen and (max-width: 400px) {

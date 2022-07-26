@@ -32,8 +32,8 @@ const Services = () => {
         </motion.div>
 
         <motion.div
-          whileInView={{ y: [300, 0], opacity: [0, 1] }}
-          transition={{ duration: 1 }}
+          whileInView={{ y: [-50, 0], opacity: [0, 1] }}
+          transition={{ duration: 1.5 }}
           className="services-img app-flex"
         >
           <div className="img-container">

@@ -1,3 +1,4 @@
+import About from "../About/About"
 import Contact from "../Contact/Contact"
 import Hero from "../Hero/Hero"
 import Services from "../Services/Services"
@@ -8,6 +9,8 @@ const Main = () => {
   return (
     <div className="main">
       <Hero />
+      <hr className="main-hr" />
+      <About />
       <hr className="main-hr" />
       <Services />
       <hr className="main-hr" />

@@ -18,7 +18,7 @@
 }
 
 section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 ul {
@@ -63,4 +63,45 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.arm {
+  animation: wave 3s ease-in-out infinite;
+  // transform-origin: center;
+  // transform-box: fill-box;
+}
+
+.hand {
+  animation: wave 3s ease-in-out infinite;
+  // transform-origin: center;
+  // transform-box: fill-box;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) translate(10%, -10%);
+    transform-origin: 0% 0%;
+  }
+  10% {
+    transform: rotate(16deg) translate(0%, 0%);
+    transform-origin: 0% 0%;
+  }
+  // 20% {
+  //   transform: rotate(-6deg);
+  // }
+  // 30% {
+  //   transform: rotate(16deg);
+  // }
+  // 40% {
+  //   transform: rotate(-4deg);
+  // }
+  // 50% {
+  //   transform: rotate(16deg);
+  // }
+  // 60% {
+  //   transform: rotate(0deg);
+  // }
+  // 100% {
+  //   transform: rotate(0deg);
+  // }
 }

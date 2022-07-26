@@ -22,7 +22,7 @@
     a {
       color: var(--color-white);
       &:hover {
-        background: rgba(110, 59, 221, 0.5);
+        background: var(--color-purple);
       }
     }
 
@@ -39,14 +39,27 @@
       .hero-badge {
         .badge,
         .tag {
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+          background: var(--color-dark);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+          color: var(--color-white);
+          transition: 1.5s all ease;
         }
       }
     }
 
-    .hero-circles {
+    .hero-circles-left {
       div {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        background: var(--color-dark);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        transition: 1.5s all ease;
+      }
+    }
+
+    .hero-circles-right {
+      div {
+        background: var(--color-dark);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        transition: 1.5s all ease;
       }
     }
 
@@ -71,12 +84,75 @@
     }
   }
 
+  .about {
+    .about-right {
+      .about-timeline {
+        .timeline-header {
+          -webkit-text-stroke: 1px var(--color-white);
+
+          &:hover::before {
+            filter: drop-shadow(0 0 15px var(--color-dark));
+          }
+        }
+      }
+    }
+
+    .about-bottom {
+      .about-buttons {
+        .about-button {
+          a {
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+  }
+
   .services {
     .services-content {
       .services-left,
       .services-right {
         p {
           color: rgb(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  .works {
+    .work-filter {
+      .work-filter-item {
+        background: var(--color-dark);
+        color: var(--color-white);
+        transition: 1.5s all ease;
+
+        &:hover {
+          background: var(--color-purple);
+          color: var(--color-white);
+        }
+      }
+
+      .item-active {
+        background: var(--color-purple);
+        color: var(--color-white);
+        transition: 1.5s all ease;
+      }
+    }
+    .work-portfolio {
+      .work-item {
+        background: var(--color-dark);
+        color: var(--color-white);
+        transition: 1.5s all ease;
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .work-content {
+          .work-tag {
+            background: var(--color-dark);
+            transition: 1.5s all ease;
+          }
         }
       }
     }

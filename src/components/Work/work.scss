@@ -23,7 +23,7 @@
       color: var(--color-purple);
       font-weight: 800;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 1.5s ease;
       margin: 0.5rem;
 
       &:hover {
@@ -39,6 +39,7 @@
     .item-active {
       background: var(--color-purple);
       color: var(--color-white);
+      transition: 1.5s all ease;
     }
   }
 
@@ -58,7 +59,7 @@
       border-radius: 0.5rem;
       color: var(--color-dark);
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 1.5s ease;
 
       &:hover {
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
@@ -97,7 +98,7 @@
           background: rgba(0, 0, 0, 0.5);
           backdrop-filter: blur(4px);
           -webkit-backdrop-filter: blur(4px);
-          border-radius: 1rem;
+          border-radius: 0.5rem;
           opacity: 0;
           transition: all 0.3s ease;
 
@@ -137,12 +138,17 @@
           font-size: 22px;
         }
 
+        p {
+          text-align: center;
+        }
+
         .work-tag {
           position: absolute;
           padding: 0.5rem 1rem 0 1rem;
           border-radius: 10px;
           background: var(--color-white);
           top: -28px;
+          transition: 1.5s all ease;
         }
       }
     }

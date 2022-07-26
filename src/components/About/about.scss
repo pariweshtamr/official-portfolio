@@ -1,0 +1,119 @@
+#about {
+  height: max-content;
+  width: 100%;
+}
+
+.about {
+  .about-container {
+    .about-left {
+      flex: 0.75;
+      padding: 2rem 2rem 0 2rem;
+      .about-img {
+        img {
+          height: 30rem;
+          width: 100%;
+        }
+      }
+    }
+
+    .about-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .about-timeline {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .timeline-header {
+          font-size: 1.7rem;
+          color: transparent;
+          text-transform: uppercase;
+          -webkit-text-stroke: 1px var(--color-dark);
+          cursor: pointer;
+          letter-spacing: 1px;
+
+          &:hover::before {
+            width: 9.2rem;
+            filter: drop-shadow(0 0 15px var(--color-white));
+          }
+
+          &::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--color-purple);
+            width: 0;
+            height: 32px;
+            overflow: hidden;
+            transition: 0.5s;
+            border-right: 2px solid var(--color-purple);
+            -webkit-text-stroke: 1px var(--color-purple);
+          }
+        }
+      }
+
+      .timeline-title {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .timeline-content {
+        border-left: 2px solid var(--color-dark);
+      }
+    }
+  }
+
+  .about-bottom {
+    .about-buttons {
+      display: flex;
+      width: 60%;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 auto;
+      gap: 8rem;
+
+      .about-button {
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.5s ease;
+        }
+
+        img {
+          width: 150px;
+          height: 150px;
+          margin: 0 1rem;
+          border-radius: 5px;
+        }
+
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          color: var(--color-dark);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+        }
+
+        &:first-child {
+          img {
+            width: 220px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}

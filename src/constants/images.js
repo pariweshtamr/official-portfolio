@@ -11,6 +11,7 @@ import redux from "../assets/redux.png"
 import sass from "../assets/sass.png"
 import mongo from "../assets/mongo.png"
 import profile from "../assets/profile.png"
+import dev from "../assets/dev.png"
 import service from "../assets/serviceBG.jpg"
 import email from "../assets/email.png"
 import mobile from "../assets/mobile.png"
@@ -32,6 +33,7 @@ const images = {
   service,
   email,
   mobile,
+  dev,
 }
 
 export default images

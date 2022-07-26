@@ -1,0 +1,49 @@
+.timeline-contents {
+  display: flex;
+  font-size: 1.2rem;
+
+  .timeline-left-content {
+    padding-left: 1.2rem;
+    padding-top: 0.4rem;
+    flex: 0.8;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      top: 1rem;
+      left: -0.45rem;
+      border-radius: 50%;
+      border: 1px solid var(--color-white);
+      background-color: var(--color-dark);
+    }
+
+    p {
+      display: inline-block;
+      font-weight: 500;
+    }
+  }
+
+  .timeline-right-content {
+    flex: 2;
+    position: relative;
+    padding-top: 0.55rem;
+
+    h5 {
+      font-weight: 600;
+    }
+
+    h6 {
+      color: var(--color-white);
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--color-purple);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
