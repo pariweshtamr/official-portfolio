@@ -3,8 +3,7 @@ import { images } from "../../constants"
 import emailjs from "@emailjs/browser"
 import Swal from "sweetalert2"
 import "./contact.scss"
-import { BsLinkedin, BsMessenger } from "react-icons/bs"
-import { RiWhatsappFill } from "react-icons/ri"
+import { RiLinkedinLine, RiMessengerLine, RiWhatsappLine } from "react-icons/ri"
 
 const Contact = () => {
   const [loading, setLoading] = useState(false)
@@ -80,7 +79,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <BsLinkedin />
+              <RiLinkedinLine />
             </a>
           </div>
           <div className="contact-icon">
@@ -89,7 +88,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <BsMessenger />
+              <RiMessengerLine />
             </a>
           </div>
           <div className="contact-icon">
@@ -98,7 +97,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <RiWhatsappFill />
+              <RiWhatsappLine />
             </a>
           </div>
         </div>
