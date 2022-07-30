@@ -1,0 +1,105 @@
+#skills {
+  height: 100%;
+  width: 100%;
+}
+
+.skills {
+  .mern {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    user-select: none;
+    height: 100%;
+
+    .mern-circles {
+      position: relative;
+      height: 38rem;
+      width: 38rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+      cursor: pointer;
+
+      .skill-circle {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: 0.2s ease;
+        opacity: 0;
+
+        img {
+          width: 60%;
+          height: 60%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+        }
+      }
+    }
+
+    .mern-circles.active {
+      animation: spin 25s linear infinite;
+    }
+    .mern-circles.active .skill-circle {
+      opacity: 1;
+
+      &:hover {
+        animation: none;
+      }
+
+      &:nth-child(1) {
+        transform: translateY(-280%);
+      }
+      &:nth-child(2) {
+        transform: translateY(280%);
+      }
+      &:nth-child(3) {
+        transform: translateX(280%);
+      }
+      &:nth-child(4) {
+        transform: translateX(-280%);
+      }
+      &:nth-child(5) {
+        transform: translate(200%, 200%);
+      }
+      &:nth-child(6) {
+        transform: translate(-200%, -200%);
+      }
+      &:nth-child(7) {
+        transform: translate(-200%, 200%);
+      }
+      &:nth-child(8) {
+        transform: translate(200%, -200%);
+      }
+    }
+
+    img {
+      position: absolute;
+      //   padding: 2rem;
+      height: 25rem;
+      width: 25rem;
+      border-radius: 50%;
+      //   border: 3px solid var(--color-dark);
+      z-index: 20;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

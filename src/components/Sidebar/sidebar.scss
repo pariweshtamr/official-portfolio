@@ -46,7 +46,7 @@
       color: var(--color-dark);
 
       &:hover {
-        color: var(--color-purple);
+        color: var(--color-orange);
       }
     }
   }
@@ -68,7 +68,7 @@
       color: var(--color-dark);
 
       &:hover {
-        background: var(--color-purple);
+        background: var(--color-orange);
         color: var(--color-white);
       }
 
@@ -135,10 +135,10 @@
 }
 
 .links a.active {
-  background: var(--color-purple);
+  background: var(--color-orange);
   color: var(--color-white);
   &:hover {
-    background: var(--color-purple);
+    background: var(--color-orange);
   }
 }
 

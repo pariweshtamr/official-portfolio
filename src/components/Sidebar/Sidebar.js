@@ -51,12 +51,12 @@ const Sidebar = () => {
             {isCollapsed ? "" : <span>About</span>}
           </a>
           <a
-            href="#experience"
-            onClick={() => setActiveTab("#experience")}
-            className={activeTab === "#experience" ? "active" : ""}
+            href="#skills"
+            onClick={() => setActiveTab("#skills")}
+            className={activeTab === "#skills" ? "active" : ""}
           >
             <MdWork />
-            {isCollapsed ? "" : <span>Experience</span>}
+            {isCollapsed ? "" : <span>Skills</span>}
           </a>
           <a
             href="#services"

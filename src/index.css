@@ -1,12 +1,11 @@
 :root {
   --color-white: #fefffe;
-  --color-red: #b33f40;
-  --color-dark: rgb(70, 70, 70);
-  --color-black: #232b2b;
-  --color-purple: #6c63ff;
-  --color-light: #9cbeab;
+  --color-dark: #242d49;
+  --color-orange: #fca61f;
   --color-secondaryDark: #1e4c48;
   --color-secondaryLight: #d0d280;
+  --box-shadow: 0 19px 60px rgb(0 0 0 / 8%);
+  --smbox-shadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -14,11 +13,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: Gumela;
+  src: url("../src/assets/font/Gumela\ Regular.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: "Gumela";
   scroll-behavior: smooth;
 }
 

@@ -4,8 +4,9 @@ import "./services.scss"
 const Services = () => {
   return (
     <section id="services" className="services">
-      <h2 className="head-text app-flex">
-        My<span>services</span>
+      <h2 className="head-text">
+        My Awesome
+        <div>services</div>
       </h2>
 
       <div className="services-content app-flex">

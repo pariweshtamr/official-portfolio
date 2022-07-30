@@ -4,7 +4,7 @@ const HeroSocials = () => {
   return (
     <motion.div
       whileInView={{ right: [0, 20], opacity: [0, 1] }}
-      transition={{ duration: 1.5, delay: 3.5, ease: "easeInOut" }}
+      transition={{ duration: 1.5, delay: 3, ease: "easeInOut" }}
       className="hero-socials-menu"
     >
       <a

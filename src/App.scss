@@ -28,35 +28,35 @@ ul {
 .head-text {
   font-size: 2.75rem;
   font-weight: 800;
-  text-align: center;
-  color: var(--black-color);
+  padding: 0 0 0 8rem;
+  color: var(--color-dark);
   text-transform: capitalize;
   position: relative;
+  letter-spacing: 3px;
 
-  &::before {
-    content: " ";
-    position: relative;
-    left: -2%;
-    width: 4rem;
-    height: 2px;
-    color: var(--color-dark);
-    border: 1px solid;
+  // &::before {
+  //   content: " ";
+  //   position: relative;
+  //   left: -2%;
+  //   width: 4rem;
+  //   height: 2px;
+  //   color: var(--color-dark);
+  //   border: 1px solid;
+  // }
+
+  div {
+    color: var(--color-orange);
   }
 
-  span {
-    color: var(--color-purple);
-    margin-left: 0.5rem;
-  }
-
-  &::after {
-    content: " ";
-    position: relative;
-    right: -2%;
-    width: 4rem;
-    height: 2px;
-    color: var(--color-dark);
-    border: 1px solid;
-  }
+  // &::after {
+  //   content: " ";
+  //   position: relative;
+  //   right: -2%;
+  //   width: 4rem;
+  //   height: 2px;
+  //   color: var(--color-dark);
+  //   border: 1px solid;
+  // }
 }
 
 .app-flex {

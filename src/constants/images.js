@@ -15,6 +15,8 @@ import dev from "../assets/dev.png"
 import service from "../assets/serviceBG.jpg"
 import email from "../assets/email.png"
 import mobile from "../assets/mobile.png"
+import mern from "../assets/mern.png"
+import crown from "../assets/crown.png"
 
 const images = {
   api,
@@ -33,7 +35,9 @@ const images = {
   service,
   email,
   mobile,
+  crown,
   dev,
+  mern,
 }
 
 export default images
