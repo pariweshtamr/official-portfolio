@@ -26,8 +26,8 @@ const Work = () => {
 
   return (
     <section id="work" className="works">
-      <h2 className="head-text app-flex ">
-        My Creative<span>Portfolio</span>
+      <h2 className="head-text">
+        My Creative<div>Portfolio</div>
       </h2>
 
       <div className="work-filter">

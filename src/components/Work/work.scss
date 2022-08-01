@@ -20,14 +20,14 @@
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
       background: var(--color-white);
-      color: var(--color-purple);
+      color: var(--color-dark);
       font-weight: 800;
       cursor: pointer;
-      transition: all 1.5s ease;
+      transition: all 0.5s ease;
       margin: 0.5rem;
 
       &:hover {
-        background: var(--color-purple);
+        background: var(--color-orange);
         color: var(--color-white);
       }
       @media screen and (min-width: 2000px) {
@@ -37,9 +37,9 @@
     }
 
     .item-active {
-      background: var(--color-purple);
+      background: var(--color-orange);
       color: var(--color-white);
-      transition: 1.5s all ease;
+      transition: 0.5s all ease;
     }
   }
 

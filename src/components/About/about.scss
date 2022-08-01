@@ -5,7 +5,6 @@
 
 .about {
   .about-container {
-    padding: 4rem 0 0 0;
     .about-left {
       flex: 0.9;
       padding: 2rem 2rem 0 2rem;
@@ -37,20 +36,20 @@
           letter-spacing: 1px;
 
           &:hover::before {
-            width: 9.2rem;
+            width: 8.2rem;
             filter: drop-shadow(0 0 15px var(--color-white));
           }
 
           &::before {
             content: attr(data-text);
             position: absolute;
-            color: var(--color-purple);
+            color: var(--color-orange);
             width: 0;
             height: 32px;
             overflow: hidden;
             transition: 0.5s;
-            border-right: 2px solid var(--color-purple);
-            -webkit-text-stroke: 1px var(--color-purple);
+            border-right: 2px solid var(--color-orange);
+            -webkit-text-stroke: 1px var(--color-orange);
           }
         }
       }

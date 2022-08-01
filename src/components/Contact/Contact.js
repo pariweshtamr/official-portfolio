@@ -46,8 +46,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contacts">
-      <h2 className="head-text app-flex">
-        Let's <span>Talk</span>
+      <h2 className="head-text">
+        Get in <span>&nbsp;Touch</span>
       </h2>
 
       <div className="contact-cards">
