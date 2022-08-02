@@ -1,5 +1,5 @@
 #about {
-  height: max-content;
+  height: 100%;
   width: 100%;
 }
 
@@ -63,12 +63,13 @@
       }
 
       .timeline-content {
-        border-left: 2px solid var(--color-dark);
+        border-left: 2px solid var(--color-orange);
       }
     }
   }
 
   .about-bottom {
+    margin-top: 6rem;
     .about-buttons {
       display: flex;
       width: 60%;

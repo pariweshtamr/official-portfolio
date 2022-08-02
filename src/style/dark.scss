@@ -115,8 +115,30 @@
 
   .timeline-contents {
     .timeline-right-content {
+      h5 {
+        color: var(--color-white);
+      }
       h6 {
         color: var(--color-white);
+      }
+      p {
+        color: var(--color-orange);
+      }
+    }
+  }
+
+  .skills {
+    .skills-container {
+      .skills-bottom {
+        .container {
+          .card {
+            .percent {
+              .number {
+                color: var(--color-white);
+              }
+            }
+          }
+        }
       }
     }
   }

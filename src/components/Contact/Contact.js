@@ -45,7 +45,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="contacts">
+    <section id="contact" className="contact">
       <h2 className="head-text">
         Get in <span>&nbsp;Touch</span>
       </h2>

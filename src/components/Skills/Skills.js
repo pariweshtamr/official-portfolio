@@ -6,7 +6,7 @@ const { html, css, javascript, mern, sass, redux, git, figma, mu5, api } =
   images
 
 const Skills = () => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(true)
 
   return (
     <section id="skills" className="skills">
@@ -16,7 +16,7 @@ const Skills = () => {
 
       <div className="skills-container">
         <div className="skills-top">
-          <div className={active ? "mern-circles" : "mern-circles active"}>
+          <div className={active ? "mern-circles active" : "mern-circles"}>
             {[html, css, javascript, sass, git, redux, figma, api].map(
               (circle, i) => (
                 <div className="skill-circle app-flex" key={`circle-${i}`}>

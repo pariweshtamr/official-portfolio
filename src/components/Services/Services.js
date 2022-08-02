@@ -15,8 +15,8 @@ const Services = () => {
           transition={{ duration: 2 }}
           className="services-left"
         >
-          <div className="services-left-content">
-            <h4 className="service-title">UI/UX Design</h4>
+          <div className="services-left-content ">
+            <h4 className="service-title">Web Development</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               quia iste possimus ratione nesciunt voluptate, fuga earum unde.
@@ -24,7 +24,7 @@ const Services = () => {
           </div>
 
           <div className="services-left-content">
-            <h4 className="service-title">UI/UX Design</h4>
+            <h4 className="service-title">Full-Stack Development</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               quia iste possimus ratione nesciunt voluptate, fuga earum unde.
@@ -55,7 +55,7 @@ const Services = () => {
             </p>
           </div>
           <div className="services-right-content">
-            <h4 className="service-title">UI/UX Design</h4>
+            <h4 className="service-title">Support</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               quia iste possimus ratione nesciunt voluptate, fuga earum unde.

@@ -1,0 +1,32 @@
+.service-card {
+  width: 18rem;
+  height: 21rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.26);
+  border: 7px solid rgba(252, 166, 31, 0.45);
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  padding: 0 26px 2rem 26px;
+
+  img {
+    // transform: scale(0.6);
+    // margin: -2rem;
+    width: 60%;
+  }
+
+  span:nth-of-type(1) {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  span:nth-of-type(2) {
+    color: var(--color-gray);
+    font-size: 1rem;
+  }
+}
