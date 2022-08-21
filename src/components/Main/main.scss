@@ -42,4 +42,18 @@
       display: none;
     }
   }
+  @include tablet() {
+    width: 98%;
+    height: 90.5%;
+    position: fixed;
+    top: 0.7%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    border-radius: 15px;
+
+    .main-hr {
+      display: none;
+    }
+  }
 }

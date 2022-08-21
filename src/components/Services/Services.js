@@ -18,16 +18,17 @@ const Services = () => {
           <div className="services-left-content ">
             <h4 className="service-title">Web Development</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia iste possimus ratione nesciunt voluptate, fuga earum unde.
+              Developing a scalable website that tailors to your needs. I keep
+              in mind the best interests of my clients to meet or even exceed
+              their expectations on how the product/service is delivered.
             </p>
           </div>
 
           <div className="services-left-content">
-            <h4 className="service-title">Full-Stack Development</h4>
+            <h4 className="service-title">Custom CMS Development</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia iste possimus ratione nesciunt voluptate, fuga earum unde.
+              Every business would prefer a custom-tailored CMS system to
+              support their workflow.
             </p>
           </div>
         </motion.div>
@@ -50,8 +51,9 @@ const Services = () => {
           <div className="services-right-content">
             <h4 className="service-title">UI/UX Design</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quia iste possimus ratione nesciunt voluptate, fuga earum unde.
+              If you need a web design company to deliver visually engaging IT
+              projects with outstanding UI/UX, Andersen and our user-centered
+              approach is your choice.
             </p>
           </div>
           <div className="services-right-content">

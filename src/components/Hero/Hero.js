@@ -34,10 +34,12 @@ const Hero = () => {
             </div>
 
             <div className="tag app-flex">
-              <img src={images.crown} alt="" />
-              <p className="p-text">
-                Full Stack <br /> Developer
-              </p>
+              <span>
+                <img src={images.crown} alt="" />
+              </span>
+              <div>
+                <p className="p-text">Full Stack Developer</p>
+              </div>
             </div>
           </div>
         </motion.div>

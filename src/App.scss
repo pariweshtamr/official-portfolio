@@ -1,7 +1,8 @@
 @import "./style/mixins";
 
 .app {
-  background: url("./assets/lightBg.png") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("./assets/lightBg.png") no-repeat center center;
   background-size: cover;
   transition: 1.5s ease;
   height: 100vh;

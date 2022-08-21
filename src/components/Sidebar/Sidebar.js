@@ -32,7 +32,9 @@ const Sidebar = () => {
             ></i>
           )}
         </div>
+
         <hr />
+
         <div className="links">
           <a
             href="#home"
@@ -83,7 +85,9 @@ const Sidebar = () => {
             {isCollapsed ? "" : <span>Contact</span>}
           </a>
         </div>
+
         <hr />
+
         {isCollapsed ? (
           <>
             <div className="me">

@@ -154,7 +154,7 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     box-shadow: 0;
-    justify-content: space-between;
+    justify-content: space-around;
 
     hr {
       display: none;
@@ -182,6 +182,57 @@
 
     .me {
       display: none;
+    }
+
+    .sidebar-toggle {
+      display: none;
+    }
+  }
+}
+
+@include tablet() {
+  .sidebar {
+    flex-direction: row;
+    height: 8%;
+    width: 98%;
+    position: fixed;
+    top: 96%;
+    z-index: 999;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0;
+    justify-content: centers;
+
+    hr {
+      // display: none;
+      transform: rotate(90deg);
+      margin-top: 5%;
+    }
+
+    .toggles {
+      font-size: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .links {
+      flex-direction: row;
+      gap: 2rem;
+      padding: 0.8rem;
+
+      a {
+        padding: 0.4rem;
+        border-radius: 5px;
+        font-size: 1.5rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .me {
+      padding-right: 1.5rem;
     }
 
     .sidebar-toggle {
