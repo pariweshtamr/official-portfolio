@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="about">
       <h2 className="head-text">
-        About <span>Me</span>
+        About<div>Me</div>
       </h2>
 
       <div className="about-container app-flex">
@@ -17,6 +17,31 @@ const About = () => {
         >
           <div className="about-img">
             <img src="images/about.svg" alt="" />
+          </div>
+
+          <p className="paragraph text-center">
+            Proactive, analytical and detail-oriented full-stack developer with
+            experiences in MongoDB, ExpressJs, ReactJs and NodeJs{" "}
+            <span>(MERN-stack)</span>. I am passionate and love to create and
+            build along with solving problems.
+          </p>
+
+          <div className="about-bottom app-flex">
+            <div className="about-buttons">
+              <div className="about-button">
+                <img src="/images/talk.png" alt="" rel="noreferrer" />
+                <a href="#contact" rel="noreferrer">
+                  Let's Talk
+                </a>
+              </div>
+
+              <div className="about-button">
+                <img src="/images/resume.png" alt="" />
+                <a href="" download target="_blank" rel="noreferrer">
+                  My Resume
+                </a>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -54,30 +79,18 @@ const About = () => {
               text={"AWARD: First Year Course Champion"}
             />
           </div>
+
+          <motion.div
+            whileInView={{ y: [50, 0], opacity: [0, 1] }}
+            transition={{ duration: 1.5, delay: 1 }}
+            className="highlights app-flex"
+          >
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+          </motion.div>
         </div>
       </div>
-
-      <motion.div
-        whileInView={{ y: [50, 0], opacity: [0, 1] }}
-        transition={{ duration: 1.5, delay: 1 }}
-        className="about-bottom app-flex"
-      >
-        <div className="about-buttons">
-          <div className="about-button">
-            <img src="/images/talk.png" alt="" rel="noreferrer" />
-            <a href="#contact" rel="noreferrer">
-              Let's Talk
-            </a>
-          </div>
-
-          <div className="about-button">
-            <img src="/images/resume.png" alt="" />
-            <a href="" download target="_blank" rel="noreferrer">
-              My Resume
-            </a>
-          </div>
-        </div>
-      </motion.div>
     </section>
   )
 }

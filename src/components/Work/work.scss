@@ -1,3 +1,5 @@
+@import "../../style/mixins";
+
 #work {
   min-height: max-content;
 }
@@ -43,17 +45,22 @@
   }
 
   .work-portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    padding: 0 8rem;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
 
     .work-item {
-      width: 25%;
-      height: 29rem;
+      // width: 25%;
+      // height: 29rem;
       padding: 0.5rem;
       background: var(--color-white);
-      margin: 2rem;
+      margin: 1rem;
       flex-direction: column;
       border-radius: 0.5rem;
       color: var(--color-dark);
@@ -64,11 +71,6 @@
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
       }
 
-      @media screen and (min-width: 2000px) {
-        width: 30%;
-        height: 34%;
-        padding: 1rem;
-      }
       @media screen and (max-width: 300px) {
         width: 100%;
         margin: 1rem;
@@ -150,6 +152,29 @@
           transition: 1.5s all ease;
         }
       }
+    }
+  }
+}
+
+@include laptop() {
+  .works {
+    .work-portfolio {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include tablet() {
+  .works {
+    .work-portfolio {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include mobile() {
+  .works {
+    .work-portfolio {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
