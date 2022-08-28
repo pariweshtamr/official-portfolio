@@ -8,10 +8,7 @@ function App() {
   const { darkMode } = useSelector((state) => state.darkMode)
   return (
     <div className={darkMode ? "app dark" : "app"}>
-      <Sidebar />
       <Main />
-      {/* <Header /> */}
-      {/* <Work /> */}
     </div>
   )
 }

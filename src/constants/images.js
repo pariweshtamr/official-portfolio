@@ -17,6 +17,7 @@ import email from "../assets/email.png"
 import mobile from "../assets/mobile.png"
 import mern from "../assets/mern.png"
 import crown from "../assets/crown.png"
+import heroBg from "../assets/bg.jpeg"
 
 const images = {
   api,
@@ -38,6 +39,7 @@ const images = {
   crown,
   dev,
   mern,
+  heroBg,
 }
 
 export default images
