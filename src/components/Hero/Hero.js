@@ -61,6 +61,41 @@ const Hero = () => {
               </div>
             </div>
           </Col>
+
+          <div className="hero-info-container">
+            <div className="hero-info-content">
+              <div>
+                <div className="info-item-container">
+                  <i className="fa-solid fa-award"></i>
+                </div>
+                <span>
+                  <h6>1 Year Job</h6>
+                  <p>Experience</p>
+                </span>
+              </div>
+              <div className="hero-info-divider"></div>
+              <div>
+                <div className="info-item-container">
+                  <i className="fa-solid fa-award"></i>
+                </div>
+                <span>
+                  <h6>10+ Projects</h6>
+                  <p>Completed</p>
+                </span>
+              </div>
+              <div className="hero-info-divider"></div>
+
+              <div>
+                <div className="info-item-container">
+                  <i className="fa-solid fa-award"></i>
+                </div>
+                <span>
+                  <h6></h6>
+                  <p>Experience</p>
+                </span>
+              </div>
+            </div>
+          </div>
         </Row>
       </Container>
     </>
