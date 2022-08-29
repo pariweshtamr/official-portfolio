@@ -17,6 +17,7 @@ const Main = () => {
         <main>
           <div className="main-wrapper">
             <Hero />
+            <Services />
           </div>
         </main>
       </div>

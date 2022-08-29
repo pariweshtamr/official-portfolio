@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 1440px;
   // background: #1e1e28;
-  background: #e1e1d7;
+  // background: #e1e1d7;
   background-size: cover;
   // backdrop-filter: blur(10px);
   // -webkit-backdrop-filter: blur(10px);
@@ -27,7 +27,7 @@
       flex: 20%;
       height: calc(100vh - 30px);
       // background: #20202a;
-      background: #dfdfd5;
+      background: #f8f9f2;
       // -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       // box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       -webkit-box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
@@ -47,7 +47,7 @@
 
       .main-wrapper {
         // background: rgba(30, 30, 40, 0.88);
-        background: rgba(255, 255, 215, 0.28);
+        background: rgba(248, 249, 242, 0.88);
         position: absolute;
         top: 0;
         left: 0;
@@ -55,6 +55,7 @@
         height: 100%;
         opacity: 1;
         transition: 0.5s ease-in-out;
+        overflow-y: scroll;
       }
     }
   }

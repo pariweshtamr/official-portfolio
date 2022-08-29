@@ -47,6 +47,7 @@ const Hero = () => {
                             1000,
                           ]}
                           repeat={Infinity}
+                          className="type-animation"
                         />
                       </span>
                     </div>
