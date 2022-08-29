@@ -1,7 +1,10 @@
 :root {
   --color-white: #fefffe;
+  --color-black: #010001;
   --color-dark: #242d49;
   --color-orange: #fca61f;
+  --color-yellow: #ffc007;
+  --color-blue: #0359e0;
   --color-gray: #788097;
   --color-secondaryLight: #d0d280;
   --box-shadow: 0 19px 60px rgb(0 0 0 / 8%);

@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap"
 import { images } from "../../../constants"
+import ProgressBar from "../../ProgressBar/ProgressBar"
 import "./leftbar.scss"
 
 const Leftbar = () => {
@@ -42,6 +43,7 @@ const Leftbar = () => {
               </li>
             </ul>
           </div>
+
           <div className="leftbar-divider"></div>
 
           <div className="leftbar-lang-skills">
@@ -63,58 +65,22 @@ const Leftbar = () => {
 
           <div className="leftbar-hard-skills">
             <div className="hard-skill-item">
-              <div className="hard-skill-header">
-                <h6>html</h6>
-              </div>
-              <div className="hard-skill-progress">
-                <div></div>
-                <div className="progress-text">90%</div>
-              </div>
+              <ProgressBar title={"html"} width={"80%"} text={"80%"} />
             </div>
             <div className="hard-skill-item">
-              <div className="hard-skill-header">
-                <h6>css</h6>
-              </div>
-              <div className="hard-skill-progress">
-                <div></div>
-                <div className="progress-text">90%</div>
-              </div>
+              <ProgressBar title={"css"} width={"90%"} text={"90%"} />
             </div>
             <div className="hard-skill-item">
-              <div className="hard-skill-header">
-                <h6>javaScipt</h6>
-              </div>
-              <div className="hard-skill-progress">
-                <div></div>
-                <div className="progress-text">90%</div>
-              </div>
+              <ProgressBar title={"javascript"} width={"65%"} text={"60%"} />
             </div>
             <div className="hard-skill-item">
-              <div className="hard-skill-header">
-                <h6>react</h6>
-              </div>
-              <div className="hard-skill-progress">
-                <div></div>
-                <div className="progress-text">90%</div>
-              </div>
+              <ProgressBar title={"react"} width={"75%"} text={"75%"} />
             </div>
             <div className="hard-skill-item">
-              <div className="hard-skill-header">
-                <h6>node</h6>
-              </div>
-              <div className="hard-skill-progress">
-                <div></div>
-                <div className="progress-text">90%</div>
-              </div>
+              <ProgressBar title={"node"} width={"60%"} text={"60%"} />
             </div>
             <div className="hard-skill-item">
-              <div className="hard-skill-header">
-                <h6>mongo</h6>
-              </div>
-              <div className="hard-skill-progress">
-                <div></div>
-                <div className="progress-text">90%</div>
-              </div>
+              <ProgressBar title={"mongo"} width={"60%"} text={"60%"} />
             </div>
           </div>
 
