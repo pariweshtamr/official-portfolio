@@ -3,17 +3,13 @@
 .main {
   position: relative;
   margin: 1rem auto;
-  height: 100%;
+  height: calc(100vh - 30px);
   width: 100%;
   max-width: 1440px;
   // background: #1e1e28;
   // background: #e1e1d7;
   background-size: cover;
-  // backdrop-filter: blur(10px);
-  // -webkit-backdrop-filter: blur(10px);
-  // box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-  -webkit-box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
-  box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
+  box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
   color: var(--color-dark);
   transition: all 1.5s ease-in-out;
   overflow: hidden;
@@ -25,13 +21,11 @@
 
     aside {
       flex: 20%;
-      height: calc(100vh - 30px);
+      height: 100%;
       // background: #20202a;
       background: #f8f9f2;
-      // -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-      // box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-      -webkit-box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
-      box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
+      -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+      box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       -webkit-transition: 0.55s ease-in-out;
       transition: 0.55s ease-in-out;
     }
@@ -40,7 +34,7 @@
       flex: 80%;
       position: relative;
       overflow: hidden;
-      width: 100vw;
+      width: 100%;
       height: calc(100vh - 30px);
       padding-right: 80px;
       transition: 0.5s ease-in-out;
@@ -56,6 +50,7 @@
         opacity: 1;
         transition: 0.5s ease-in-out;
         overflow-y: scroll;
+        padding-right: 80px;
       }
     }
   }

@@ -1,10 +1,8 @@
-import About from "../About/About"
-import Contact from "../Contact/Contact"
 import Hero from "../Hero/Hero"
 import Services from "../Services/Services"
 import Leftbar from "../Sidebar/Left/Leftbar"
-import Skills from "../Skills/Skills"
-import Work from "../Work/Work"
+import Rightbar from "../Sidebar/Right/Rightbar"
+
 import "./main.scss"
 
 const Main = () => {
@@ -20,6 +18,9 @@ const Main = () => {
             <Services />
           </div>
         </main>
+        <nav>
+          <Rightbar />
+        </nav>
       </div>
     </div>
   )
