@@ -1,4 +1,6 @@
+import Footer from "../Footer/Footer"
 import Hero from "../Hero/Hero"
+import MainLayout from "../Layout/MainLayout"
 import Services from "../Services/Services"
 import Leftbar from "../Sidebar/Left/Leftbar"
 import Rightbar from "../Sidebar/Right/Rightbar"
@@ -12,12 +14,15 @@ const Main = () => {
         <aside>
           <Leftbar />
         </aside>
-        <main>
-          <div className="main-wrapper">
-            <Hero />
-            <Services />
-          </div>
-        </main>
+        <MainLayout className="main-layout">
+          <main>
+            <div className="main-wrapper">
+              <Hero />
+              <Services />
+              <Footer />
+            </div>
+          </main>
+        </MainLayout>
         <nav>
           <Rightbar />
         </nav>

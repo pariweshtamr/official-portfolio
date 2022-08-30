@@ -127,6 +127,7 @@
         .hero-img {
           position: absolute;
           height: 100%;
+          padding-top: 2rem;
           img {
             width: 100%;
             height: 100%;
@@ -139,7 +140,6 @@
       width: 80%;
       height: 100px;
       border-radius: 100px;
-      background: #fff;
       display: flex;
       justify-content: center;
       position: absolute;
@@ -154,6 +154,7 @@
       -webkit-backdrop-filter: blur(15px);
       box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+
       .hero-info-content {
         color: var(--color-white);
         width: 100%;
@@ -193,7 +194,7 @@
         .hero-info-divider {
           width: 2px;
           height: 35px;
-          background-color: var(--color-yellow);
+          background-color: #737371;
         }
       }
     }

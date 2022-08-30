@@ -21,19 +21,25 @@ const Rightbar = () => {
           </div>
         </div>
 
-        <div className="menu-bar-current-page"></div>
+        {show && <div className="menu-bar-current-page">Home</div>}
 
         <ul className="main-menu">
-          <li className="menu-item current-menu-item">
+          <li
+            className={
+              !show
+                ? "menu-item current-menu-item"
+                : "menu-item closed curent-menu-item"
+            }
+          >
             <a href="/home">Home</a>
           </li>
-          <li className="menu-item">
+          <li className={!show ? "menu-item" : "menu-item closed"}>
             <a href="/home">Portfolio</a>
           </li>
-          <li className="menu-item">
+          <li className={!show ? "menu-item" : "menu-item closed"}>
             <a href="/home">History</a>
           </li>
-          <li className="menu-item">
+          <li className={!show ? "menu-item" : "menu-item closed"}>
             <a href="/home">Contact</a>
           </li>
         </ul>

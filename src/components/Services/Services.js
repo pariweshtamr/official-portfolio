@@ -27,7 +27,7 @@ const Services = () => {
               <i className="fa-solid fa-compass-drafting"></i>
             </div>
             <div className="service-card-content">
-              <h6>Web Development</h6>
+              <h6>UI/UX Design</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
                 sapiente.
@@ -39,7 +39,7 @@ const Services = () => {
               <i className="fa-solid fa-compass-drafting"></i>
             </div>
             <div className="service-card-content">
-              <h6>Web Development</h6>
+              <h6>E-Commerce Development</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
                 sapiente.
@@ -51,7 +51,7 @@ const Services = () => {
               <i className="fa-solid fa-compass-drafting"></i>
             </div>
             <div className="service-card-content">
-              <h6>Web Development</h6>
+              <h6>Custom CMS Development</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
                 sapiente.

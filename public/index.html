@@ -33,10 +33,52 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <title>Pariwesh</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #a0965c;
+        display: grid;
+        place-items: center;
+      }
+
+      .loader {
+        border: 16px solid #e3e3e3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loader-wrapper">
+        <div class="loader"></div>
+      </div>
+    </div>
   </body>
 </html>

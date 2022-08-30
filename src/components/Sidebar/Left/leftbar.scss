@@ -41,8 +41,7 @@
       text-align: center;
       // -webkit-box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
       // box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
-      -webkit-box-shadow: 0 3px 8px 0 rgb(240 240 235 / 10%);
-      box-shadow: 0 3px 8px 0 rgb(240 240 235 / 10%);
+      filter: drop-shadow(0 1px 4px rgb(15 15 20 / 20%));
       z-index: 999;
 
       .avatar-image {
@@ -85,7 +84,7 @@
       p {
         font-size: 11px;
         display: block;
-        color: gray;
+        color: #737371;
       }
     }
   }
@@ -210,10 +209,10 @@
 
           &::before {
             font-family: "Font Awesome 5 Free";
-            font-weight: 900;
+            font-weight: 700;
             content: "\f00c";
-            font-size: 9px;
-            color: var(--color-yellow);
+            font-size: 11px;
+            color: #c5a269;
             margin-right: 10px;
           }
         }
@@ -263,8 +262,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    -webkit-box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
-    box-shadow: 0 3px 8px 0 rgb(240 240 235 / 20%);
+    filter: drop-shadow(0 1px 4px rgb(15 15 20 / 20%));
+
     // -webkit-box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
     // box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
     width: 20%;

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 2.5rem;
   padding: 20px 2rem;
+  margin-bottom: 4rem;
   .service-title {
     h5 {
       font-weight: 700;
@@ -15,11 +16,11 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 4rem 2rem;
       .service-card {
-        border: 1px solid #c5a269;
+        // border: 1px solid #c5a269;
         padding: 3rem 1.5rem 1rem 1rem;
         background: rgba(217, 223, 171, 0.3);
-        -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 35%);
-        box-shadow: 0 3px 8px 0 rgb(15 15 20 / 35%);
+        -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
+        box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
         border-top-right-radius: 50px;
         position: relative;
 
@@ -37,6 +38,10 @@
           h6 {
             font-weight: 700;
             letter-spacing: 1px;
+          }
+          p {
+            color: #737371;
+            font-size: 14px;
           }
         }
       }
