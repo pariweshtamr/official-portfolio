@@ -13,6 +13,7 @@
   color: var(--color-dark);
   transition: all 1.5s ease-in-out;
   overflow: hidden;
+  padding: 0;
 
   .main-container {
     position: relative;
@@ -36,13 +37,13 @@
       overflow: hidden;
       width: 100%;
       height: calc(100vh - 30px);
-      padding-right: 80px;
+      // padding-right: 80px;
       transition: 0.5s ease-in-out;
 
       .main-wrapper {
         // background: rgba(30, 30, 40, 0.88);
         background: rgba(248, 249, 242, 0.88);
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;

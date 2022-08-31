@@ -1,12 +1,13 @@
+import { Container } from "react-bootstrap"
 import "./footer.scss"
 
 const Footer = () => {
   return (
-    <footer>
+    <Container className="footer">
       <div className="footer-content">
         <p>@ 2022 Pariwesh Tamrakar</p>
       </div>
-    </footer>
+    </Container>
   )
 }
 

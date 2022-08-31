@@ -1,3 +1,4 @@
+import { Container } from "react-bootstrap"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
@@ -11,27 +12,28 @@ import "./main.scss"
 
 const Main = () => {
   return (
-    <div className="main">
+    <Container fluid className="main">
       <div className="main-container">
         <aside>
           <Leftbar />
         </aside>
         <main className="main-layout">
-          <div className="main-wrapper">
-            <BrowserRouter>
+          <BrowserRouter>
+            <div className="main-wrapper">
               <Routes>
                 <Route path="/" element={<Hero />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
               </Routes>
-              <nav>
-                <Rightbar />
-              </nav>
-            </BrowserRouter>
-            <Footer />
-          </div>
+              <Footer />
+            </div>
+
+            <nav>
+              <Rightbar />
+            </nav>
+          </BrowserRouter>
         </main>
       </div>
-    </div>
+    </Container>
   )
 }
 

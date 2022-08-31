@@ -4,6 +4,8 @@ import "./rightbar.scss"
 
 const Rightbar = () => {
   const [show, setShow] = useState(true)
+  const [activeTab, setActiveTab] = useState("/home")
+
   return (
     <div
       className={
@@ -22,26 +24,46 @@ const Rightbar = () => {
           </div>
         </div>
 
-        {show && <div className="menu-bar-current-page">Home</div>}
+        {show && (
+          <div className="menu-bar-current-page">{activeTab.slice(1)}</div>
+        )}
 
         <ul className="main-menu">
-          <li
-            className={
-              !show
-                ? "menu-item current-menu-item"
-                : "menu-item closed curent-menu-item"
-            }
-          >
-            <Link to="/">Home</Link>
+          <li className={!show ? "menu-item " : "menu-item closed"}>
+            <Link
+              to="/"
+              className={activeTab === "/home" ? "menu-item active" : ""}
+              onClick={() => setActiveTab("/home")}
+            >
+              Home
+            </Link>
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
-            <Link to="/projects">Portfolio</Link>
+            <Link
+              to="/projects"
+              className={activeTab === "/projects" ? "menu-item active" : ""}
+              onClick={() => setActiveTab("/projects")}
+            >
+              Portfolio
+            </Link>
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
-            <Link to="/history">History</Link>
+            <Link
+              to="/journey"
+              className={activeTab === "/journey" ? "menu-item active" : ""}
+              onClick={() => setActiveTab("/journey")}
+            >
+              Journey
+            </Link>
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              className={activeTab === "/contact" ? "menu-item active" : ""}
+              onClick={() => setActiveTab("/contact")}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

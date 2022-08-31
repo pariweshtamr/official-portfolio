@@ -48,7 +48,11 @@
   }
 
   .contact-bottom-container {
+    width: 98%;
+    margin: 0 auto;
     background: rgba(217, 223, 171, 0.3);
+    -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
+    box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
 
     .contact-form {
       width: 100%;
