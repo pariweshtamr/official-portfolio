@@ -1,3 +1,5 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
 import Hero from "../Hero/Hero"
 import MainLayout from "../Layout/MainLayout"
@@ -14,18 +16,20 @@ const Main = () => {
         <aside>
           <Leftbar />
         </aside>
-        <MainLayout className="main-layout">
-          <main>
-            <div className="main-wrapper">
-              <Hero />
-              <Services />
-              <Footer />
-            </div>
-          </main>
-        </MainLayout>
-        <nav>
-          <Rightbar />
-        </nav>
+        <main className="main-layout">
+          <div className="main-wrapper">
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Hero />}></Route>
+                <Route path="/contact" element={<Contact />}></Route>
+              </Routes>
+              <nav>
+                <Rightbar />
+              </nav>
+            </BrowserRouter>
+            <Footer />
+          </div>
+        </main>
       </div>
     </div>
   )

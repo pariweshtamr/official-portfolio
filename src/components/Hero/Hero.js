@@ -3,6 +3,9 @@ import { motion } from "framer-motion"
 import { images } from "../../constants"
 import { Col, Container, Row } from "react-bootstrap"
 import { TypeAnimation } from "react-type-animation"
+import { FaAward, FaProjectDiagram } from "react-icons/fa"
+import Services from "../Services/Services"
+import { useNavigate } from "react-router-dom"
 
 const scaleVariants = {
   whileInView: {
@@ -16,6 +19,10 @@ const scaleVariants = {
   },
 }
 const Hero = () => {
+  const navigate = useNavigate()
+  const handleOnClick = () => {
+    navigate("/contact")
+  }
   return (
     <>
       <div className="hero-top-bg">
@@ -51,7 +58,7 @@ const Hero = () => {
                         />
                       </span>
                     </div>
-                    <button>Let's Talk</button>
+                    <button onClick={handleOnClick}>Let's Talk</button>
                   </div>
                 </Col>
                 <Col md={4}>
@@ -67,7 +74,7 @@ const Hero = () => {
             <div className="hero-info-content">
               <div>
                 <div className="info-item-container">
-                  <i className="fa-solid fa-award"></i>
+                  <FaAward />
                 </div>
                 <span>
                   <h6>1 Year Job</h6>
@@ -77,7 +84,7 @@ const Hero = () => {
               <div className="hero-info-divider"></div>
               <div>
                 <div className="info-item-container">
-                  <i className="fa-solid fa-award"></i>
+                  <FaProjectDiagram />
                 </div>
                 <span>
                   <h6>10+ Projects</h6>
@@ -99,6 +106,7 @@ const Hero = () => {
           </div>
         </Row>
       </Container>
+      <Services />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import "./rightbar.scss"
 
 const Rightbar = () => {
@@ -31,16 +32,16 @@ const Rightbar = () => {
                 : "menu-item closed curent-menu-item"
             }
           >
-            <a href="/home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
-            <a href="/home">Portfolio</a>
+            <Link to="/projects">Portfolio</Link>
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
-            <a href="/home">History</a>
+            <Link to="/history">History</Link>
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
-            <a href="/home">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

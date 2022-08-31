@@ -4,6 +4,9 @@ import emailjs from "@emailjs/browser"
 import Swal from "sweetalert2"
 import "./contact.scss"
 import { RiLinkedinLine, RiMessengerLine, RiWhatsappLine } from "react-icons/ri"
+import { FaUser } from "react-icons/fa"
+import { MdAttachEmail, MdMessage } from "react-icons/md"
+import { Container, Row } from "react-bootstrap"
 
 const Contact = () => {
   const [loading, setLoading] = useState(false)
@@ -45,12 +48,110 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="contact">
-      <h2 className="head-text">
-        Get in <div>Touch</div>
-      </h2>
+    <Container className="contact-container">
+      <Row className="contact-title">
+        <h5>Contact Information</h5>
+      </Row>
 
-      <div className="contact-cards">
+      <Row className="contact-cards">
+        <div className="contact">
+          <div className="contact-card">
+            <div className="contact-card-content">
+              <ul>
+                <li>
+                  <h6>Country:</h6>
+                  <span>Australia</span>
+                </li>
+                <li>
+                  <h6>City:</h6>
+                  <span>Sydney</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="contact-card">
+            <div className="contact-card-content">
+              <ul>
+                <li>
+                  <h6>Email:</h6>
+                  <span>tamrpariwesh@gmail.com </span>
+                </li>
+                <li>
+                  <h6>Phone:</h6>
+                  <span>0468 804 207</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="contact-card">
+            <div className="contact-card-content">
+              <ul>
+                <li>
+                  <h6>Email:</h6>
+                  <span>tamrpariwesh@gmail.com </span>
+                </li>
+                <li>
+                  <h6>Phone:</h6>
+                  <span>0468 804 207</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Row>
+
+      <Row className="contact-title">
+        <h5>Get in touch</h5>
+      </Row>
+
+      <Row>
+        <div className="contact-bottom-container">
+          <form ref={form} className="contact-form" onSubmit={sendEmail}>
+            <div>
+              <div className="icon-container">
+                <FaUser />
+              </div>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                className="p-text"
+                required
+              />
+            </div>
+
+            <div>
+              <div className="icon-container">
+                <MdAttachEmail />
+              </div>
+              <input
+                type="text"
+                placeholder="Email"
+                name="email"
+                className="p-text"
+                required
+              />
+            </div>
+
+            <div>
+              <div className="icon-container">
+                <MdMessage />
+              </div>
+              <textarea
+                name="message"
+                className="p-text"
+                placeholder="Message"
+              />
+            </div>
+
+            <button className="p-text" type="submit">
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
+      </Row>
+
+      {/* <div className="contact-cards">
         <div className="contact-card">
           <img src={images.email} alt="email" />
           <a
@@ -69,9 +170,9 @@ const Contact = () => {
             (+61) 468804207
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className="contact-bottom app-flex">
+      {/* <div className="contact-bottom app-flex">
         <div className="contact-icons">
           <div className="contact-icon">
             <a
@@ -132,8 +233,8 @@ const Contact = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-      </div>
-    </section>
+      </div> */}
+    </Container>
   )
 }
 

@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap"
 import { images } from "../../../constants"
+import CircularProgressBar from "../../CircularProgressBar/CircularProgressBar"
 import ProgressBar from "../../ProgressBar/ProgressBar"
 import "./leftbar.scss"
 
@@ -49,13 +50,13 @@ const Leftbar = () => {
           <div className="leftbar-lang-skills">
             <div className="lang-skill-item">
               <div className="leftbar-circle-progress">
-                <div className=""></div>
+                <CircularProgressBar val={90} />
                 <h6>English</h6>
               </div>
             </div>
             <div className="lang-skill-item">
               <div className="leftbar-circle-progress">
-                <div className=""></div>
+                <CircularProgressBar val={85} />
                 <h6>Nepali</h6>
               </div>
             </div>

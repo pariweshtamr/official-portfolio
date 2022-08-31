@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 const ProgressBar = ({ title, width, text }) => {
   return (
     <div className="progress-bar-container">
@@ -6,9 +7,19 @@ const ProgressBar = ({ title, width, text }) => {
       </div>
       <div className="hard-skill-progress">
         <div className="progress" style={{ width: width }}>
-          <span style={{ width: width }}></span>
+          <motion.span
+            whileInView={{ x: [-130, 0], opacity: [0, 1] }}
+            transition={{ duration: 2.5, delay: 0.5 }}
+            style={{ width: width }}
+          ></motion.span>
         </div>
-        <p className="progress-text">{text}</p>
+        <motion.p
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 2.5, delay: 0.5 }}
+          className="progress-text"
+        >
+          {text}
+        </motion.p>
       </div>
     </div>
   )
