@@ -8,6 +8,11 @@
     h5 {
       font-weight: 700;
       letter-spacing: 1px;
+      span {
+        background: -webkit-linear-gradient(45deg, #a0965c, #d9dfab);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
   .service-cards {

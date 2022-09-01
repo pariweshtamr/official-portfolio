@@ -93,9 +93,10 @@
           padding: 80px;
           h1 {
             margin-bottom: 0px;
-            color: var(--color-white);
+            color: #f8f9f2;
             font-size: 45px;
             font-weight: 600;
+            letter-spacing: 1px;
           }
           div {
             margin-bottom: 10px;
@@ -108,8 +109,8 @@
           }
           button {
             height: 50px;
-            font-size: 12px;
-            width: 150px;
+            font-size: 14px;
+            width: 160px;
             text-transform: uppercase;
             color: #20202a;
             background: var(--color-light);
@@ -119,6 +120,10 @@
             justify-content: center;
             align-items: center;
             border: none;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 2px;
+            border-top-right-radius: 2px;
             transition: 0.4s ease-in-out;
             cursor: pointer;
           }
@@ -156,7 +161,7 @@
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 15%);
 
       .hero-info-content {
-        color: var(--color-white);
+        color: var(--color-black);
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -175,7 +180,7 @@
             justify-content: center;
             align-items: center;
             svg {
-              font-size: 25px;
+              font-size: 20px;
             }
           }
 

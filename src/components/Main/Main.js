@@ -7,6 +7,7 @@ import MainLayout from "../Layout/MainLayout"
 import Services from "../Services/Services"
 import Leftbar from "../Sidebar/Left/Leftbar"
 import Rightbar from "../Sidebar/Right/Rightbar"
+import Work from "../Work/Work"
 
 import "./main.scss"
 
@@ -23,6 +24,7 @@ const Main = () => {
               <Routes>
                 <Route path="/" element={<Hero />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/projects" element={<Work />}></Route>
               </Routes>
               <Footer />
             </div>

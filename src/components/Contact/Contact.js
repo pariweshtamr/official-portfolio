@@ -3,7 +3,6 @@ import { images } from "../../constants"
 import emailjs from "@emailjs/browser"
 import Swal from "sweetalert2"
 import "./contact.scss"
-import { RiLinkedinLine, RiMessengerLine, RiWhatsappLine } from "react-icons/ri"
 import { FaUser } from "react-icons/fa"
 import { MdAttachEmail, MdMessage } from "react-icons/md"
 import { Container, Row } from "react-bootstrap"
@@ -50,7 +49,9 @@ const Contact = () => {
   return (
     <Container className="contact-container">
       <Row className="contact-title">
-        <h5>Contact Information</h5>
+        <h5>
+          Contact <span> Information</span>
+        </h5>
       </Row>
 
       <Row className="contact-cards">
@@ -101,7 +102,9 @@ const Contact = () => {
       </Row>
 
       <Row className="contact-title">
-        <h5>Get in touch</h5>
+        <h5>
+          Get <span> in touch</span>
+        </h5>
       </Row>
 
       <Row>

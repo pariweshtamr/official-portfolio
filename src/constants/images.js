@@ -7,6 +7,7 @@ import javascript from "../assets/javascript.png"
 import mu5 from "../assets/mu5.png"
 import node from "../assets/node.png"
 import react from "../assets/react.png"
+import express from "../assets/express.png"
 import redux from "../assets/redux.png"
 import sass from "../assets/sass.png"
 import mongo from "../assets/mongo.png"
@@ -40,6 +41,7 @@ const images = {
   dev,
   mern,
   heroBg,
+  express,
 }
 
 export default images

@@ -1,0 +1,90 @@
+.mern-container {
+  padding: 4rem 0;
+  .mern-title {
+    h5 {
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      span {
+        background: -webkit-linear-gradient(45deg, #a0965c, #d9dfab);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: #737371;
+    }
+  }
+
+  .mern-circles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    background-image: url("../../assets/mern-back.png");
+    background-size: cover;
+    height: 240px;
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: relative;
+      animation: animate 5s ease-in-out infinite;
+
+      // circles with different height and width
+      &:nth-child(1) {
+        background: #53584b;
+        animation-delay: -6s;
+      }
+
+      &:nth-child(2) {
+        width: 90px;
+        height: 90px;
+        background: #f77f7b;
+        animation-delay: -4s;
+
+        img {
+          width: 45%;
+          height: 40%;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 100px;
+        height: 100px;
+        background: #25628e;
+        animation-delay: -2s;
+      }
+
+      &:nth-child(4) {
+        width: 85px;
+        height: 85px;
+        background: #9ec04b;
+      }
+
+      img {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

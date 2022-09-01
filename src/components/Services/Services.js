@@ -5,7 +5,9 @@ const Services = () => {
   return (
     <Container className="service-container">
       <Row className="service-title">
-        <h5>What I Offer</h5>
+        <h5>
+          What <span> I Offer</span>
+        </h5>
       </Row>
 
       <Row className="service-cards">

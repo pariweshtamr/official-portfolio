@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation"
 import { FaAward, FaProjectDiagram } from "react-icons/fa"
 import Services from "../Services/Services"
 import { useNavigate } from "react-router-dom"
+import Mern from "../Mern/Mern"
 
 const scaleVariants = {
   whileInView: {
@@ -107,6 +108,7 @@ const Hero = () => {
         </Row>
       </Container>
       <Services />
+      <Mern />
     </>
   )
 }
