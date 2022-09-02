@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
 import Hero from "../Hero/Hero"
+import Journey from "../Journey/Journey"
 import MainLayout from "../Layout/MainLayout"
 import Services from "../Services/Services"
 import Leftbar from "../Sidebar/Left/Leftbar"
@@ -25,6 +26,7 @@ const Main = () => {
                 <Route path="/" element={<Hero />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/portfolio" element={<Work />}></Route>
+                <Route path="/journey" element={<Journey />}></Route>
               </Routes>
               <Footer />
             </div>
