@@ -3,10 +3,10 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { projects } from "../../constants"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
-import { Container } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 const Work = () => {
-  const [activeFilter, setActiveFilter] = useState("All")
+  const [activeFilter, setActiveFilter] = useState("ALL")
   const [animateCard, setAnimateCard] = useState({ y: 0, opactiy: 1 })
   const [filterWork, setFilterWork] = useState(projects)
 
@@ -17,7 +17,7 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opactiy: 1 }])
 
-      if (item === "All") {
+      if (item === "ALL") {
         setFilterWork(projects)
       } else {
         setFilterWork(projects.filter((project) => project.tags.includes(item)))
@@ -27,24 +27,28 @@ const Work = () => {
 
   return (
     <Container className="work-container">
-      <h5 className="all-title">
-        My Creative <span>Portfolio</span>
-      </h5>
+      <div className="work-header">
+        <div className="all-title">
+          <h5>
+            My Creative <span>Portfolio</span>
+          </h5>
+        </div>
 
-      <div className="work-filter">
-        {["HTML/CSS", "JavaScript", "React JS", "Full-Stack", "All"].map(
-          (item, i) => (
-            <div
-              className={`work-filter-item app-flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-              key={i}
-              onClick={() => handleWorkFilter(item)}
-            >
-              {item}
-            </div>
-          )
-        )}
+        <div className="work-filter">
+          {["ALL", "HTML/CSS", "JAVASCRIPT", "REACT JS", "FULL-STACK"].map(
+            (item, i) => (
+              <div
+                className={`work-filter-item ${
+                  activeFilter === item ? "item-active" : ""
+                }`}
+                key={i}
+                onClick={() => handleWorkFilter(item)}
+              >
+                {item}
+              </div>
+            )
+          )}
+        </div>
       </div>
 
       <motion.div

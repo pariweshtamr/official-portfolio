@@ -4,21 +4,11 @@
   gap: 2.5rem;
   padding: 0px 2rem;
   margin-bottom: 2.5rem;
-  .service-title {
-    h5 {
-      font-weight: 700;
-      letter-spacing: 1px;
-      span {
-        background: -webkit-linear-gradient(45deg, #5e5e49, #a0965c, #c5a269);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
+
   .service-cards {
     .service {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 4rem 2rem;
       .service-card {
         // border: 1px solid #c5a269;

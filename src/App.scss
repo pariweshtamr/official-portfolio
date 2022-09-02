@@ -9,12 +9,20 @@
   overflow: hidden;
 
   .all-title {
-    font-weight: 700;
-    letter-spacing: 1px;
-    span {
-      background: -webkit-linear-gradient(45deg, #5e5e49, #a0965c, #c5a269);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    h5 {
+      font-weight: 700;
+      letter-spacing: 1px;
+      span {
+        background: -webkit-linear-gradient(45deg, #5e5e49, #a0965c, #c5a269);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: #737371;
     }
   }
 

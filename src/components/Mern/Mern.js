@@ -6,7 +6,7 @@ import "./mern.scss"
 const Mern = () => {
   return (
     <Container className="mern-container">
-      <Row className="mern-title text-center">
+      <Row className="all-title text-center">
         <h5>
           MERN <span> Stack Development</span>
         </h5>

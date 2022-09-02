@@ -1,45 +1,53 @@
 @import "../../style/mixins";
 
 .work-container {
-  padding: 20px 2rem;
+  padding: 30px 2rem;
   width: 100%;
   min-height: calc(100vh - 82px);
   display: flex;
   flex-direction: column;
 
-  .work-filter {
+  .work-header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .work-filter {
+      display: flex;
+      flex-wrap: wrap;
 
-    margin: 1.5rem 0 2rem;
+      .work-filter-item {
+        padding: 0.5rem 0.6rem;
+        // background: var(--color-white);
+        color: #737371;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        letter-spacing: 2px;
+        font-size: 12px;
+        // margin: 0.5rem 0.8rem;
+        // -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
+        // box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
 
-    .work-filter-item {
-      padding: 0.5rem 1rem;
-      background: var(--color-white);
-      color: #737371;
-      font-weight: 800;
-      cursor: pointer;
-      transition: all 0.5s ease;
-      margin: 0.5rem 0.8rem;
-      -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
-      box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
-
-      &:hover {
-        background: #a0965c;
-        color: var(--color-white);
+        &:hover {
+          // background: #a0965c;
+          color: var(--color-black);
+          font-weight: 700;
+        }
+        @media screen and (min-width: 2000px) {
+          padding: 1rem 2rem;
+          border-radius: 0.85rem;
+        }
       }
-      @media screen and (min-width: 2000px) {
-        padding: 1rem 2rem;
-        border-radius: 0.85rem;
-      }
-    }
 
-    .item-active {
-      background: #a0965c;
-      color: var(--color-white);
-      transition: 0.5s all ease;
+      .item-active {
+        // background: #a0965c;
+        color: var(--color-black);
+        font-weight: 700;
+        transition: 0.5s all ease;
+      }
     }
   }
 
@@ -90,6 +98,8 @@
           rgba(237, 226, 185, 0.98) 0%,
           rgba(217, 223, 171, 0.98) 100%
         );
+        -webkit-box-shadow: 0 3px 15px 0 rgb(15 15 20 / 50%);
+        box-shadow: 0 3px 15px 0 rgb(15 15 20 / 50%);
         transform: translateY(100%);
         transition: 0.55s ease-in-out;
         display: flex;
@@ -106,7 +116,7 @@
 
           p {
             font-size: 14px;
-            color: gray;
+            color: #737371;
           }
         }
 
