@@ -24,7 +24,6 @@
       top: 0;
       left: 0;
       z-index: 9;
-      // box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
       filter: drop-shadow(0 1px 4px rgb(15 15 20 / 10%));
       background: linear-gradient(
         160deg,
@@ -161,4 +160,6 @@
 
 .right-menu-bar-active {
   width: 230px;
+  box-shadow: 0 3px 8px 10000px rgb(15 15 20 / 50%);
+  -webkit-box-shadow: 0 3px 8px 10000px rgb(15 15 20 / 50%);
 }

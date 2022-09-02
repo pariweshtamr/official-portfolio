@@ -40,9 +40,9 @@ const Rightbar = () => {
           </li>
           <li className={!show ? "menu-item" : "menu-item closed"}>
             <Link
-              to="/projects"
-              className={activeTab === "/projects" ? "menu-item active" : ""}
-              onClick={() => setActiveTab("/projects")}
+              to="/portfolio"
+              className={activeTab === "/portfolio" ? "menu-item active" : ""}
+              onClick={() => setActiveTab("/portfolio")}
             >
               Portfolio
             </Link>

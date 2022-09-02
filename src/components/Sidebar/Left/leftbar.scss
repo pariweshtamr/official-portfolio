@@ -278,7 +278,8 @@
       color: #737371;
       transition: 0.2s ease-in-out;
       &:hover {
-        color: var(--color-yellow);
+        color: var(--color-black);
+        transition: 0.2s ease-in-out;
       }
     }
   }

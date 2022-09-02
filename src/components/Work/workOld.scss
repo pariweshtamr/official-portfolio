@@ -17,6 +17,7 @@
 
     .work-filter-item {
       padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
       background: var(--color-white);
       color: #737371;
       font-weight: 800;
@@ -45,32 +46,21 @@
 
   .work-portfolio {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 
     .work-item {
       background: var(--color-white);
-      margin: 0.8rem;
+      margin: 1rem;
       flex-direction: column;
       color: var(--color-dark);
       cursor: pointer;
       transition: 0.5s ease-in-out;
-      height: 290px;
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
       box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
-      position: relative;
-      overflow-y: hidden;
-      filter: brightness(90%);
 
       &:hover {
-        // box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        &:hover {
-          filter: brightness(100%);
-        }
-
-        .work-item-description {
-          transform: translateY(0);
-        }
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
       }
 
       @media screen and (max-width: 300px) {
@@ -78,81 +68,55 @@
         margin: 1rem;
       }
 
-      .work-item-description {
-        position: absolute;
-        z-index: 9;
-        bottom: 0;
+      .work-img {
         width: 100%;
-        height: 60%;
-        padding: 25px 30px;
-        background: linear-gradient(
-          160deg,
-          rgba(237, 226, 185, 0.98) 0%,
-          rgba(217, 223, 171, 0.98) 100%
-        );
-        transform: translateY(100%);
-        transition: 0.55s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        height: 100%;
+        position: relative;
+        flex: 1;
 
-        div {
-          h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--color-black);
-            letter-spacing: 1px;
-          }
-
-          p {
-            font-size: 14px;
-            color: gray;
-          }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+          object-fit: cover;
         }
 
-        .work-item-links {
-          display: flex;
-          gap: 0.8rem;
+        .work-img-links {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(4px);
+          -webkit-backdrop-filter: blur(4px);
+          border-radius: 0.5rem;
+          opacity: 0;
+          transition: all 0.3s ease;
+
           div {
-            width: 40px;
-            height: 40px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
-            background: #5e5e49;
+            background: rgba(255, 255, 255, 0.2);
             color: var(--color-white);
+            margin: 1rem;
             font-weight: 800;
             cursor: pointer;
             transition: all 0.1s ease;
-            position: relative;
-
-            &:hover {
-              box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
-            }
+            align-items: center;
 
             svg {
               width: 50%;
               height: 50%;
               color: var(--color-white);
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
             }
           }
         }
       }
-
-      .work-img {
-        width: 100%;
-        height: 100%;
-        position: relative;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: fill;
-        }
-      }
       .work-content {
+        flex: 0.8;
         padding: 0.5rem 1rem;
         width: 100%;
         position: relative;

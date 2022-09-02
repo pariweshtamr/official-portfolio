@@ -6,7 +6,7 @@
       letter-spacing: 1px;
       margin-bottom: 20px;
       span {
-        background: -webkit-linear-gradient(45deg, #a0965c, #d9dfab);
+        background: -webkit-linear-gradient(45deg, #5e5e49, #a0965c, #c5a269);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -20,11 +20,12 @@
 
   .mern-circles {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
     position: relative;
-    background-image: url("../../assets/mern-back.png");
+    background-image: url("../../assets/mern-bg.png");
+    background-position: center;
     background-size: cover;
     height: 240px;
 
@@ -34,6 +35,8 @@
       border-radius: 50%;
       position: relative;
       animation: animate 5s ease-in-out infinite;
+      -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+      box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
 
       // circles with different height and width
       &:nth-child(1) {
@@ -48,8 +51,8 @@
         animation-delay: -4s;
 
         img {
-          width: 45%;
-          height: 40%;
+          width: 48%;
+          height: 35%;
         }
       }
 

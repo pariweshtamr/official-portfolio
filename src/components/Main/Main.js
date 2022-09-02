@@ -24,7 +24,7 @@ const Main = () => {
               <Routes>
                 <Route path="/" element={<Hero />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
-                <Route path="/projects" element={<Work />}></Route>
+                <Route path="/portfolio" element={<Work />}></Route>
               </Routes>
               <Footer />
             </div>

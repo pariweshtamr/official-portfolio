@@ -5,7 +5,7 @@ import { projects } from "../../constants"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { Container } from "react-bootstrap"
 
-const Work = () => {
+const WorkOld = () => {
   const [activeFilter, setActiveFilter] = useState("All")
   const [animateCard, setAnimateCard] = useState({ y: 0, opactiy: 1 })
   const [filterWork, setFilterWork] = useState(projects)
@@ -28,7 +28,7 @@ const Work = () => {
   return (
     <Container className="work-container">
       <h5 className="all-title">
-        My Creative <span>Portfolio</span>
+        My Creative<span>Portfolio</span>
       </h5>
 
       <div className="work-filter">
@@ -56,19 +56,21 @@ const Work = () => {
           <div className="work-item app-flex" key={i}>
             <div className="work-img app-flex">
               <img src={work.image} alt={work.title} />
-            </div>
 
-            <div className="work-item-description">
-              <div>
-                <h4>{work.title}</h4>
-                <p>{work.description}</p>
-              </div>
-              <div className="work-item-links">
+              <motion.div
+                whileHover={{ opacity: 1 }}
+                transition={{
+                  duration: 0.25,
+                  ease: "easeInOut",
+                }}
+                className="work-img-links app-flex"
+              >
                 <a href={work.visit} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
+                    whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
+                    className="app-flex"
                   >
                     <AiFillEye />
                   </motion.div>
@@ -76,23 +78,24 @@ const Work = () => {
                 <a href={work.source} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
+                    whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
+                    className="app-flex"
                   >
                     <AiFillGithub />
                   </motion.div>
                 </a>
-              </div>
+              </motion.div>
             </div>
 
-            {/* <div className="work-content app-flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text">{work.description}</p>
+            <div className="work-content app-flex">
+              {/* <h4 className="bold-text">{work.title}</h4> */}
+              {/* <p className="p-text">{work.description}</p> */}
 
-              <div className="work-tag app-flex">
+              {/* <div className="work-tag app-flex">
                 <p className="p-text">{work.tags[0]}</p>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
           </div>
         ))}
       </motion.div>
@@ -100,4 +103,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default WorkOld
