@@ -123,8 +123,6 @@ const Journey = () => {
                   Fugiat officiis id libero nostrum soluta voluptatibus
                   inventore ab voluptate enim. Iste!
                 </p>
-
-                <a className="journey-link">certification</a>
               </div>
             </div>
             <div className="journey-timeline-item">
@@ -148,8 +146,6 @@ const Journey = () => {
                   Fugiat officiis id libero nostrum soluta voluptatibus
                   inventore ab voluptate enim. Iste!
                 </p>
-
-                <a className="journey-link">certification</a>
               </div>
             </div>
             <div className="journey-timeline-item">
@@ -173,8 +169,6 @@ const Journey = () => {
                   Fugiat officiis id libero nostrum soluta voluptatibus
                   inventore ab voluptate enim. Iste!
                 </p>
-
-                <a className="journey-link">certification</a>
               </div>
             </div>
           </div>
