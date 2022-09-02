@@ -6,6 +6,10 @@ const Rightbar = () => {
   const [show, setShow] = useState(true)
   const [activeTab, setActiveTab] = useState("/home")
 
+  const handleOnClick = () => {
+    setShow(!show)
+  }
+
   return (
     <div
       className={
@@ -33,7 +37,10 @@ const Rightbar = () => {
             <Link
               to="/"
               className={activeTab === "/home" ? "menu-item active" : ""}
-              onClick={() => setActiveTab("/home")}
+              onClick={() => {
+                setActiveTab("/home")
+                handleOnClick()
+              }}
             >
               Home
             </Link>
@@ -42,7 +49,10 @@ const Rightbar = () => {
             <Link
               to="/portfolio"
               className={activeTab === "/portfolio" ? "menu-item active" : ""}
-              onClick={() => setActiveTab("/portfolio")}
+              onClick={() => {
+                setActiveTab("/portfolio")
+                handleOnClick()
+              }}
             >
               Portfolio
             </Link>
@@ -51,7 +61,10 @@ const Rightbar = () => {
             <Link
               to="/journey"
               className={activeTab === "/journey" ? "menu-item active" : ""}
-              onClick={() => setActiveTab("/journey")}
+              onClick={() => {
+                setActiveTab("/journey")
+                handleOnClick()
+              }}
             >
               Journey
             </Link>
@@ -60,7 +73,10 @@ const Rightbar = () => {
             <Link
               to="/contact"
               className={activeTab === "/contact" ? "menu-item active" : ""}
-              onClick={() => setActiveTab("/contact")}
+              onClick={() => {
+                setActiveTab("/contact")
+                handleOnClick()
+              }}
             >
               Contact
             </Link>
