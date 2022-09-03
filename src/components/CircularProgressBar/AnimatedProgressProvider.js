@@ -7,14 +7,12 @@ const AnimatedProgressProvider = ({
   valueEnd,
   duration,
   easingFunction,
-  children,
 }) => {
   const [isAnimated, setIsAnimated] = useState(false)
-
   useEffect(() => {
     setInterval(() => {
       setIsAnimated(true)
-    })
+    }, duration * 1000)
   }, [duration])
   return (
     <Animate
@@ -23,7 +21,7 @@ const AnimatedProgressProvider = ({
         value: valueStart,
       })}
       update={() => ({
-        value: [isAnimated ? valueEnd : valueStart],
+        value: [isAnimated ? valueStart : valueEnd],
         timing: {
           duration: duration * 1000,
           ease: easingFunction,

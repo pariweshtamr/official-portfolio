@@ -7,6 +7,7 @@
 
   .journey-main-title {
     margin-bottom: 2rem;
+
     h5 {
       letter-spacing: 1px;
       font-weight: 700;
@@ -14,6 +15,7 @@
   }
 
   .journey-main {
+    z-index: 1;
     .education-col,
     .history-col {
       .journey-list {
@@ -66,7 +68,6 @@
         .journey-item {
           position: relative;
           margin-right: 45px;
-
           background: rgba(217, 223, 171, 0.3);
           padding: 30px;
           margin-bottom: 30px;
@@ -86,7 +87,7 @@
           }
 
           p {
-            color: gray;
+            color: var(--color-gray);
             font-size: 14px;
           }
 

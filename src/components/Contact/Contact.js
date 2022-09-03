@@ -47,197 +47,118 @@ const Contact = () => {
   }
 
   return (
-    <Container className="contact-container">
-      <Row className="all-title">
-        <h5>
-          Contact <span> Information</span>
-        </h5>
-      </Row>
+    <>
+      <div className="top-bg">
+        <div className="top-bg-overlay"></div>
+      </div>
+      <Container className="contact-container">
+        <Row className="all-title">
+          <h4>
+            Contact <span> Information</span>
+          </h4>
+        </Row>
 
-      <Row className="contact-cards">
-        <div className="contact">
-          <div className="contact-card">
-            <div className="contact-card-content">
-              <ul>
-                <li>
-                  <h6>Country:</h6>
-                  <span>Australia</span>
-                </li>
-                <li>
-                  <h6>City:</h6>
-                  <span>Sydney</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="contact-card">
-            <div className="contact-card-content">
-              <ul>
-                <li>
-                  <h6>Email:</h6>
-                  <span>tamrpariwesh@gmail.com </span>
-                </li>
-                <li>
-                  <h6>Phone:</h6>
-                  <span>0468 804 207</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="contact-card">
-            <div className="contact-card-content">
-              <ul>
-                <li>
-                  <h6>Email:</h6>
-                  <span>tamrpariwesh@gmail.com </span>
-                </li>
-                <li>
-                  <h6>Phone:</h6>
-                  <span>0468 804 207</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </Row>
-
-      <Row className="all-title">
-        <h5>
-          Get <span> in touch</span>
-        </h5>
-      </Row>
-
-      <Row>
-        <div className="contact-bottom-container">
-          <form ref={form} className="contact-form" onSubmit={sendEmail}>
-            <div>
-              <div className="icon-container">
-                <FaUser />
+        <Row className="contact-cards">
+          <div className="contact">
+            <div className="contact-card">
+              <div className="contact-card-content">
+                <ul>
+                  <li>
+                    <h6>Country:</h6>
+                    <span>Australia</span>
+                  </li>
+                  <li>
+                    <h6>City:</h6>
+                    <span>Sydney</span>
+                  </li>
+                </ul>
               </div>
-              <input
-                type="text"
-                placeholder="Name"
-                name="name"
-                className="p-text"
-                required
-              />
             </div>
-
-            <div>
-              <div className="icon-container">
-                <MdAttachEmail />
+            <div className="contact-card">
+              <div className="contact-card-content">
+                <ul>
+                  <li>
+                    <h6>Email:</h6>
+                    <span>tamrpariwesh@gmail.com </span>
+                  </li>
+                  <li>
+                    <h6>Phone:</h6>
+                    <span>0468 804 207</span>
+                  </li>
+                </ul>
               </div>
-              <input
-                type="text"
-                placeholder="Email"
-                name="email"
-                className="p-text"
-                required
-              />
             </div>
-
-            <div>
-              <div className="icon-container">
-                <MdMessage />
+            <div className="contact-card">
+              <div className="contact-card-content">
+                <ul>
+                  <li>
+                    <h6>Email:</h6>
+                    <span>tamrpariwesh@gmail.com </span>
+                  </li>
+                  <li>
+                    <h6>Phone:</h6>
+                    <span>0468 804 207</span>
+                  </li>
+                </ul>
               </div>
-              <textarea
-                name="message"
-                className="p-text"
-                placeholder="Message"
-              />
             </div>
+          </div>
+        </Row>
 
-            <button className="p-text" type="submit">
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-        </div>
-      </Row>
+        <Row className="all-title">
+          <h4>
+            Get <span> in touch</span>
+          </h4>
+        </Row>
 
-      {/* <div className="contact-cards">
-        <div className="contact-card">
-          <img src={images.email} alt="email" />
-          <a
-            href="mailto:tamrpariwesh@gmail.com"
-            className="p-text"
-            target="_blank"
-            rel="noreferrer"
-          >
-            tamrpariwesh@gmail.com
-          </a>
-        </div>
+        <Row>
+          <div className="contact-bottom-container">
+            <form ref={form} className="contact-form" onSubmit={sendEmail}>
+              <div>
+                <div className="icon-container">
+                  <FaUser />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  className="p-text"
+                  required
+                />
+              </div>
 
-        <div className="contact-card">
-          <img src={images.mobile} alt="mobile" />
-          <a href="tel: +61468804207" className="p-text">
-            (+61) 468804207
-          </a>
-        </div>
-      </div> */}
+              <div>
+                <div className="icon-container">
+                  <MdAttachEmail />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  name="email"
+                  className="p-text"
+                  required
+                />
+              </div>
 
-      {/* <div className="contact-bottom app-flex">
-        <div className="contact-icons">
-          <div className="contact-icon">
-            <a
-              href="https://www.linkedin.com/in/pariwesh-tamrakar/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiLinkedinLine />
-            </a>
-          </div>
-          <div className="contact-icon">
-            <a
-              href="https://m.me/pariweshtamr7"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiMessengerLine />
-            </a>
-          </div>
-          <div className="contact-icon">
-            <a
-              href="https://api.whatsapp.com/send?phone+61468804207"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiWhatsappLine />
-            </a>
-          </div>
-        </div>
+              <div>
+                <div className="icon-container">
+                  <MdMessage />
+                </div>
+                <textarea
+                  name="message"
+                  className="p-text"
+                  placeholder="Message"
+                />
+              </div>
 
-        <form ref={form} className="contact-form app-flex" onSubmit={sendEmail}>
-          <div className="app-flex">
-            <input
-              type="text"
-              placeholder="Your Name"
-              name="name"
-              className="p-text"
-              required
-            />
+              <button className="p-text" type="submit">
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </form>
           </div>
-          <div className="app-flex">
-            <input
-              type="text"
-              placeholder="Your Email"
-              name="email"
-              className="p-text"
-              required
-            />
-          </div>
-          <div>
-            <textarea
-              name="message"
-              className="p-text"
-              placeholder="Your Message"
-            />
-          </div>
-          <button className="p-text" type="submit">
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      </div> */}
-    </Container>
+        </Row>
+      </Container>
+    </>
   )
 }
 

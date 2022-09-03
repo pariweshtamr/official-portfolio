@@ -1,7 +1,6 @@
 @import "./style/mixins";
 
 .app {
-  // background: #191923;
   background: var(--color-light);
   height: 100vh;
   width: 100vw;
@@ -9,7 +8,8 @@
   overflow: hidden;
 
   .all-title {
-    h5 {
+    z-index: 1;
+    h4 {
       font-weight: 700;
       letter-spacing: 1px;
       span {
@@ -22,44 +22,31 @@
     p {
       font-weight: 400;
       font-size: 14px;
-      color: #737371;
+      color: var(--color-gray);
     }
   }
 
-  .head-text {
-    font-size: 2.75rem;
-    font-weight: 800;
-    padding: 0 0 0 8rem;
-    color: var(--color-dark);
-    text-transform: capitalize;
-    position: relative;
-    letter-spacing: 4px;
-    line-height: 1.3;
-    div {
-      color: var(--color-orange);
-    }
+  .top-bg {
+    background-image: url("./assets/bg.jpeg");
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-position: center;
+    height: 400px;
+    background-size: cover;
 
-    span {
-      color: var(--color-orange);
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      width: 5rem;
-      height: 0.35rem;
-      bottom: -0.8rem;
-      background-color: var(--color-dark);
-      border-radius: 15px;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 2.5rem;
-      height: 0.35rem;
-      background-color: var(--color-orange);
-      border-radius: 15px;
-      bottom: -0.8rem;
+    .top-bg-overlay {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        180deg,
+        rgba(30, 30, 40, 0.93) 0%,
+        rgba(30, 30, 40, 0.96) 70%,
+        rgba(30, 30, 40, 0.99) 80%,
+        #1e1e28 100%
+      );
     }
   }
 }
@@ -70,10 +57,4 @@ section {
 
 ul {
   list-style: none;
-}
-
-.app-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

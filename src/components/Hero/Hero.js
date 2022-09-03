@@ -26,7 +26,7 @@ const Hero = () => {
   }
   return (
     <>
-      <div className="hero-top-bg">
+      <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
 

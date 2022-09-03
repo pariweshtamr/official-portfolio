@@ -26,70 +26,74 @@ const Work = () => {
   }
 
   return (
-    <Container className="work-container">
-      <div className="work-header">
-        <div className="all-title">
-          <h5>
-            My Creative <span>Portfolio</span>
-          </h5>
-        </div>
-
-        <div className="work-filter">
-          {["ALL", "HTML/CSS", "JAVASCRIPT", "REACT JS", "FULL-STACK"].map(
-            (item, i) => (
-              <div
-                className={`work-filter-item ${
-                  activeFilter === item ? "item-active" : ""
-                }`}
-                key={i}
-                onClick={() => handleWorkFilter(item)}
-              >
-                {item}
-              </div>
-            )
-          )}
-        </div>
+    <>
+      <div className="top-bg">
+        <div className="top-bg-overlay"></div>
       </div>
+      <Container className="work-container">
+        <div className="work-header">
+          <div className="all-title">
+            <h4>
+              My Creative <span>Portfolio</span>
+            </h4>
+          </div>
 
-      <motion.div
-        animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="work-portfolio"
-      >
-        {filterWork.map((work, i) => (
-          <div className="work-item app-flex" key={i}>
-            <div className="work-img app-flex">
-              <img src={work.image} alt={work.title} />
-            </div>
+          <div className="work-filter">
+            {["ALL", "HTML/CSS", "JAVASCRIPT", "REACT JS", "FULL-STACK"].map(
+              (item, i) => (
+                <div
+                  className={`work-filter-item ${
+                    activeFilter === item ? "item-active" : ""
+                  }`}
+                  key={i}
+                  onClick={() => handleWorkFilter(item)}
+                >
+                  {item}
+                </div>
+              )
+            )}
+          </div>
+        </div>
 
-            <div className="work-item-description">
-              <div>
-                <h4>{work.title}</h4>
-                <p>{work.description}</p>
+        <motion.div
+          animate={animateCard}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className="work-portfolio"
+        >
+          {filterWork.map((work, i) => (
+            <div className="work-item app-flex" key={i}>
+              <div className="work-img app-flex">
+                <img src={work.image} alt={work.title} />
               </div>
-              <div className="work-item-links">
-                <a href={work.visit} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <AiFillEye />
-                  </motion.div>
-                </a>
-                <a href={work.source} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <AiFillGithub />
-                  </motion.div>
-                </a>
-              </div>
-            </div>
 
-            {/* <div className="work-content app-flex">
+              <div className="work-item-description">
+                <div>
+                  <h4>{work.title}</h4>
+                  <p>{work.description}</p>
+                </div>
+                <div className="work-item-links">
+                  <a href={work.visit} target="_blank" rel="noreferrer">
+                    <motion.div
+                      whileInView={{ opacity: [0, 1] }}
+                      whileHover={{ scale: [1, 1.1] }}
+                      transition={{ duration: 0.25 }}
+                    >
+                      <AiFillEye />
+                    </motion.div>
+                  </a>
+                  <a href={work.source} target="_blank" rel="noreferrer">
+                    <motion.div
+                      whileInView={{ opacity: [0, 1] }}
+                      whileHover={{ scale: [1, 1.1] }}
+                      transition={{ duration: 0.25 }}
+                    >
+                      <AiFillGithub />
+                    </motion.div>
+                  </a>
+                </div>
+              </div>
+
+              {/* <div className="work-content app-flex">
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text">{work.description}</p>
 
@@ -97,10 +101,11 @@ const Work = () => {
                 <p className="p-text">{work.tags[0]}</p>
               </div>
             </div> */}
-          </div>
-        ))}
-      </motion.div>
-    </Container>
+            </div>
+          ))}
+        </motion.div>
+      </Container>
+    </>
   )
 }
 

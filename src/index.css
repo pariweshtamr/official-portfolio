@@ -1,11 +1,12 @@
 :root {
   --color-white: #f8f9f2;
   --color-black: #010001;
-  --color-dark: #242d49;
-  --color-orange: #fca61f;
-  --color-yellow: #ffc007;
-  --color-blue: #0359e0;
-  --color-gray: #788097;
+  --color-dark: #20202a;
+  --color-card: #2b2b36;
+  --color-darkSecondary: #1e1e28;
+  --color-yellow: #ffc107;
+  --color-gray: #737371;
+  --color-secondaryGray: #8c8c8e;
   --color-light: #ede2b9;
   --color-secondaryLight: #d0d280;
   --box-shadow: 0 19px 60px rgb(0 0 0 / 8%);

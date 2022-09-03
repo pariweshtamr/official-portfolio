@@ -7,9 +7,9 @@ const Mern = () => {
   return (
     <Container className="mern-container">
       <Row className="all-title text-center">
-        <h5>
+        <h4>
           MERN <span> Stack Development</span>
-        </h5>
+        </h4>
         <p>
           MERN stands for MongoDB, Express, React, Node, after the four key
           technologies that make up the stack.

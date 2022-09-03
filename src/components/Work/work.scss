@@ -17,19 +17,16 @@
     .work-filter {
       display: flex;
       flex-wrap: wrap;
+      z-index: 1;
 
       .work-filter-item {
         padding: 0.5rem 0.4rem;
-        // background: var(--color-white);
         color: #737371;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.5s ease;
         letter-spacing: 2px;
         font-size: 12px;
-        // margin: 0.5rem 0.8rem;
-        // -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
-        // box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
 
         &:hover {
           // background: #a0965c;
@@ -43,7 +40,6 @@
       }
 
       .item-active {
-        // background: #a0965c;
         color: var(--color-black);
         font-weight: 700;
         transition: 0.5s all ease;
@@ -57,11 +53,8 @@
     grid-gap: 1rem;
 
     .work-item {
-      background: var(--color-white);
       margin: 0.8rem;
       flex-direction: column;
-      color: var(--color-dark);
-      cursor: pointer;
       transition: 0.5s ease-in-out;
       height: 290px;
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
@@ -71,10 +64,7 @@
       filter: brightness(90%);
 
       &:hover {
-        // box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        &:hover {
-          filter: brightness(100%);
-        }
+        filter: brightness(100%);
 
         .work-item-description {
           transform: translateY(0);
@@ -94,8 +84,8 @@
         height: 60%;
         padding: 25px 30px;
         background: rgba(217, 223, 171);
-        -webkit-box-shadow: 0 3px 15px 0 rgb(15 15 20 / 50%);
-        box-shadow: 0 3px 15px 0 rgb(15 15 20 / 50%);
+        -webkit-box-shadow: 0 3px 15px 0 rgb(15 15 20 / 10%);
+        box-shadow: 0 3px 15px 0 rgb(15 15 20 / 10%);
         transform: translateY(100%);
         transition: 0.55s ease-in-out;
         display: flex;
