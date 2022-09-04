@@ -1,4 +1,5 @@
-import { Col, Container, Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
+import servicesList from "../../constants/servicesData"
 import "./services.scss"
 
 const Services = () => {
@@ -12,66 +13,17 @@ const Services = () => {
 
       <Row className="service-cards">
         <div className="service">
-          <div className="service-card">
-            <div className="service-icon">
-              <i className="fa-solid fa-code"></i>
+          {servicesList?.map((s, i) => (
+            <div className="service-card" key={i}>
+              <div className="service-icon">
+                <i className={s.icon}></i>
+              </div>
+              <div className="service-card-content">
+                <h6>{s.title}</h6>
+                <p>{s.desc}</p>
+              </div>
             </div>
-            <div className="service-card-content">
-              <h6>Web Development</h6>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                sapiente.
-              </p>
-            </div>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">
-              <i className="fa-solid fa-compass-drafting"></i>
-            </div>
-            <div className="service-card-content">
-              <h6>UI/UX Design</h6>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                sapiente.
-              </p>
-            </div>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">
-              <i className="fa-solid fa-compass-drafting"></i>
-            </div>
-            <div className="service-card-content">
-              <h6>E-Commerce Development</h6>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                sapiente.
-              </p>
-            </div>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">
-              <i className="fa-solid fa-compass-drafting"></i>
-            </div>
-            <div className="service-card-content">
-              <h6>Custom CMS Development</h6>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                sapiente.
-              </p>
-            </div>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">
-              <i className="fa-solid fa-compass-drafting"></i>
-            </div>
-            <div className="service-card-content">
-              <h6>Web Development</h6>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                sapiente.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </Row>
     </Container>
