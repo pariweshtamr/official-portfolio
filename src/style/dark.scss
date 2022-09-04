@@ -1,5 +1,18 @@
 .app.dark {
   background: #191923;
+  transition: all 1s ease-in-out;
+
+  .top-bg {
+    .top-bg-overlay {
+      background-image: linear-gradient(
+        180deg,
+        rgba(30, 30, 40, 0.93) 0%,
+        rgba(30, 30, 40, 0.96) 70%,
+        rgba(30, 30, 40, 0.99) 80%,
+        #1e1e28 100%
+      );
+    }
+  }
 
   // MAIN //
   .main {
@@ -43,6 +56,16 @@
         }
         p {
           color: #8c8c8e;
+        }
+        .dark-mode-switch {
+          input {
+            background-color: var(--color-white);
+
+            &:checked {
+              background-color: var(--color-yellow);
+              border-color: var(--color-yellow);
+            }
+          }
         }
       }
     }
@@ -182,14 +205,9 @@
   .hero-container {
     .hero-row {
       .hero-banner {
-        box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-        -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
         .hero-banner-back {
-          -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-          box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
           background: rgba(30, 30, 40, 0.88);
         }
-
         .hero-banner-overlay {
           background-image: linear-gradient(
             90deg,
@@ -197,7 +215,6 @@
             rgba(45, 45, 58, 0.7) 50%,
             rgba(43, 43, 53, 0.7) 100%
           );
-
           .banner-title {
             h1 {
               color: var(--color-white);
@@ -213,13 +230,9 @@
           }
         }
       }
-
       .hero-info-container {
         background: rgba(30, 30, 40, 0.3);
         border: 1px solid var(--color-white);
-        box-shadow: 0 3px 8px 0 rgb(15 15 20 / 15%);
-        -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 15%);
-
         .hero-info-content {
           color: var(--color-white);
           div {

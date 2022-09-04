@@ -1,10 +1,14 @@
-import { Container } from "react-bootstrap"
+import { Container, Form, FormCheck } from "react-bootstrap"
+import { useDispatch } from "react-redux"
 import { images } from "../../../constants"
+import { toggle } from "../../../redux/DarkMode/DarkModeSlice"
 import CircularProgressBar from "../../CircularProgressBar/CircularProgressBar"
 import ProgressBar from "../../ProgressBar/ProgressBar"
 import "./leftbar.scss"
 
 const Leftbar = () => {
+  const dispatch = useDispatch()
+
   return (
     <Container className="leftbar-container">
       <div className="leftbar-top">
@@ -23,6 +27,12 @@ const Leftbar = () => {
 
           <h5>Pariwesh Tamrakar</h5>
           <p>Full-Stack Developer</p>
+
+          <FormCheck
+            type="switch"
+            className="dark-mode-switch"
+            onClick={() => dispatch(toggle())}
+          />
         </div>
       </div>
 

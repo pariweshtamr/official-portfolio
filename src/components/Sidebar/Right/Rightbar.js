@@ -82,6 +82,8 @@ const Rightbar = () => {
             </Link>
           </li>
         </ul>
+
+        <div className="right-menu-bar-footer"></div>
       </div>
     </div>
   )

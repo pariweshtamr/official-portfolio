@@ -1,24 +1,43 @@
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
-import AnimatedProgressProvider from "./AnimatedProgressProvider"
-import { easeQuadInOut } from "d3-ease"
+import ProgressProvider from "./ProgressProvider"
 import "./circularProgressBar.scss"
+import { useState } from "react"
+import { useSelector } from "react-redux"
 const CircularProgressBar = ({ val }) => {
+  const [valueEnd, setValueEnd] = useState(val)
+  const { darkMode } = useSelector((state) => state.darkMode)
   return (
     <div className="circle-wrap">
-      <CircularProgressbar
-        value={val}
-        text={`${val}%`}
-        strokeWidth={7}
-        styles={buildStyles({
-          textSize: "22px",
-          textColor: "#737371",
-          pathColor: "#c5a269",
-          trailColor: "#d9dfab",
-          pathTransition: "none",
-          strokeLinecap: "butt",
-        })}
-      />
+      <Animate>
+        <ProgressProvider valueStart={0} valueEnd={valueEnd}>
+          {(value) => (
+            <CircularProgressbar
+              value={value}
+              text={`${value}%`}
+              strokeWidth={7}
+              styles={buildStyles({
+                textSize: "22px",
+                textColor: "#737371",
+                pathColor: "#c5a269",
+                trailColor: "#d9dfab",
+                strokeLinecap: "butt",
+                pathTransitionDuration: 2.5,
+              })}
+            />
+          )}
+        </ProgressProvider>
+      </Animate>
+    </div>
+  )
+}
+
+function Animate({ children }) {
+  return (
+    <div>
+      <div style={{ display: "flex" }}>
+        <div>{children}</div>
+      </div>
     </div>
   )
 }

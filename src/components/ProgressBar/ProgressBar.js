@@ -8,8 +8,15 @@ const ProgressBar = ({ title, width, text }) => {
       <div className="hard-skill-progress">
         <div className="progress" style={{ width: width }}>
           <motion.span
-            whileInView={{ x: [-130, 0], opacity: [0, 1] }}
-            transition={{ duration: 2.5, delay: 0.5 }}
+            whileInView={{
+              x: [-125, 0],
+              opacity: [0, 1],
+              transition: {
+                duration: 1.5,
+                delay: 0.5,
+                ease: "easeInOut",
+              },
+            }}
             style={{ width: width }}
           ></motion.span>
         </div>

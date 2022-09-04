@@ -6,6 +6,7 @@
   width: 100vw;
   position: relative;
   overflow: hidden;
+  transition: all 1s ease-in-out;
 
   .all-title {
     z-index: 1;
@@ -42,10 +43,10 @@
       width: 100%;
       background-image: linear-gradient(
         180deg,
-        rgba(30, 30, 40, 0.93) 0%,
-        rgba(30, 30, 40, 0.96) 70%,
-        rgba(30, 30, 40, 0.99) 80%,
-        #1e1e28 100%
+        rgba(248, 249, 242, 0.93) 0%,
+        rgba(248, 249, 242, 0.96) 70%,
+        rgba(248, 249, 242, 0.99) 80%,
+        #f8f9f2 100%
       );
     }
   }

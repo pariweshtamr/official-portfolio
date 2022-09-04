@@ -80,6 +80,20 @@
         display: block;
         color: #737371;
       }
+
+      .dark-mode-switch {
+        input {
+          cursor: pointer;
+          background-color: var(--color-white);
+          border: none;
+
+          &:focus {
+            border-color: none;
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
     }
   }
 
