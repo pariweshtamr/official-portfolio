@@ -10,23 +10,43 @@ const CircularProgressBar = ({ val }) => {
   return (
     <div className="circle-wrap">
       <Animate>
-        <ProgressProvider valueStart={0} valueEnd={valueEnd}>
-          {(value) => (
-            <CircularProgressbar
-              value={value}
-              text={`${value}%`}
-              strokeWidth={7}
-              styles={buildStyles({
-                textSize: "22px",
-                textColor: "#737371",
-                pathColor: "#c5a269",
-                trailColor: "#d9dfab",
-                strokeLinecap: "butt",
-                pathTransitionDuration: 2.5,
-              })}
-            />
-          )}
-        </ProgressProvider>
+        {darkMode ? (
+          <ProgressProvider valueStart={0} valueEnd={valueEnd}>
+            {(value) => (
+              <CircularProgressbar
+                value={value}
+                text={`${value}%`}
+                strokeWidth={7}
+                styles={buildStyles({
+                  textSize: "22px",
+                  textColor: "#8c8c8e",
+                  pathColor: "#ffc107",
+                  trailColor: "#191923",
+                  strokeLinecap: "butt",
+                  pathTransitionDuration: 2.5,
+                })}
+              />
+            )}
+          </ProgressProvider>
+        ) : (
+          <ProgressProvider valueStart={0} valueEnd={valueEnd}>
+            {(value) => (
+              <CircularProgressbar
+                value={value}
+                text={`${value}%`}
+                strokeWidth={7}
+                styles={buildStyles({
+                  textSize: "22px",
+                  textColor: "#737371",
+                  pathColor: "#c5a269",
+                  trailColor: "#d9dfab",
+                  strokeLinecap: "butt",
+                  pathTransitionDuration: 2.5,
+                })}
+              />
+            )}
+          </ProgressProvider>
+        )}
       </Animate>
     </div>
   )

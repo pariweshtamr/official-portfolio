@@ -20,13 +20,14 @@
 
         .service-icon {
           position: absolute;
-          top: -1.7rem;
+          top: -1.5rem;
           left: 3rem;
           background: var(--color-light);
           width: max-content;
-          padding: 0.8rem 1.2rem;
-          border-radius: 5px;
-          font-size: 20px;
+          padding: 0.6rem 1rem;
+          font-size: 18px;
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 20px;
         }
         .service-card-content {
           h6 {

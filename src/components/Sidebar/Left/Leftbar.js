@@ -22,7 +22,9 @@ const Leftbar = () => {
           <div className="avatar-image">
             <img src={images.dev} alt="" />
 
-            <div className="avatar-light"></div>
+            <div className="avatar-light">
+              <div className="avatar-light-available"></div>
+            </div>
           </div>
 
           <h5>Pariwesh Tamrakar</h5>
