@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap"
-import servicesList from "../../constants/servicesData"
+import { servicesList } from "../../constants"
 import "./services.scss"
 
 const Services = () => {

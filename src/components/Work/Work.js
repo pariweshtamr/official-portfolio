@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { projects } from "../../constants"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
-import { Container, Row } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")

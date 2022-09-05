@@ -349,11 +349,14 @@
             background: #191923;
           }
           .journey-timeline-item {
-            .journey-timeline-mark {
-              border: solid 3px var(--color-yellow);
-            }
-            .journey-timeline-mark-light {
-              background: var(--color-dark);
+            &:hover {
+              .journey-timeline-mark-light {
+                background: var(--color-white);
+              }
+              .journey-timeline-mark {
+                border: solid 3px var(--color-yellow);
+                background: #191923;
+              }
             }
           }
           .journey-item {
@@ -363,7 +366,9 @@
             }
             p {
               color: var(--color-secondaryGray);
-              // font-size: 14px;
+            }
+            .journey-link {
+              color: var(--color-yellow);
             }
             .journey-item-header {
               .journey-title {

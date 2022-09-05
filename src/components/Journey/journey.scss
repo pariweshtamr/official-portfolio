@@ -34,6 +34,23 @@
 
         .journey-timeline-item {
           position: relative;
+          &:hover {
+            .journey-timeline-mark-light {
+              &::before {
+                content: "";
+                background: var(--color-card);
+                position: absolute;
+                top: 6px;
+                right: -4px;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                -webkit-transition: 0.4s ease-in-out;
+                transition: 0.4s ease-in-out;
+                animation: puls 1s infinite;
+              }
+            }
+          }
 
           .journey-timeline-mark {
             position: absolute;
@@ -42,26 +59,11 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            border: solid 3px #c5a269;
+            border: 3px solid #c5a269;
+            background: #ede2b9;
             -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
             box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
             z-index: 1;
-          }
-          .journey-timeline-mark-light {
-            background: linear-gradient(
-              160deg,
-              rgba(237, 226, 185, 0.98) 0%,
-              rgba(217, 223, 171, 0.98) 100%
-            );
-            position: absolute;
-            top: 6px;
-            right: -4px;
-            width: 23px;
-            height: 23px;
-            opacity: 1;
-            border-radius: 50%;
-            -webkit-transition: 0.4s ease-in-out;
-            transition: 0.4s ease-in-out;
           }
         }
 
