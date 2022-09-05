@@ -7,6 +7,7 @@ import { FaAward, FaProjectDiagram } from "react-icons/fa"
 import Services from "../Services/Services"
 import { useNavigate } from "react-router-dom"
 import Mern from "../Mern/Mern"
+import { Helmet } from "react-helmet-async"
 
 const scaleVariants = {
   whileInView: {
@@ -26,6 +27,11 @@ const Hero = () => {
   }
   return (
     <>
+      <Helmet>
+        <title>Pariwesh Home</title>
+        <link rel="canonical" href={process.env.REACT_APP_URL} />
+        <meta name="" value="" />
+      </Helmet>
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>

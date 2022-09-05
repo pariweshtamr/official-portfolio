@@ -7,7 +7,7 @@ export const educationList = [
   },
   {
     title: "Victoria University",
-    course: "Master of Applied Information Technology",
+    course: "Master of Applied Info Tech",
     date: "jul 2019 - july 2021",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit Fugiat officiis id libero nostrum soluta voluptatibus inventore ab voluptate enim. Iste!",
   },

@@ -1,11 +1,11 @@
 import { useRef, useState } from "react"
-import { images } from "../../constants"
 import emailjs from "@emailjs/browser"
 import Swal from "sweetalert2"
 import "./contact.scss"
 import { FaUser } from "react-icons/fa"
 import { MdAttachEmail, MdMessage } from "react-icons/md"
 import { Container, Row } from "react-bootstrap"
+import { Helmet } from "react-helmet-async"
 
 const Contact = () => {
   const [loading, setLoading] = useState(false)
@@ -79,7 +79,11 @@ const Contact = () => {
                 <ul>
                   <li>
                     <h6>Email:</h6>
-                    <span>tamrpariwesh@gmail.com </span>
+                    <span>
+                      <a href="mailto:tamrpariwesh@gmail.com">
+                        tamrpariwesh@gmail.com
+                      </a>
+                    </span>
                   </li>
                   <li>
                     <h6>Phone:</h6>

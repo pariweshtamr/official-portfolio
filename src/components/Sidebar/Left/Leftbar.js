@@ -1,5 +1,6 @@
-import { Container, Form, FormCheck } from "react-bootstrap"
+import { Container, FormCheck } from "react-bootstrap"
 import { useDispatch } from "react-redux"
+import { Link } from "react-router-dom"
 import { images } from "../../../constants"
 import { toggle } from "../../../redux/DarkMode/DarkModeSlice"
 import CircularProgressBar from "../../CircularProgressBar/CircularProgressBar"
@@ -19,13 +20,15 @@ const Leftbar = () => {
         </div>
 
         <div className="avatar">
-          <div className="avatar-image">
-            <img src={images.dev} alt="" />
+          <Link to="/">
+            <div className="avatar-image">
+              <img src={images.dev} alt="" />
 
-            <div className="avatar-light">
-              <div className="avatar-light-available"></div>
+              <div className="avatar-light">
+                <div className="avatar-light-available"></div>
+              </div>
             </div>
-          </div>
+          </Link>
 
           <h5>Pariwesh Tamrakar</h5>
           <p>Full-Stack Developer</p>

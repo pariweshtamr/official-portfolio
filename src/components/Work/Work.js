@@ -4,6 +4,7 @@ import { useState } from "react"
 import { projects } from "../../constants"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { Container } from "react-bootstrap"
+import { Helmet } from "react-helmet-async"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")

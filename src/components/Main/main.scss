@@ -14,28 +14,27 @@
 
   .main-container {
     position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-
-    aside {
-      flex: 20%;
-      height: 100%;
-      background: var(--color-white);
-      -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-      box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-      -webkit-transition: 0.5s ease-in-out;
-      transition: 0.5s ease-in-out;
-    }
 
     .main-layout {
-      flex: 80%;
+      display: flex;
       position: relative;
       overflow: hidden;
       width: 100%;
       height: calc(100vh - 30px);
       transition: 0.5s ease-in-out;
 
+      aside {
+        flex: 20%;
+        height: 100%;
+        background: var(--color-white);
+        -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+        box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+      }
+
       .main-wrapper {
+        flex: 80%;
         background: rgba(248, 249, 242, 0.88);
         position: relative;
         top: 0;

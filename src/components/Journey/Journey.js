@@ -1,5 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { educationList, workList } from "../../constants"
+import { Helmet } from "react-helmet-async"
+
 import "./journey.scss"
 
 const Journey = () => {

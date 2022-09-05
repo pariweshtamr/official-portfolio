@@ -1,11 +1,10 @@
 import { Container } from "react-bootstrap"
+import { HelmetProvider } from "react-helmet-async"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
 import Hero from "../Hero/Hero"
 import Journey from "../Journey/Journey"
-import MainLayout from "../Layout/MainLayout"
-import Services from "../Services/Services"
 import Leftbar from "../Sidebar/Left/Leftbar"
 import Rightbar from "../Sidebar/Right/Rightbar"
 import Work from "../Work/Work"
@@ -16,11 +15,11 @@ const Main = () => {
   return (
     <Container fluid className="main">
       <div className="main-container">
-        <aside>
-          <Leftbar />
-        </aside>
         <main className="main-layout">
           <BrowserRouter>
+            <aside>
+              <Leftbar />
+            </aside>
             <div className="main-wrapper">
               <Routes>
                 <Route path="/" element={<Hero />}></Route>
@@ -30,7 +29,6 @@ const Main = () => {
               </Routes>
               <Footer />
             </div>
-
             <nav>
               <Rightbar />
             </nav>
