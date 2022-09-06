@@ -17,6 +17,11 @@
     width: 100vw;
     margin: 0;
   }
+  @include mobile() {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
 
   .main-container {
     position: relative;
@@ -73,7 +78,7 @@
         overflow-x: hidden;
         padding-right: 80px;
 
-        @include tablet() {
+        @include trial() {
           flex: 100%;
           width: 100vw;
           height: 100vh;

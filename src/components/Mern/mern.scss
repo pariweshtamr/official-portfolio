@@ -1,3 +1,5 @@
+@import "../../style/mixins";
+
 .mern-container {
   padding: 4rem 0;
 
@@ -21,6 +23,11 @@
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
 
+      @include mobile() {
+        width: 40px;
+        height: 40px;
+      }
+
       // circles with different height and width
       &:nth-child(1) {
         background: #53584b;
@@ -32,6 +39,10 @@
         height: 90px;
         background: #f77f7b;
         animation-delay: -4s;
+        @include mobile() {
+          width: 50px;
+          height: 50px;
+        }
 
         img {
           width: 48%;
@@ -44,12 +55,20 @@
         height: 100px;
         background: #25628e;
         animation-delay: -2s;
+        @include mobile() {
+          width: 60px;
+          height: 60px;
+        }
       }
 
       &:nth-child(4) {
         width: 85px;
         height: 85px;
         background: #9ec04b;
+        @include mobile() {
+          width: 45px;
+          height: 45px;
+        }
       }
 
       img {

@@ -55,6 +55,9 @@
 
   .journey-main-title {
     margin-bottom: 2rem;
+    @include mobile() {
+      text-align: center;
+    }
 
     h5 {
       letter-spacing: 1px;

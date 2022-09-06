@@ -6,8 +6,12 @@
   position: relative;
   height: 525px;
 
-  @include tablet() {
+  @include trial() {
     padding: 0 15px;
+  }
+  @include mobile() {
+    width: 100vw;
+    height: 725px;
   }
 
   .hero-row {
@@ -17,6 +21,7 @@
     @include trial() {
       padding-top: 55px;
     }
+
     .hero-banner {
       background-image: url("../../assets/bg.jpeg");
       background-size: cover;
@@ -67,7 +72,7 @@
           justify-content: center;
           height: 100%;
           padding: 80px;
-          @include tablet() {
+          @include trial() {
             align-items: center;
             text-align: center;
           }
@@ -85,6 +90,9 @@
               font-size: 20px;
               letter-spacing: 2px;
               font-weight: 700;
+              @include mobile() {
+                font-size: 16px;
+              }
             }
           }
           button {
@@ -108,6 +116,10 @@
             box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
             -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
             cursor: pointer;
+            @include mobile() {
+              width: 140px;
+              font-size: 11px;
+            }
 
             &:hover {
               transform: translateY(-3px);
@@ -125,7 +137,7 @@
             height: 100%;
           }
 
-          @include tablet() {
+          @include trial() {
             display: none;
           }
         }
@@ -149,12 +161,28 @@
       box-shadow: 0 3px 8px 0 rgb(15 15 20 / 15%);
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 15%);
 
+      @include mobile() {
+        position: relative;
+        width: 100%;
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+
       .hero-info-content {
         color: var(--color-black);
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include mobile() {
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
         div {
           display: flex;
           align-items: center;
@@ -182,6 +210,9 @@
             h6 {
               color: var(--color-white);
               margin-bottom: 3px;
+              @include mobile() {
+                color: var(--color-main);
+              }
             }
             p {
               color: var(--color-black);
@@ -191,7 +222,11 @@
         .hero-info-divider {
           width: 2px;
           height: 35px;
-          background-color: #737371;
+          background-color: var(--color-gray);
+
+          @include mobile() {
+            display: none;
+          }
         }
       }
     }

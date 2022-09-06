@@ -18,9 +18,8 @@
     }
   }
 
-  @include tablet() {
+  @include trial() {
     background: rgba(217, 223, 171);
-
     margin: 0 auto;
   }
 }

@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="hero-banner">
               <div className="hero-banner-back"></div>
               <div className="hero-banner-overlay">
-                <Col lg={8} md={12}>
+                <Col lg={8} md={12} sm={12}>
                   <div className="banner-title">
                     <h1>
                       Hi! I am

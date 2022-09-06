@@ -26,6 +26,13 @@
       display: flex;
       flex-wrap: wrap;
       z-index: 1;
+      @include mobile() {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
 
       .work-filter-item {
         padding: 0.5rem 0.4rem;
@@ -56,6 +63,10 @@
     grid-gap: 1rem;
     @include trial() {
       grid-gap: 15px;
+    }
+    @include mobile() {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
     }
 
     .work-item {
