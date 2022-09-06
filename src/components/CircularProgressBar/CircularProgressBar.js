@@ -25,6 +25,7 @@ const CircularProgressBar = ({ val }) => {
                   strokeLinecap: "butt",
                   pathTransitionDuration: 2.5,
                 })}
+                className="cpb"
               />
             )}
           </ProgressProvider>

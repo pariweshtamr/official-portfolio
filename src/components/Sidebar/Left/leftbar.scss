@@ -9,38 +9,6 @@
   }
 
   .leftbar-top {
-    .leftbar-top-header {
-      width: max-content;
-      height: 70px;
-      justify-content: flex-start;
-      align-items: center;
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      @include trial() {
-        div {
-          margin-left: auto;
-          font-size: 14px;
-          padding: 30px;
-          pointer-events: all;
-          position: absolute;
-          left: -3.5rem;
-          z-index: 1;
-
-          i {
-            &::before {
-              content: "\f142";
-            }
-          }
-        }
-      }
-
-      @include trial() {
-        display: flex;
-      }
-    }
-
     .avatar {
       position: absolute;
       left: 0;
@@ -55,6 +23,7 @@
       );
       text-align: center;
       filter: drop-shadow(0 1px 4px rgb(15 15 20 / 20%));
+      z-index: 1;
 
       @include trial() {
         width: 100%;
@@ -136,7 +105,7 @@
     height: calc(100vh - 30px);
     overflow-y: scroll;
 
-    @include tablet() {
+    @include trial() {
       height: 100vh;
     }
     .scroll-content {
@@ -145,7 +114,7 @@
 
       .leftbar-about-info {
         padding: 15px 0;
-        color: #737371;
+        color: var(--color-gray);
 
         ul {
           padding: 0;
@@ -168,7 +137,7 @@
       }
 
       .leftbar-divider {
-        background: #a0965c;
+        background: var(--color-secondary);
         width: 100%;
         height: 1px;
         opacity: 0.3;

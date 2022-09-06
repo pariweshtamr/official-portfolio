@@ -15,6 +15,7 @@
   .all-title {
     @include mobile() {
       text-align: center;
+      margin-bottom: -1rem;
     }
   }
 
@@ -72,6 +73,7 @@
     -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
     box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
     z-index: 1;
+
     .contact-form {
       width: 100%;
       padding: 2rem 1rem;

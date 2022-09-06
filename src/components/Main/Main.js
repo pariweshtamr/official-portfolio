@@ -15,6 +15,7 @@ import "./main.scss"
 const Main = () => {
   const [show, setShow] = useState(false)
   const [openNav, setOpenNav] = useState(false)
+  const [active, setActive] = useState("/home")
 
   return (
     <Container fluid className="main">
@@ -22,24 +23,48 @@ const Main = () => {
         <main className="main-layout">
           <BrowserRouter>
             <div className="app-mobile-top-bar">
-              <div className="info-bar-btn" onClick={() => setShow(!show)}>
-                <i className="fas fa-ellipsis-v"></i>
-              </div>
               <div className="top-bar-nav">
                 <ul>
                   <li>
-                    <Link to="/"> Home</Link>
+                    <Link
+                      to="/"
+                      className={active === "/home" ? "active" : ""}
+                      onClick={() => setActive("/home")}
+                    >
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/portfolio">Portfolio</Link>
+                    <Link
+                      to="/portfolio"
+                      className={active === "/portfolio" ? "active" : ""}
+                      onClick={() => setActive("/portfolio")}
+                    >
+                      Portfolio
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/journey">Journey</Link>
+                    <Link
+                      to="/journey"
+                      className={active === "/journey" ? "active" : ""}
+                      onClick={() => setActive("/journey")}
+                    >
+                      Journey
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link
+                      to="/contact"
+                      className={active === "/contact" ? "active" : ""}
+                      onClick={() => setActive("/contact")}
+                    >
+                      Contact
+                    </Link>
                   </li>
                 </ul>
+              </div>
+              <div className="info-bar-btn" onClick={() => setShow(!show)}>
+                <i className="fas fa-ellipsis-v"></i>
               </div>
             </div>
             <aside className={show ? "aside active" : "aside"}>

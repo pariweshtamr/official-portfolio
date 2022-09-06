@@ -16,6 +16,7 @@ const darkModeSlice = createSlice({
     },
     toggle: (state) => {
       state.darkMode = !state.darkMode
+      sessionStorage.setItem("darkMode", JSON.stringify(state.darkMode))
     },
   },
 })

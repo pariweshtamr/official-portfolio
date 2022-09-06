@@ -42,6 +42,10 @@
           font-size: 18px;
           border-top-left-radius: 20px;
           border-bottom-right-radius: 20px;
+          @include mobile() {
+            font-size: 14px;
+            top: -1.2rem;
+          }
         }
         .service-card-content {
           h6 {
@@ -49,7 +53,7 @@
             letter-spacing: 1px;
           }
           p {
-            color: #737371;
+            color: var(--color-gray);
             font-size: 14px;
           }
         }
