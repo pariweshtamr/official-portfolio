@@ -51,7 +51,7 @@ const Contact = () => {
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
-      <Container className="contact-container">
+      <Container fluid className="contact-container">
         <Row className="all-title">
           <h4>
             Contact <span> Information</span>
@@ -84,20 +84,6 @@ const Contact = () => {
                         tamrpariwesh@gmail.com
                       </a>
                     </span>
-                  </li>
-                  <li>
-                    <h6>Phone:</h6>
-                    <span>0468 804 207</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="contact-card">
-              <div className="contact-card-content">
-                <ul>
-                  <li>
-                    <h6>Email:</h6>
-                    <span>tamrpariwesh@gmail.com </span>
                   </li>
                   <li>
                     <h6>Phone:</h6>

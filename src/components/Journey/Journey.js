@@ -1,26 +1,50 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { educationList, workList } from "../../constants"
-import { Helmet } from "react-helmet-async"
-
+import { AiFillCloseCircle } from "react-icons/ai"
 import "./journey.scss"
+import { useState } from "react"
+import { motion } from "framer-motion"
 
 const Journey = () => {
+  const [open, setOpen] = useState(false)
+  const [image, setImage] = useState()
+
+  const handleOnClick = (img) => {
+    setOpen(true)
+    setImage(img)
+  }
   return (
     <>
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
-      <Container className="journey-container">
+      <Container fluid className="journey-container">
+        {open && (
+          <div className="image-viewer">
+            <AiFillCloseCircle
+              className="close-image-viewer"
+              onClick={() => setOpen(false)}
+            />
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="image-wrapper"
+            >
+              <img src={image} alt="" />
+            </motion.div>
+          </div>
+        )}
         <Row>
           <div className="all-title">
             <h4>
-              My <span>Journey</span>
+              My<span> Journey</span>
             </h4>
           </div>
         </Row>
 
         <Row className="journey-main">
-          <Col md={6} className="education-col">
+          <Col lg={6} md={12} className="education-col">
             <div className="journey-main-title">
               <h5>Education</h5>
             </div>
@@ -44,13 +68,18 @@ const Journey = () => {
 
                     <p>{education.desc}</p>
 
-                    <a className="journey-link">certification</a>
+                    <div
+                      className="journey-link"
+                      onClick={() => handleOnClick(education.img)}
+                    >
+                      certification
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </Col>
-          <Col md={6} className="history-col">
+          <Col lg={6} md={12} className="history-col">
             <div className="journey-main-title">
               <h5>Work History</h5>
             </div>

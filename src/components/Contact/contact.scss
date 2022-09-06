@@ -1,3 +1,5 @@
+@import "../../style/mixins";
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -6,11 +8,16 @@
   margin-bottom: 1rem;
   min-height: calc(100vh - 98px);
 
+  @include trial() {
+    padding: 70px 15px;
+  }
+
   .contact-cards {
     .contact {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 2.2rem;
+
       .contact-card {
         // border: 1px solid #c5a269;
         padding: 2rem 1.5rem;

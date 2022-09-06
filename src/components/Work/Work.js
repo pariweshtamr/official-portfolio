@@ -31,7 +31,7 @@ const Work = () => {
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
-      <Container className="work-container">
+      <Container fluid className="work-container">
         <div className="work-header">
           <div className="all-title">
             <h4>
@@ -62,8 +62,8 @@ const Work = () => {
           className="work-portfolio"
         >
           {filterWork.map((work, i) => (
-            <div className="work-item app-flex" key={i}>
-              <div className="work-img app-flex">
+            <div className="work-item" key={i}>
+              <div className="work-img">
                 <img src={work.image} alt={work.title} />
               </div>
 

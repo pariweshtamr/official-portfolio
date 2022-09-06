@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { HelmetProvider } from "react-helmet-async"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
@@ -17,7 +18,8 @@ const Main = () => {
       <div className="main-container">
         <main className="main-layout">
           <BrowserRouter>
-            <aside>
+            <div className="app-mobile-top-bar"></div>
+            <aside className="aside">
               <Leftbar />
             </aside>
             <div className="main-wrapper">

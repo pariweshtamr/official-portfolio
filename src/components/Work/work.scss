@@ -6,6 +6,9 @@
   min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
+  @include trial() {
+    padding: 70px 15px;
+  }
 
   .work-header {
     display: flex;
@@ -14,6 +17,11 @@
     width: 100%;
     justify-content: space-between;
     margin-bottom: 10px;
+    .all-title {
+      @include trial() {
+        display: none;
+      }
+    }
     .work-filter {
       display: flex;
       flex-wrap: wrap;
@@ -21,7 +29,7 @@
 
       .work-filter-item {
         padding: 0.5rem 0.4rem;
-        color: #737371;
+        color: var(color-gray);
         font-weight: 500;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -29,13 +37,8 @@
         font-size: 12px;
 
         &:hover {
-          // background: #a0965c;
           color: var(--color-black);
           font-weight: 700;
-        }
-        @media screen and (min-width: 2000px) {
-          padding: 1rem;
-          border-radius: 0.85rem;
         }
       }
 
@@ -51,9 +54,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    @include trial() {
+      grid-gap: 15px;
+    }
 
     .work-item {
       margin: 0.8rem;
+      display: flex;
       flex-direction: column;
       transition: 0.5s ease-in-out;
       height: 290px;
@@ -62,6 +69,11 @@
       position: relative;
       overflow-y: hidden;
       filter: brightness(90%);
+      @include trial() {
+        margin: 0;
+        overflow-y: visible;
+        height: 100%;
+      }
 
       &:hover {
         filter: brightness(100%);
@@ -69,11 +81,6 @@
         .work-item-description {
           transform: translateY(0);
         }
-      }
-
-      @media screen and (max-width: 300px) {
-        width: 100%;
-        margin: 1rem;
       }
 
       .work-item-description {
@@ -92,6 +99,11 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @include trial() {
+          position: relative;
+          transform: translateY(0);
+          background: rgba(217, 223, 171, 0.6);
+        }
         div {
           h4 {
             font-size: 16px;
@@ -102,7 +114,7 @@
 
           p {
             font-size: 14px;
-            color: #737371;
+            color: var(--color-gray);
           }
         }
 

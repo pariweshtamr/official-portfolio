@@ -1,3 +1,5 @@
+@import "../../../style/mixins";
+
 .right-menu-bar {
   display: flex;
   align-items: center;
@@ -11,7 +13,13 @@
   box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  z-index: 999;
+
+  @include tablet() {
+    position: absolute;
+    right: -230px;
+    width: 230px;
+    height: 100vh;
+  }
 
   .right-menu-bar-container {
     .right-menu-bar-header {
@@ -23,7 +31,6 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 9;
       filter: drop-shadow(0 1px 4px rgb(15 15 20 / 10%));
       background: linear-gradient(
         160deg,
@@ -45,7 +52,7 @@
           height: 3px;
           border-radius: 1px;
           backface-visibility: hidden;
-          background: #737371;
+          background: var(--color-gray);
 
           &::after,
           &::before {
@@ -54,7 +61,7 @@
             width: 15px;
             height: 3px;
             border-radius: 1px;
-            background: #737371;
+            background: var(--color-gray);
             backface-visibility: hidden;
           }
 
@@ -170,4 +177,8 @@
 .right-menu-bar-active {
   width: 230px;
   transition: 0.55s ease-in-out;
+
+  @include tablet() {
+    transform: translate(-230px);
+  }
 }

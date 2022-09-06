@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Container, FormCheck } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
@@ -9,26 +10,25 @@ import "./leftbar.scss"
 
 const Leftbar = () => {
   const dispatch = useDispatch()
+  const [open, setOpen] = useState(false)
 
   return (
     <Container className="leftbar-container">
       <div className="leftbar-top">
         <div className="leftbar-top-header">
           <div>
-            <i className="fas fa-ellipsis-v"></i>
+            <i className="fas fa-ellipsis-v" onClick={() => setOpen(!open)}></i>
           </div>
         </div>
 
         <div className="avatar">
-          <Link to="/">
-            <div className="avatar-image">
-              <img src={images.dev} alt="" />
+          <div className="avatar-image">
+            <img src={images.dev} alt="" />
 
-              <div className="avatar-light">
-                <div className="avatar-light-available"></div>
-              </div>
+            <div className="avatar-light">
+              <div className="avatar-light-available"></div>
             </div>
-          </Link>
+          </div>
 
           <h5>Pariwesh Tamrakar</h5>
           <p>Full-Stack Developer</p>

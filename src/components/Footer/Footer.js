@@ -3,7 +3,7 @@ import "./footer.scss"
 
 const Footer = () => {
   return (
-    <Container className="footer">
+    <Container fluid className="footer">
       <div className="footer-content">
         <p>@ 2022 Pariwesh Tamrakar</p>
       </div>

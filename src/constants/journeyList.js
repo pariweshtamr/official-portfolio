@@ -4,12 +4,14 @@ export const educationList = [
     course: "Full-Stack Web Development",
     date: "aug 2021 - jan 2022",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit Fugiat officiis id libero nostrum soluta voluptatibus inventore ab voluptate enim. Iste!",
+    img: "/images/dented-code-certificate.jpeg",
   },
   {
     title: "Victoria University",
     course: "Master of Applied Info Tech",
     date: "jul 2019 - july 2021",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit Fugiat officiis id libero nostrum soluta voluptatibus inventore ab voluptate enim. Iste!",
+    img: "/images/vu-cert.jpeg",
   },
 ]
 
