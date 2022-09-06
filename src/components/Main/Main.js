@@ -9,6 +9,7 @@ import Journey from "../Journey/Journey"
 import Leftbar from "../Sidebar/Left/Leftbar"
 import Rightbar from "../Sidebar/Right/Rightbar"
 import Work from "../Work/Work"
+import { motion } from "framer-motion"
 
 import "./main.scss"
 
@@ -67,10 +68,20 @@ const Main = () => {
                 <i className="fas fa-ellipsis-v"></i>
               </div>
             </div>
-            <aside className={show ? "aside active" : "aside"}>
+            <motion.aside
+              initial={{ x: -290 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 1 }}
+              className={show ? "aside active" : "aside"}
+            >
               <Leftbar />
-            </aside>
-            <div className="main-wrapper">
+            </motion.aside>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.5 }}
+              className="main-wrapper"
+            >
               <Routes>
                 <Route path="/" element={<Hero />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
@@ -78,7 +89,7 @@ const Main = () => {
                 <Route path="/journey" element={<Journey />}></Route>
               </Routes>
               <Footer />
-            </div>
+            </motion.div>
             <nav className={openNav ? "nav active" : "nav"}>
               <Rightbar />
             </nav>

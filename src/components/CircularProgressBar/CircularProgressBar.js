@@ -2,16 +2,14 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 import ProgressProvider from "./ProgressProvider"
 import "./circularProgressBar.scss"
-import { useState } from "react"
 import { useSelector } from "react-redux"
 const CircularProgressBar = ({ val }) => {
-  const [valueEnd, setValueEnd] = useState(val)
   const { darkMode } = useSelector((state) => state.darkMode)
   return (
     <div className="circle-wrap">
       <Animate>
         {darkMode ? (
-          <ProgressProvider valueStart={0} valueEnd={valueEnd}>
+          <ProgressProvider valueStart={0} valueEnd={val}>
             {(value) => (
               <CircularProgressbar
                 value={value}
@@ -30,7 +28,7 @@ const CircularProgressBar = ({ val }) => {
             )}
           </ProgressProvider>
         ) : (
-          <ProgressProvider valueStart={0} valueEnd={valueEnd}>
+          <ProgressProvider valueStart={0} valueEnd={val}>
             {(value) => (
               <CircularProgressbar
                 value={value}

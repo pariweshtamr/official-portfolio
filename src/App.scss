@@ -6,7 +6,7 @@
   width: 100vw;
   position: relative;
   overflow: hidden;
-  transition: all 1s ease-in-out;
+  transition: 0.2s ease-in-out;
   z-index: 1;
 
   .all-title {
@@ -67,10 +67,6 @@
       opacity: 0;
     }
   }
-}
-
-section {
-  padding: 5rem 0;
 }
 
 ul {

@@ -1,5 +1,4 @@
 import "./hero.scss"
-import { motion } from "framer-motion"
 import { images } from "../../constants"
 import { Col, Container, Row } from "react-bootstrap"
 import { TypeAnimation } from "react-type-animation"
@@ -9,17 +8,6 @@ import { useNavigate } from "react-router-dom"
 import Mern from "../Mern/Mern"
 import { Helmet } from "react-helmet-async"
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1.5,
-      delay: 0.5,
-      ease: "easeInOut",
-    },
-  },
-}
 const Hero = () => {
   const navigate = useNavigate()
   const handleOnClick = () => {

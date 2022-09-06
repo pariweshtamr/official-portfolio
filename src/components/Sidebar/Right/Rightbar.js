@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 import "./rightbar.scss"
 
 const Rightbar = () => {
@@ -11,7 +12,10 @@ const Rightbar = () => {
   }
 
   return (
-    <div
+    <motion.div
+      initial={{ x: 80 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1.5 }}
       className={
         show ? "right-menu-bar" : "right-menu-bar right-menu-bar-active"
       }
@@ -85,7 +89,7 @@ const Rightbar = () => {
 
         <div className="right-menu-bar-footer"></div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
