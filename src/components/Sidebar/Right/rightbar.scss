@@ -14,13 +14,6 @@
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 
-  @include tablet() {
-    position: absolute;
-    right: -230px;
-    width: 230px;
-    height: 100vh;
-  }
-
   .right-menu-bar-container {
     .right-menu-bar-header {
       width: 100%;
@@ -91,7 +84,7 @@
       width: 200px;
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg);
-      color: #737371;
+      color: var(--color-gray);
       position: absolute;
       overflow: hidden;
       top: 200px;
@@ -142,7 +135,7 @@
           letter-spacing: 1px;
           font-weight: 500;
           text-decoration: none;
-          color: #737371;
+          color: var(--color-gray);
           &:hover {
             color: var(--color-black);
           }
@@ -178,7 +171,7 @@
   width: 230px;
   transition: 0.55s ease-in-out;
 
-  @include tablet() {
+  @include trial() {
     transform: translate(-230px);
   }
 }

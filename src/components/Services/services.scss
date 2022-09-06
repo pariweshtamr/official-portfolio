@@ -7,7 +7,7 @@
   padding: 0px 2rem;
   margin-bottom: 2.5rem;
   @include tablet() {
-    padding: 0px;
+    padding: 0px 15px;
   }
 
   .service-cards {
@@ -18,7 +18,7 @@
 
       @include tablet() {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 4rem 3rem;
+        grid-gap: 4rem 2.5rem;
       }
       .service-card {
         padding: 3rem 1.5rem 1rem 1rem;

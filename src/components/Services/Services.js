@@ -4,7 +4,7 @@ import "./services.scss"
 
 const Services = () => {
   return (
-    <Container className="service-container">
+    <Container fluid className="service-container">
       <Row className="all-title">
         <h4>
           What <span> I Offer</span>

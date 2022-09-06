@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
 import { HelmetProvider } from "react-helmet-async"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
 import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
 import Hero from "../Hero/Hero"
@@ -13,13 +13,36 @@ import Work from "../Work/Work"
 import "./main.scss"
 
 const Main = () => {
+  const [show, setShow] = useState(false)
+  const [openNav, setOpenNav] = useState(false)
+
   return (
     <Container fluid className="main">
       <div className="main-container">
         <main className="main-layout">
           <BrowserRouter>
-            <div className="app-mobile-top-bar"></div>
-            <aside className="aside">
+            <div className="app-mobile-top-bar">
+              <div className="info-bar-btn" onClick={() => setShow(!show)}>
+                <i className="fas fa-ellipsis-v"></i>
+              </div>
+              <div className="top-bar-nav">
+                <ul>
+                  <li>
+                    <Link to="/"> Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/portfolio">Portfolio</Link>
+                  </li>
+                  <li>
+                    <Link to="/journey">Journey</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <aside className={show ? "aside active" : "aside"}>
               <Leftbar />
             </aside>
             <div className="main-wrapper">
@@ -31,7 +54,7 @@ const Main = () => {
               </Routes>
               <Footer />
             </div>
-            <nav>
+            <nav className={openNav ? "nav active" : "nav"}>
               <Rightbar />
             </nav>
           </BrowserRouter>

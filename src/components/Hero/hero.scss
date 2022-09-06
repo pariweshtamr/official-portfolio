@@ -14,7 +14,7 @@
     padding-top: 60px;
     padding-bottom: 0px;
     position: relative;
-    @include tablet() {
+    @include trial() {
       padding-top: 55px;
     }
     .hero-banner {
@@ -25,7 +25,7 @@
       box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
       z-index: 1;
-      ≈ß .hero-banner-back {
+      .hero-banner-back {
         position: absolute;
         content: "";
         z-index: 0;
@@ -43,7 +43,7 @@
           rgba(217, 223, 171, 0.98) 100%
         );
 
-        @include tablet() {
+        @include trial() {
           display: none;
         }
       }
@@ -170,6 +170,11 @@
             align-items: center;
             svg {
               font-size: 20px;
+            }
+
+            @include trial() {
+              width: 40px;
+              height: 40px;
             }
           }
           span {

@@ -1,3 +1,5 @@
+@import "../style/mixins";
+
 .app.dark {
   background: #191923;
   transition: all 1s ease-in-out;
@@ -25,6 +27,11 @@
       }
 
       .main-layout {
+        @include trial() {
+          .app-mobile-top-bar {
+            background: var(--color-dark);
+          }
+        }
         .main-wrapper {
           background: rgba(30, 30, 40, 0.88);
         }
@@ -246,7 +253,7 @@
         background: rgba(30, 30, 40, 0.3);
         border: 1px solid var(--color-white);
         .hero-info-content {
-          color: var(--color-white);
+          color: var(--color-dark);
           div {
             .info-item-container {
               background-color: var(--color-yellow);
@@ -254,6 +261,7 @@
             span {
               p {
                 color: var(--color-yellow);
+                font-size: 14px;
               }
             }
           }
@@ -275,6 +283,7 @@
           background: var(--color-card);
           .service-icon {
             background: var(--color-yellow);
+            color: var(--color-dark);
           }
           .service-card-content {
             h6 {

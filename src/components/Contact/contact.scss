@@ -11,12 +11,27 @@
   @include trial() {
     padding: 70px 15px;
   }
+  @include mobile() {
+    padding: 100px 15px;
+    width: 100vw;
+  }
+
+  .all-title {
+    @include mobile() {
+      text-align: center;
+    }
+  }
 
   .contact-cards {
     .contact {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2.2rem;
+
+      @include mobile() {
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+      }
 
       .contact-card {
         // border: 1px solid #c5a269;
