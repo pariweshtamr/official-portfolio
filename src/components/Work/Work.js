@@ -3,13 +3,22 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { projects } from "../../constants"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
+import { MdZoomOutMap } from "react-icons/md"
 import { Container } from "react-bootstrap"
+import { AiFillCloseCircle } from "react-icons/ai"
 import { Helmet } from "react-helmet-async"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")
   const [animateCard, setAnimateCard] = useState({ y: 0, opactiy: 1 })
   const [filterWork, setFilterWork] = useState(projects)
+  const [openImg, setOpenImg] = useState(false)
+  const [image, setImage] = useState()
+
+  const handleOnZoom = (img) => {
+    setOpenImg(true)
+    setImage(img)
+  }
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item)
@@ -32,6 +41,22 @@ const Work = () => {
         <div className="top-bg-overlay"></div>
       </div>
       <Container fluid className="work-container">
+        {openImg && (
+          <div className="image-viewer">
+            <AiFillCloseCircle
+              className="close-image-viewer"
+              onClick={() => setOpenImg(false)}
+            />
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="image-wrapper"
+            >
+              <img src={image} alt="" />
+            </motion.div>
+          </div>
+        )}
         <div className="work-header">
           <div className="all-title">
             <h4>
@@ -64,6 +89,9 @@ const Work = () => {
           {filterWork.map((work, i) => (
             <div className="work-item" key={i}>
               <div className="work-img">
+                <div className="zoom-icon-container">
+                  <MdZoomOutMap onClick={() => handleOnZoom(work.image)} />
+                </div>
                 <img src={work.image} alt={work.title} />
               </div>
 
