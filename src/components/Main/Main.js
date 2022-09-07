@@ -14,9 +14,9 @@ import { motion } from "framer-motion"
 import "./main.scss"
 
 const Main = () => {
-  const [show, setShow] = useState(false)
-  const [openNav, setOpenNav] = useState(false)
+  const [showInfo, setShowInfo] = useState(false)
   const [active, setActive] = useState("/home")
+  console.log(showInfo)
 
   return (
     <Container fluid className="main">
@@ -64,18 +64,16 @@ const Main = () => {
                   </li>
                 </ul>
               </div>
-              <div className="info-bar-btn" onClick={() => setShow(!show)}>
+              <div
+                className="info-bar-btn"
+                onClick={() => setShowInfo(!showInfo)}
+              >
                 <i className="fas fa-ellipsis-v"></i>
               </div>
             </div>
-            <motion.aside
-              initial={{ x: -290 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 1 }}
-              className={show ? "aside active" : "aside"}
-            >
+            <aside className={showInfo ? "aside active" : "aside"}>
               <Leftbar />
-            </motion.aside>
+            </aside>
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -90,7 +88,7 @@ const Main = () => {
               </Routes>
               <Footer />
             </motion.div>
-            <nav className={openNav ? "nav active" : "nav"}>
+            <nav className="nav">
               <Rightbar />
             </nav>
           </BrowserRouter>

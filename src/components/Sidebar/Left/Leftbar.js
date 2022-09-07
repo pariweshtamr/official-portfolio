@@ -13,7 +13,12 @@ const Leftbar = () => {
 
   return (
     <>
-      <Container className="leftbar-container">
+      <motion.div
+        initial={{ x: -290 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1.5 }}
+        className="leftbar-container container"
+      >
         <div className="leftbar-top">
           <motion.div
             initial={{ scale: 0 }}
@@ -148,7 +153,7 @@ const Leftbar = () => {
             <i className="fa-brands fa-facebook-f"></i>
           </a>
         </motion.div>
-      </Container>
+      </motion.div>
     </>
   )
 }

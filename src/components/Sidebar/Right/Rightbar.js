@@ -15,7 +15,7 @@ const Rightbar = () => {
     <motion.div
       initial={{ x: 80 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1.5, delay: 1.5 }}
       className={
         show ? "right-menu-bar" : "right-menu-bar right-menu-bar-active"
       }
