@@ -101,7 +101,11 @@ const Work = () => {
                   <p>{work.description}</p>
                 </div>
                 <div className="work-item-links">
-                  <a href={work.visit} target="_blank" rel="noreferrer">
+                  <a
+                    href={work.visit}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       whileHover={{ scale: [1, 1.1] }}
@@ -110,7 +114,11 @@ const Work = () => {
                       <AiFillEye />
                     </motion.div>
                   </a>
-                  <a href={work.source} target="_blank" rel="noreferrer">
+                  <a
+                    href={work.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       whileHover={{ scale: [1, 1.1] }}
