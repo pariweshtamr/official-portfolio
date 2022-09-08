@@ -47,6 +47,8 @@ const Hero = () => {
                             1000,
                             "Full-Stack Developer",
                             1000,
+                            "Blogger",
+                            1000,
                           ]}
                           repeat={Infinity}
                           className="type-animation"
@@ -93,7 +95,7 @@ const Hero = () => {
                   <i className="fa-solid fa-award"></i>
                 </div>
                 <span>
-                  <h6></h6>
+                  <h6>1 Year Job</h6>
                   <p>Experience</p>
                 </span>
               </div>
