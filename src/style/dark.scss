@@ -23,13 +23,23 @@
     color: var(--color-white);
     .main-container {
       aside {
-        background: #20202a;
+        background: var(--color-dark);
       }
 
       .main-layout {
         @include trial() {
           .app-mobile-top-bar {
             background: var(--color-dark);
+
+            .top-bar-nav {
+              ul {
+                li {
+                  .active {
+                    color: var(--color-yellow);
+                  }
+                }
+              }
+            }
           }
         }
         .main-wrapper {

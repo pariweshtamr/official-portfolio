@@ -47,6 +47,8 @@ const Hero = () => {
                             1000,
                             "Full-Stack Developer",
                             1000,
+                            "Enthusiastic Developer",
+                            1000,
                             "Blogger",
                             1000,
                           ]}
