@@ -49,7 +49,7 @@
           right: 5px;
           height: calc(100% - 10px);
           width: 5px;
-          background: #ede2b9;
+          background: var(--color-light);
           -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
           box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
         }
@@ -81,8 +81,8 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            border: 3px solid #c5a269;
-            background: #ede2b9;
+            border: 3px solid var(--color-main);
+            background: var(--color-light);
             -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
             box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
             z-index: 1;
@@ -111,7 +111,7 @@
 
             p,
             ul {
-              color: var(--color-gray);
+              color: var(--color-secondaryGray);
               font-size: 14px;
             }
 
@@ -121,7 +121,6 @@
               display: flex;
               flex-direction: column;
               gap: 5px;
-              color: var(--color-secondaryGray);
             }
 
             .journey-link {
@@ -173,7 +172,7 @@
                 }
                 p {
                   font-size: 14px;
-                  color: #737371;
+                  color: var(--color-gray);
                 }
               }
               .journey-date {

@@ -67,7 +67,12 @@ const Journey = () => {
                       </div>
                     </div>
 
-                    <p>{education.desc}</p>
+                    <p>
+                      <i>
+                        <b>Achievement: </b>
+                      </i>
+                      {education.desc}
+                    </p>
 
                     <div
                       className="journey-link"

@@ -3,14 +3,14 @@ export const educationList = [
     title: "Dented Code Academy",
     course: "Full-Stack Web Development",
     date: "aug 2021 - jan 2022",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit Fugiat officiis id libero nostrum soluta voluptatibus inventore ab voluptate enim. Iste!",
+    desc: "Successfully completed bootcamp course and acquired skills to develop full-stack MERN applications.",
     img: "/images/dented-code-certificate.jpeg",
   },
   {
     title: "Victoria University",
     course: "Master of Applied Info Tech",
     date: "jul 2019 - july 2021",
-    desc: "Award: First Year Course Champion",
+    desc: "Awarded the First Year Course Champion Award in recognition of outstanding academic performance in the first 8 units attempted.",
     img: "/images/vu-cert.jpeg",
   },
 ]
@@ -21,7 +21,9 @@ export const workList = [
     role: "Full-Stack Web Developer",
     date: "may 2021 - present",
     desc: [
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit Fugiat officiis id libero nostrum soluta voluptatibus inventore ab voluptate enim. Iste!",
+      "Work in a team to build front-end web application using HTML, CSS, JavaScript and React JS",
+      "Work in a team as well as individually to build back-end server API using Node JS",
+      "Building and integrating MongoDB database into the backend API system",
     ],
   },
   {
