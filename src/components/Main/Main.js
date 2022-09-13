@@ -16,7 +16,6 @@ import "./main.scss"
 const Main = () => {
   const [showInfo, setShowInfo] = useState(false)
   const [active, setActive] = useState("/home")
-  console.log(showInfo)
 
   return (
     <Container fluid className="main">

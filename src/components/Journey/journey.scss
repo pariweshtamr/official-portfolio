@@ -13,6 +13,11 @@
   }
 
   .all-title {
+    p {
+      margin-top: 5px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
     @include trial() {
       display: none;
     }
@@ -104,9 +109,19 @@
               border-left: 10px solid rgba(217, 223, 171, 0.3);
             }
 
-            p {
+            p,
+            ul {
               color: var(--color-gray);
               font-size: 14px;
+            }
+
+            ul {
+              list-style-type: square;
+              padding: 0 15px;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              color: var(--color-secondaryGray);
             }
 
             .journey-link {

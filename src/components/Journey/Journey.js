@@ -39,6 +39,7 @@ const Journey = () => {
           <div className="all-title">
             <h4>
               My<span> Journey</span>
+              <p>The Odyssey of a full-stack developer</p>
             </h4>
           </div>
         </Row>
@@ -100,7 +101,11 @@ const Journey = () => {
                         <p>{work.date}</p>
                       </div>
                     </div>
-                    <p>{work.desc}</p>
+                    <ul>
+                      {work?.desc?.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
