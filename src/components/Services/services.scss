@@ -6,7 +6,7 @@
   gap: 2.5rem;
   padding: 0px 2rem;
   margin-bottom: 2.5rem;
-  @include trial() {
+  @include upToTablet() {
     padding: 0px 15px;
   }
 
@@ -16,7 +16,11 @@
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 4rem 2rem;
 
-      @include trial() {
+      @include largeScreen() {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem 2.5rem;
+      }
+      @include upToTablet() {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 4rem 2.5rem;
       }
@@ -25,12 +29,16 @@
         grid-gap: 3rem;
       }
       .service-card {
-        padding: 3rem 1.5rem 1rem 1rem;
+        padding: 3rem 1.5rem 1rem 2rem;
         background: rgba(217, 223, 171, 0.3);
         -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
         box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
         border-top-right-radius: 50px;
         position: relative;
+
+        @include extraLargeScreen() {
+          padding: 3rem 1.5rem 1rem 2rem;
+        }
 
         .service-icon {
           position: absolute;

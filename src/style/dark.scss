@@ -27,7 +27,7 @@
       }
 
       .main-layout {
-        @include trial() {
+        @include upToTablet() {
           .app-mobile-top-bar {
             background: var(--color-dark);
 
@@ -235,7 +235,11 @@
     .hero-row {
       .hero-banner {
         .hero-banner-back {
-          background: rgba(30, 30, 40, 0.88);
+          background: linear-gradient(
+            159deg,
+            rgba(37, 37, 50, 0.98) 0%,
+            rgba(35, 35, 45, 0.98) 100%
+          );
         }
         .hero-banner-overlay {
           background-image: linear-gradient(

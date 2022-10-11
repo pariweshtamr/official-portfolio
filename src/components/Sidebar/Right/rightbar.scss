@@ -179,7 +179,7 @@
   width: 230px;
   transition: 0.5s ease-in-out;
 
-  @include trial() {
+  @include upToTablet() {
     transform: translate(-230px);
     transition: 0.5s ease-in-out;
   }

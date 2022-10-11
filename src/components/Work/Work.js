@@ -6,7 +6,6 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { MdZoomOutMap } from "react-icons/md"
 import { Container } from "react-bootstrap"
 import { AiFillCloseCircle } from "react-icons/ai"
-import { Helmet } from "react-helmet-async"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")

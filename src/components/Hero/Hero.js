@@ -6,7 +6,6 @@ import { FaAward, FaProjectDiagram } from "react-icons/fa"
 import Services from "../Services/Services"
 import { useNavigate } from "react-router-dom"
 import Mern from "../Mern/Mern"
-import { Helmet } from "react-helmet-async"
 
 const Hero = () => {
   const navigate = useNavigate()
@@ -15,22 +14,13 @@ const Hero = () => {
   }
   return (
     <>
-      <Helmet>
-        <title>Pariwesh Home</title>
-        <link rel="canonical" href={process.env.REACT_APP_URL} />
-        <meta name="" value="" />
-      </Helmet>
-      <div className="top-bg">
-        <div className="top-bg-overlay"></div>
-      </div>
-
       <Container fluid className="hero-container">
         <Row className="hero-row">
           <Col lg={12}>
             <div className="hero-banner">
               <div className="hero-banner-back"></div>
               <div className="hero-banner-overlay">
-                <Col lg={8} md={12} sm={12}>
+                <Col xxl={8} lg={12} md={12} sm={12}>
                   <div className="banner-title">
                     <h1>
                       Hi! I am

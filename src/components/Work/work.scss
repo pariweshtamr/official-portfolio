@@ -6,7 +6,7 @@
   min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  @include trial() {
+  @include upToTablet() {
     padding: 70px 15px;
   }
 
@@ -18,7 +18,7 @@
     justify-content: space-between;
     margin-bottom: 10px;
     .all-title {
-      @include trial() {
+      @include upToTablet() {
         display: none;
       }
     }
@@ -61,12 +61,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    @include trial() {
+    @include upToTablet() {
       grid-gap: 15px;
     }
     @include mobile() {
       grid-template-columns: 1fr;
       grid-gap: 30px;
+    }
+
+    @include largeScreen() {
+      grid-gap: 25px 0;
     }
 
     .work-item {
@@ -80,9 +84,13 @@
       position: relative;
       overflow-y: hidden;
       filter: brightness(90%);
-      @include trial() {
+      @include upToTablet() {
         margin: 0;
         overflow-y: visible;
+        height: 100%;
+      }
+
+      @include largeScreen() {
         height: 100%;
       }
 
@@ -161,10 +169,15 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @include trial() {
+        @include upToTablet() {
           position: relative;
           transform: translateY(0);
           background: rgba(217, 223, 171, 0.6);
+        }
+
+        @include largeScreen() {
+          height: 80%;
+          padding: 20px;
         }
         div {
           h4 {
@@ -172,11 +185,18 @@
             font-weight: 600;
             color: var(--color-black);
             letter-spacing: 1px;
+            @include largeScreen() {
+              font-size: 14px;
+              letter-spacing: normal;
+            }
           }
 
           p {
             font-size: 14px;
             color: var(--color-gray);
+            @include largeScreen() {
+              font-size: 12px;
+            }
           }
         }
 
@@ -196,6 +216,11 @@
 
             &:hover {
               box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
+            }
+
+            @include largeScreen() {
+              height: 30px;
+              width: 30px;
             }
 
             svg {
