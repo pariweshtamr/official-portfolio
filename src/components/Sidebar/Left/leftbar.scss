@@ -2,7 +2,6 @@
 .leftbar-container {
   height: fit-content;
   background: var(--color-white);
-
   h6 {
     font-size: 14px;
     font-weight: 400;
@@ -84,10 +83,10 @@
         color: var(--color-gray);
       }
 
-      .dark-mode-switch {
+      .light-mode-switch {
         input {
           cursor: pointer;
-          background-color: var(--color-white);
+          background-color: var(--color-gray);
           border: none;
 
           &:focus {

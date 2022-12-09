@@ -343,10 +343,19 @@
             }
           }
           .work-item-links {
-            div {
-              background: var(--color-yellow);
+            .external-links {
+              .icon {
+                background: var(--color-yellow);
+              }
+
               svg {
                 color: var(--color-card);
+              }
+            }
+            .details {
+              .detail {
+                border: none;
+                color: var(--color-yellow);
               }
             }
           }
@@ -360,6 +369,24 @@
     }
   }
   // PORTFOLIO SECTION - END //
+
+  // SINGLE-PROJECT SECTION - START //
+
+  .single-project-container {
+    .project-section-title {
+      .title-right {
+        .category {
+          color: var(--color-gray);
+          background: var(--color-dark);
+
+          -webkit-box-shadow: inset 0 3px 8px 0 rgb(15 15 20 / 20%);
+          box-shadow: inset 0 3px 8px 0 rgb(15 15 20 / 20%);
+        }
+      }
+    }
+  }
+
+  // SINGLE-PROJECT SECTION - END //
 
   // JOURNEY SECTION //
   .journey-container {

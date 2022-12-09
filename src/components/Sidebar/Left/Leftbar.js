@@ -1,7 +1,7 @@
 import { FormCheck } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { images } from "../../../constants"
-import { toggle } from "../../../redux/DarkMode/DarkModeSlice"
+import { toggle } from "../../../redux/DarkMode/LightModeSlice"
 import CircularProgressBar from "../../CircularProgressBar/CircularProgressBar"
 import ProgressBar from "../../ProgressBar/ProgressBar"
 import CV from "../../../assets/Pariwesh.Resume.pdf"
@@ -39,7 +39,7 @@ const Leftbar = () => {
 
             <FormCheck
               type="switch"
-              className="dark-mode-switch"
+              className="light-mode-switch"
               onClick={() => dispatch(toggle())}
             />
           </motion.div>

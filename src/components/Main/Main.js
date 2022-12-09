@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Container } from "react-bootstrap"
-import { HelmetProvider } from "react-helmet-async"
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
 import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
@@ -12,6 +11,7 @@ import Work from "../Work/Work"
 import { motion } from "framer-motion"
 
 import "./main.scss"
+import PortfolioSingle from "../SingleProject/PortfolioSingle"
 
 const Main = () => {
   const [showInfo, setShowInfo] = useState(false)
@@ -83,6 +83,10 @@ const Main = () => {
                 <Route path="/" element={<Hero />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/portfolio" element={<Work />}></Route>
+                <Route
+                  path="/portfolio/:id"
+                  element={<PortfolioSingle />}
+                ></Route>
                 <Route path="/journey" element={<Journey />}></Route>
               </Routes>
               <Footer />

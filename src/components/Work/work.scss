@@ -179,7 +179,7 @@
           height: 80%;
           padding: 20px;
         }
-        div {
+        .work-item-title {
           h4 {
             font-size: 16px;
             font-weight: 600;
@@ -202,35 +202,51 @@
 
         .work-item-links {
           display: flex;
-          gap: 0.8rem;
-          div {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #5e5e49;
-            color: var(--color-white);
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.1s ease;
-            position: relative;
+          justify-content: space-between;
+          align-items: center;
+          .external-links {
+            display: flex;
+            gap: 0.8rem;
+            background: transparent;
 
-            &:hover {
-              box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
+            .icon {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: #5e5e49;
+              color: var(--color-white);
+              font-weight: 800;
+              cursor: pointer;
+              transition: all 0.1s ease;
+              position: relative;
+
+              svg {
+                width: 50%;
+                height: 50%;
+                color: var(--color-white);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+
+              &:hover {
+                box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
+              }
             }
 
             @include largeScreen() {
               height: 30px;
               width: 30px;
             }
+          }
 
-            svg {
-              width: 50%;
-              height: 50%;
-              color: var(--color-white);
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
+          .details {
+            .detail {
+              background: transparent;
+              text-decoration: underline;
+              border: none;
+              color: var(--color-dark);
             }
           }
         }

@@ -5,14 +5,18 @@ import "./App.scss"
 import { useEffect, useState } from "react"
 
 function App() {
-  const { darkMode } = useSelector((state) => state.darkMode)
-  const [darkModeState, setDarkModeState] = useState()
+  const { lightMode } = useSelector((state) => state.lightMode)
+  const [lightModeState, setLightModeState] = useState()
 
   useEffect(() => {
-    setDarkModeState(JSON.parse(sessionStorage.getItem("darkMode")))
-  }, [darkMode])
+    setLightModeState(
+      sessionStorage.getItem("lightMode")
+        ? JSON.parse(sessionStorage.getItem("lightMode"))
+        : false
+    )
+  }, [lightMode])
   return (
-    <div className={darkModeState ? "app dark" : "app"}>
+    <div className={lightModeState === false ? "app dark" : "app"}>
       <Main />
     </div>
   )

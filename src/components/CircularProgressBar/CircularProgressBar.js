@@ -4,11 +4,11 @@ import ProgressProvider from "./ProgressProvider"
 import "./circularProgressBar.scss"
 import { useSelector } from "react-redux"
 const CircularProgressBar = ({ val }) => {
-  const { darkMode } = useSelector((state) => state.darkMode)
+  const { lightMode } = useSelector((state) => state.lightMode)
   return (
     <div className="circle-wrap">
       <Animate>
-        {darkMode ? (
+        {!lightMode ? (
           <ProgressProvider valueStart={0} valueEnd={val}>
             {(value) => (
               <CircularProgressbar

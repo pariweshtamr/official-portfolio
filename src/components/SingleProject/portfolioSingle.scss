@@ -1,0 +1,15 @@
+.single-project-container {
+  .project-section-title {
+    display: flex;
+    justify-content: space-between;
+
+    .title-right {
+      .category {
+        display: inline;
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 14px;
+      }
+    }
+  }
+}

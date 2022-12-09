@@ -6,6 +6,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { MdZoomOutMap } from "react-icons/md"
 import { Container } from "react-bootstrap"
 import { AiFillCloseCircle } from "react-icons/ai"
+import { Link } from "react-router-dom"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")
@@ -95,37 +96,52 @@ const Work = () => {
               </div>
 
               <div className="work-item-description">
-                <div>
+                <div className="work-item-title">
                   <h4>{work.title}</h4>
                   <p>{work.description}</p>
                 </div>
                 <div className="work-item-links">
-                  <a
-                    href={work.visit}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      whileHover={{ scale: [1, 1.1] }}
-                      transition={{ duration: 0.25 }}
+                  <div className="external-links">
+                    <a
+                      href={work.visit}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
                     >
-                      <AiFillEye />
-                    </motion.div>
-                  </a>
-                  <a
-                    href={work.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      whileHover={{ scale: [1, 1.1] }}
-                      transition={{ duration: 0.25 }}
+                      <motion.div
+                        whileInView={{ opacity: [0, 1] }}
+                        whileHover={{ scale: [1, 1.1] }}
+                        transition={{ duration: 0.25 }}
+                        className="icon"
+                      >
+                        <AiFillEye />
+                      </motion.div>
+                    </a>
+                    <a
+                      href={work.source}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
                     >
-                      <AiFillGithub />
-                    </motion.div>
-                  </a>
+                      <motion.div
+                        whileInView={{ opacity: [0, 1] }}
+                        whileHover={{ scale: [1, 1.1] }}
+                        transition={{ duration: 0.25 }}
+                        className="icon"
+                      >
+                        <AiFillGithub />
+                      </motion.div>
+                    </a>
+                  </div>
+
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.25 }}
+                    className="details"
+                  >
+                    <Link to={`/portfolio/${work.id}`} className="detail">
+                      Details
+                    </Link>
+                  </motion.div>
                 </div>
               </div>
 
