@@ -1,7 +1,7 @@
 import { FormCheck } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { images } from "../../../constants"
-import { toggle } from "../../../redux/DarkMode/LightModeSlice"
+import { toggle } from "../../../redux/LightMode/LightModeSlice"
 import CircularProgressBar from "../../CircularProgressBar/CircularProgressBar"
 import ProgressBar from "../../ProgressBar/ProgressBar"
 import CV from "../../../assets/Pariwesh.Resume.pdf"
@@ -85,10 +85,10 @@ const Leftbar = () => {
 
             <div className="leftbar-hard-skills">
               <div className="hard-skill-item">
-                <ProgressBar title={"html"} width={"80%"} text={"80%"} />
+                <ProgressBar title={"html"} width={"85%"} text={"85%"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"css"} width={"90%"} text={"90%"} />
+                <ProgressBar title={"css"} width={"80%"} text={"80%"} />
               </div>
               <div className="hard-skill-item">
                 <ProgressBar title={"javascript"} width={"65%"} text={"60%"} />

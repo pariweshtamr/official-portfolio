@@ -5,7 +5,6 @@ import "./contact.scss"
 import { FaUser } from "react-icons/fa"
 import { MdAttachEmail, MdMessage } from "react-icons/md"
 import { Container, Row } from "react-bootstrap"
-import { Helmet } from "react-helmet-async"
 
 const Contact = () => {
   const [loading, setLoading] = useState(false)

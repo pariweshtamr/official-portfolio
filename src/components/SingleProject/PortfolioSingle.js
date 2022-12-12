@@ -4,9 +4,9 @@ import "./portfolioSingle.scss"
 const PortfolioSingle = () => {
   return (
     <>
-      <div className="top-bg">
+      {/* <div className="top-bg">
         <div className="top-bg-overlay"></div>
-      </div>
+      </div> */}
       <Container fluid className="single-project-container">
         <Row className="p-5">
           <Col lg={12}>

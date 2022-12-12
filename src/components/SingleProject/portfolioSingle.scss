@@ -1,4 +1,7 @@
 .single-project-container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+
   .project-section-title {
     display: flex;
     justify-content: space-between;
@@ -9,6 +12,8 @@
         padding: 5px 15px;
         border-radius: 15px;
         font-size: 14px;
+        -webkit-box-shadow: inset 0 3px 8px 0 rgb(15 15 20 / 20%);
+        box-shadow: inset 0 3px 8px 0 rgb(15 15 20 / 20%);
       }
     }
   }
