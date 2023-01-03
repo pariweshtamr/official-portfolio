@@ -87,7 +87,7 @@ const Hero = () => {
                   <i className="fa-solid fa-award"></i>
                 </div>
                 <span>
-                  <h6>Info Tech</h6>
+                  <h6>Information Technology</h6>
                   <p>Graduate</p>
                 </span>
               </div>
