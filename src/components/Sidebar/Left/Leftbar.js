@@ -27,7 +27,7 @@ const Leftbar = () => {
             className="avatar"
           >
             <div className="avatar-image">
-              <img src={images.dev} alt="" />
+              <img src={images.logo} alt="" />
 
               <div className="avatar-light">
                 <div className="avatar-light-available"></div>
@@ -91,7 +91,7 @@ const Leftbar = () => {
                 <ProgressBar title={"css"} width={"80%"} text={"80%"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"javascript"} width={"65%"} text={"60%"} />
+                <ProgressBar title={"javascript"} width={"65%"} text={"65%"} />
               </div>
               <div className="hard-skill-item">
                 <ProgressBar title={"react"} width={"75%"} text={"75%"} />

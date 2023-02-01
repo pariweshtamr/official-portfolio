@@ -19,6 +19,7 @@ import mobile from "../assets/mobile.png"
 import mern from "../assets/mern.png"
 import crown from "../assets/crown.png"
 import heroBg from "../assets/bg.jpeg"
+import logo from "../assets/Logo.png"
 
 const images = {
   api,
@@ -42,6 +43,7 @@ const images = {
   mern,
   heroBg,
   express,
+  logo,
 }
 
 export default images

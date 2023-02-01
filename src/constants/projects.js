@@ -10,14 +10,26 @@ const projects = [
     id: 0,
   },
   {
-    title: "Chat App",
+    title: "Library Management App",
     category: "React JS",
-    description: "This project is a Full Stack MERN Chat application.",
+    description:
+      "This project is a Full Stack MERN Library Management Application.",
     image: "/images/1.jpg",
     tags: ["MERN", "Mongo", "Express", "REACT JS", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/mern-soccer-store-frontend",
     visit: "",
     id: 1,
+  },
+  {
+    title: "Expenses Tracker App",
+    category: "React JS",
+    description:
+      "This project is a Full Stack MERN Expenses Tracker Application.",
+    image: "/images/1.jpg",
+    tags: ["MERN", "Mongo", "Express", "REACT JS", "Node", "FULL-STACK"],
+    source: "https://github.com/pariweshtamr/mern-soccer-store-frontend",
+    visit: "",
+    id: 2,
   },
   {
     title: "Beat Maker",
@@ -41,17 +53,6 @@ const projects = [
     source: "https://github.com/pariweshtamr/react-portfolio-website",
     visit: "https://my-portfolio-pariweshtamr.vercel.app/",
     id: 3,
-  },
-  {
-    title: "Portfolio - Styled components",
-    category: "REACT JS",
-    description:
-      "This is one of my portfolio websites where I got to learn about styled components.",
-    image: "/images/2.png",
-    tags: ["REACT JS"],
-    source:
-      "https://github.com/pariweshtamr/react-portfolio-styled-components.git",
-    id: 4,
   },
   {
     title: "Amazon-Prime Clone App",
@@ -108,6 +109,26 @@ const projects = [
     source: "https://github.com/pariweshtamr/js-not-to-do-list",
     visit: "https://pariweshtamr.github.io/js-todo-list/",
     id: 9,
+  },
+  {
+    title: "Calculator",
+    category: "JAVASCRIPT",
+    description: "This is a calculator app without using eval() method.",
+    image: "/images/9.png",
+    tags: ["HTML", "CSS", "JAVASCRIPT"],
+    source: "https://github.com/pariweshtamr/js-not-to-do-list",
+    visit: "",
+    id: 10,
+  },
+  {
+    title: "Tesla Homepage Clone",
+    category: "REACT JS",
+    description: "This is a clone of official Tesla website home-page.",
+    image: "/images/9.png",
+    tags: ["REACT JS"],
+    source: "https://github.com/pariweshtamr/js-not-to-do-list",
+    visit: "",
+    id: 11,
   },
 ]
 

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Container fluid className="footer">
       <div className="footer-content">
-        <p>@ 2022 Pariwesh Tamrakar</p>
+        <p>&copy; 2023 Pariwesh Tamrakar</p>
       </div>
     </Container>
   )

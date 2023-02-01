@@ -18,7 +18,7 @@ const CircularProgressBar = ({ val }) => {
                 styles={buildStyles({
                   textSize: "22px",
                   textColor: "#8c8c8e",
-                  pathColor: "#ffc107",
+                  pathColor: "#d2ac47",
                   trailColor: "#191923",
                   strokeLinecap: "butt",
                   pathTransitionDuration: 2.5,
