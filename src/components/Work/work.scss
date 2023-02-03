@@ -81,7 +81,6 @@
       height: 290px;
       -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
       box-shadow: 0 3px 8px 0 rgb(15 15 20 / 10%);
-      position: relative;
       overflow-y: hidden;
       filter: brightness(90%);
       @include upToTablet() {
@@ -98,8 +97,11 @@
         filter: brightness(100%);
 
         .work-img {
+          position: relative;
+
           .zoom-icon-container {
             display: block;
+
             svg {
               display: block;
               z-index: 1;

@@ -6,7 +6,7 @@
   --color-darkSecondary: #1e1e28;
   --color-yellow: linear-gradient(90deg, #ae8625, #f7ef8a, #d2ac47, #edc967);
   /* --color-yellow: #ffc107; */
-  /* --color-yellow: #ffd369; */
+  --font-color-yellow: #ffd369;
   --color-gray: #737371;
   --color-secondaryGray: #8c8c8e;
   --color-light: #ede2b9;

@@ -4,6 +4,17 @@
   background: #191923;
   transition: all 1s ease-in-out;
 
+  .all-title {
+    h4 {
+      span {
+        background: var(--color-yellow);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
   .top-bg {
     .top-bg-overlay {
       background-image: linear-gradient(
@@ -270,17 +281,17 @@
           color: var(--color-dark);
           div {
             .info-item-container {
-              background-color: var(--color-yellow);
+              background: var(--color-yellow);
             }
             span {
               p {
-                color: var(--color-yellow);
+                color: var(--font-color-yellow);
                 font-size: 14px;
               }
             }
           }
           .hero-info-divider {
-            background-color: var(--color-white);
+            background: var(--color-white);
           }
         }
       }
@@ -320,18 +331,31 @@
         .work-filter-item {
           color: var(--color-secondaryGray);
           &:hover {
-            color: var(--color-yellow);
+            color: var(--font-color-yellow);
             font-weight: 700;
           }
         }
         .item-active {
-          color: var(--color-yellow);
+          color: var(--font-color-yellow);
         }
       }
     }
 
     .work-portfolio {
       .work-item {
+        .work-img {
+          .zoom-icon-container {
+            &:hover {
+              background: var(--color-yellow);
+              svg {
+                color: var(--color-dark);
+              }
+            }
+            svg {
+              color: var(--font-color-yellow);
+            }
+          }
+        }
         .work-item-description {
           background: var(--color-card);
           div {
@@ -355,7 +379,7 @@
             .details {
               .detail {
                 border: none;
-                color: var(--color-yellow);
+                color: var(--font-color-yellow);
               }
             }
           }
@@ -374,6 +398,11 @@
 
   .single-project-container {
     .project-section-title {
+      .title-frame {
+        .back {
+          color: var(--font-color-yellow);
+        }
+      }
       .title-right {
         .category {
           color: var(--color-gray);
@@ -382,6 +411,10 @@
           box-shadow: inset 0 3px 8px 0 rgb(15 15 20 / 20%);
         }
       }
+    }
+
+    .project-description {
+      background: var(--color-card);
     }
   }
 
@@ -407,7 +440,7 @@
               }
             }
             .journey-timeline-mark {
-              border: solid 3px var(--color-yellow);
+              border: solid 3px var(--font-color-yellow);
               background: #191923;
             }
           }
@@ -476,7 +509,7 @@
           }
         }
         button {
-          background-color: var(--color-yellow);
+          background: var(--color-yellow);
           color: var(--color-black);
         }
       }

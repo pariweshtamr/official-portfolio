@@ -1,25 +1,82 @@
+import { useEffect } from "react"
 import { Col, Container, Row } from "react-bootstrap"
+import { useDispatch, useSelector } from "react-redux"
+import { Link, useParams } from "react-router-dom"
+import { getSingleProjectSuccess } from "../../redux/Project/ProjectSlice"
 import "./portfolioSingle.scss"
 
 const PortfolioSingle = () => {
+  const dispatch = useDispatch()
+  const { id } = useParams()
+  const { selectedProject, projects } = useSelector((state) => state.project)
+  const specificProject = projects.find((p) => p.id === id)
+
+  useEffect(() => {
+    dispatch(getSingleProjectSuccess(specificProject))
+  }, [dispatch, specificProject])
+
   return (
     <>
-      {/* <div className="top-bg">
+      <div className="top-bg">
         <div className="top-bg-overlay"></div>
-      </div> */}
+      </div>
       <Container fluid className="single-project-container">
         <Row className="p-5">
-          <Col lg={12}>
-            <div className="project-section-title">
-              <div className="title-frame">
-                <h4>Project title</h4>
-              </div>
-
-              <div className="title-right">
-                <div className="category">Full-Stack</div>
-              </div>
+          <div className="project-section-title">
+            <div className="title-frame">
+              <h4 className="fw-bold">{selectedProject.title}</h4>
+              <Link to="/portfolio" className="back">
+                Back
+              </Link>
             </div>
-          </Col>
+
+            <div className="title-right">
+              <div className="category">{selectedProject.category}</div>
+            </div>
+          </div>
+
+          <div className="project-image pt-4">
+            <img src={selectedProject.image} alt="project-img" />
+          </div>
+        </Row>
+
+        <Row className="px-5">
+          <h4 className="fw-bold mb-4">Project details</h4>
+          <Row className="mb-5">
+            <Col md={8}>
+              <div className="project-description">
+                <h6 className="fw-bold">Description</h6>
+                <p>{selectedProject.description}</p>
+                <a
+                  className="project-link"
+                  href={selectedProject.visit}
+                  target="_blank"
+                  rel="noreferrer nofollow noopener"
+                >
+                  DEMO
+                </a>
+              </div>
+            </Col>
+
+            <Col md={4}>
+              <div className="project-description">
+                <ul className="p-0 m-0">
+                  <li className="d-flex justify-content-between">
+                    <strong>Start Date:</strong>
+                    <span> {selectedProject.start}</span>
+                  </li>
+                  <li className="d-flex justify-content-between">
+                    <strong>End Date:</strong>
+                    <span> {selectedProject.end}</span>
+                  </li>
+                  <li className="d-flex justify-content-between">
+                    <strong>Status:</strong>
+                    <span> {selectedProject.status}</span>
+                  </li>
+                </ul>
+              </div>
+            </Col>
+          </Row>
         </Row>
       </Container>
     </>

@@ -1,19 +1,20 @@
 import "./work.scss"
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { projects } from "../../constants"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { MdZoomOutMap } from "react-icons/md"
 import { Container } from "react-bootstrap"
 import { AiFillCloseCircle } from "react-icons/ai"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")
   const [animateCard, setAnimateCard] = useState({ y: 0, opactiy: 1 })
-  const [filterWork, setFilterWork] = useState(projects)
   const [openImg, setOpenImg] = useState(false)
   const [image, setImage] = useState()
+  const { projects } = useSelector((state) => state.project)
+  const [filterWork, setFilterWork] = useState(projects)
 
   const handleOnZoom = (img) => {
     setOpenImg(true)
@@ -53,7 +54,7 @@ const Work = () => {
               transition={{ duration: 0.6 }}
               className="image-wrapper"
             >
-              <img src={image} alt="" />
+              <img src={image} alt="project-img" />
             </motion.div>
           </div>
         )}
@@ -102,20 +103,23 @@ const Work = () => {
                 </div>
                 <div className="work-item-links">
                   <div className="external-links">
-                    <a
-                      href={work.visit}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                    >
-                      <motion.div
-                        whileInView={{ opacity: [0, 1] }}
-                        whileHover={{ scale: [1, 1.1] }}
-                        transition={{ duration: 0.25 }}
-                        className="icon"
+                    {work.visit && (
+                      <a
+                        href={work.visit}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
                       >
-                        <AiFillEye />
-                      </motion.div>
-                    </a>
+                        <motion.div
+                          whileInView={{ opacity: [0, 1] }}
+                          whileHover={{ scale: [1, 1.1] }}
+                          transition={{ duration: 0.25 }}
+                          className="icon"
+                        >
+                          <AiFillEye />
+                        </motion.div>
+                      </a>
+                    )}
+
                     <a
                       href={work.source}
                       target="_blank"

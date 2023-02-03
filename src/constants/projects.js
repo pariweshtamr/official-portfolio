@@ -1,38 +1,44 @@
 const projects = [
   {
     title: "E-Commerce",
-    category: "React JS",
+    status: "Complete",
+    category: "Full-Stack",
     description: "This project is a Full Stack MERN E-commerce application.",
     image: "/images/1.jpg",
-    tags: ["MERN", "Mongo", "Express", "REACT JS", "Node", "FULL-STACK"],
+    start: "01.08.2021",
+    end: "03.01.2022",
+    tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/mern-soccer-store-frontend",
     visit: "https://mern-soccer-store.vercel.app/",
-    id: 0,
+    id: "0",
   },
   {
     title: "Library Management App",
-    category: "React JS",
+    status: "Complete",
+    category: "Full-Stack",
     description:
       "This project is a Full Stack MERN Library Management Application.",
-    image: "/images/1.jpg",
-    tags: ["MERN", "Mongo", "Express", "REACT JS", "Node", "FULL-STACK"],
+    image: "/images/12.png",
+    tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/mern-soccer-store-frontend",
     visit: "",
-    id: 1,
+    id: "1",
   },
   {
     title: "Expenses Tracker App",
-    category: "React JS",
+    status: "Complete",
+    category: "Full-Stack",
     description:
       "This project is a Full Stack MERN Expenses Tracker Application.",
-    image: "/images/1.jpg",
-    tags: ["MERN", "Mongo", "Express", "REACT JS", "Node", "FULL-STACK"],
+    image: "/images/13.png",
+    tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/mern-soccer-store-frontend",
     visit: "",
-    id: 2,
+    id: "2",
   },
   {
     title: "Beat Maker",
+    status: "Complete",
     category: "JAVASCRIPT",
     description:
       "This is a beat-maker app where a user can create beautiful and catchy beats.",
@@ -40,7 +46,7 @@ const projects = [
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-beatMaker.git",
     visit: "https://pariweshtamr.github.io/js-beatMaker/",
-    id: 2,
+    id: "3",
   },
 
   {
@@ -52,10 +58,11 @@ const projects = [
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/react-portfolio-website",
     visit: "https://my-portfolio-pariweshtamr.vercel.app/",
-    id: 3,
+    id: "4",
   },
   {
     title: "Amazon-Prime Clone App",
+    status: "Complete",
     category: "REACT JS",
     description:
       "This is an amazon-prime clone app where data is fetched from Omdb api. You can search for a movie and view the details.",
@@ -63,10 +70,11 @@ const projects = [
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/react-redux-movie-app.git",
     visit: "",
-    id: 5,
+    id: "5",
   },
   {
     title: "Animated Login/Registration Form",
+    status: "Complete",
     category: "HTML",
     description:
       "This is an animated login/registration page built using html, css and javaScript.",
@@ -74,11 +82,12 @@ const projects = [
     tags: ["HTML/CSS"],
     source: "https://github.com/pariweshtamr/animated-login-registration-form",
     visit: "",
-    id: 6,
+    id: "6",
   },
 
   {
     title: "Quiz game",
+    status: "Complete",
     category: "JAVASCRIPT",
     description:
       "This is a quiz application where a user can test their knowledge on a famous european football club, Manchester United.",
@@ -86,21 +95,23 @@ const projects = [
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-man-united-quiz-game.git",
     visit: "https://pariweshtamr.github.io/js-man-united-quiz-game/",
-    id: 7,
+    id: "7",
   },
 
   {
     title: "Contacts App",
+    status: "Complete",
     category: "REACT JS",
     description:
       "This project is a contacts list app where a user can view a list of contacts and its details when a contact is clicked.",
     image: "/images/3.png",
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/contacts-app.git",
-    id: 8,
+    id: "8",
   },
   {
     title: "To-do List",
+    status: "Complete",
     category: "JAVASCRIPT",
     description:
       "This is a to-do list application created using javaScripy where a user can add, clear or mark-off items on their to-do list.",
@@ -108,27 +119,29 @@ const projects = [
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-not-to-do-list",
     visit: "https://pariweshtamr.github.io/js-todo-list/",
-    id: 9,
+    id: "9",
   },
   {
     title: "Calculator",
+    status: "Complete",
     category: "JAVASCRIPT",
     description: "This is a calculator app without using eval() method.",
     image: "/images/9.png",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-not-to-do-list",
     visit: "",
-    id: 10,
+    id: "10",
   },
   {
     title: "Tesla Homepage Clone",
+    status: "Complete",
     category: "REACT JS",
     description: "This is a clone of official Tesla website home-page.",
     image: "/images/9.png",
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/js-not-to-do-list",
     visit: "",
-    id: 11,
+    id: "11",
   },
 ]
 
