@@ -2,10 +2,14 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import "./rightbar.scss"
+import { useDispatch, useSelector } from "react-redux"
+import { onTabChange } from "../../../redux/ActiveTab/TabSlice"
 
 const Rightbar = () => {
+  const dispatch = useDispatch()
   const [show, setShow] = useState(true)
-  const [activeTab, setActiveTab] = useState("/home")
+  // const [activeTab, setActiveTab] = useState("/home")
+  const { selectedTab } = useSelector((state) => state.activeTab)
 
   const handleOnClick = () => {
     setShow(!show)
@@ -35,16 +39,16 @@ const Rightbar = () => {
           </div>
 
           {show && (
-            <div className="menu-bar-current-page">{activeTab.slice(1)}</div>
+            <div className="menu-bar-current-page">{selectedTab.slice(1)}</div>
           )}
 
           <ul className="main-menu">
             <li className={!show ? "menu-item " : "menu-item closed"}>
               <Link
                 to="/"
-                className={activeTab === "/home" ? "menu-item active" : ""}
+                className={selectedTab === "/home" ? "menu-item active" : ""}
                 onClick={() => {
-                  setActiveTab("/home")
+                  dispatch(onTabChange("/home"))
                   handleOnClick()
                 }}
               >
@@ -54,9 +58,12 @@ const Rightbar = () => {
             <li className={!show ? "menu-item" : "menu-item closed"}>
               <Link
                 to="/portfolio"
-                className={activeTab === "/portfolio" ? "menu-item active" : ""}
+                className={
+                  selectedTab === "/portfolio" ? "menu-item active" : ""
+                }
                 onClick={() => {
-                  setActiveTab("/portfolio")
+                  dispatch(onTabChange("/portfolio"))
+                  // setActiveTab("/portfolio")
                   handleOnClick()
                 }}
               >
@@ -66,9 +73,11 @@ const Rightbar = () => {
             <li className={!show ? "menu-item" : "menu-item closed"}>
               <Link
                 to="/journey"
-                className={activeTab === "/journey" ? "menu-item active" : ""}
+                className={selectedTab === "/journey" ? "menu-item active" : ""}
                 onClick={() => {
-                  setActiveTab("/journey")
+                  dispatch(onTabChange("/journey"))
+
+                  // setActiveTab("/journey")
                   handleOnClick()
                 }}
               >
@@ -78,9 +87,11 @@ const Rightbar = () => {
             <li className={!show ? "menu-item" : "menu-item closed"}>
               <Link
                 to="/contact"
-                className={activeTab === "/contact" ? "menu-item active" : ""}
+                className={selectedTab === "/contact" ? "menu-item active" : ""}
                 onClick={() => {
-                  setActiveTab("/contact")
+                  dispatch(onTabChange("/contact"))
+
+                  // setActiveTab("/contact")
                   handleOnClick()
                 }}
               >

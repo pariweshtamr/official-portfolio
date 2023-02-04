@@ -7,6 +7,8 @@ import ProgressBar from "../../ProgressBar/ProgressBar"
 import CV from "../../../assets/Pariwesh.Resume.pdf"
 import { motion } from "framer-motion"
 import "./leftbar.scss"
+import { Link } from "react-router-dom"
+import { onTabChange } from "../../../redux/ActiveTab/TabSlice"
 
 const Leftbar = () => {
   const dispatch = useDispatch()
@@ -26,13 +28,15 @@ const Leftbar = () => {
             transition={{ duration: 1.5, ease: "easeInOut", delay: 1.5 }}
             className="avatar"
           >
-            <div className="avatar-image">
-              <img src={images.logo} alt="" />
+            <Link to="/" onClick={() => dispatch(onTabChange("/home"))}>
+              <div className="avatar-image">
+                <img src={images.logo} alt="my-logo" />
 
-              <div className="avatar-light">
-                <div className="avatar-light-available"></div>
+                <div className="avatar-light">
+                  <div className="avatar-light-available"></div>
+                </div>
               </div>
-            </div>
+            </Link>
 
             <h5>Pariwesh Tamrakar</h5>
             <p>Full-Stack Developer</p>

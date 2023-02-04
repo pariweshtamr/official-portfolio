@@ -22,4 +22,10 @@
     background: rgba(217, 223, 171);
     margin: 0 auto;
   }
+
+  @include mobile() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

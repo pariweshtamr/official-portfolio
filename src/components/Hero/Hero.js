@@ -6,10 +6,14 @@ import { FaAward, FaProjectDiagram } from "react-icons/fa"
 import Services from "../Services/Services"
 import { useNavigate } from "react-router-dom"
 import Mern from "../Mern/Mern"
+import { useDispatch } from "react-redux"
+import { onTabChange } from "../../redux/ActiveTab/TabSlice"
 
 const Hero = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate()
   const handleOnClick = () => {
+    dispatch(onTabChange("/contact"))
     navigate("/contact")
   }
   return (
