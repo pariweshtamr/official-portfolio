@@ -41,12 +41,12 @@ const PortfolioSingle = () => {
         </Row>
 
         <Row className="px-5">
-          <h4 className="fw-bold mb-4">Project details</h4>
-          <Row className="mb-5">
+          <h4 className="fw-bold">Project details</h4>
+          <Row className="mb-5 g-3">
             <Col md={8}>
               <div className="project-description">
                 <h6 className="fw-bold">Description</h6>
-                <p>{selectedProject.description}</p>
+                <p>{selectedProject.details}</p>
                 <a
                   className="project-link"
                   href={selectedProject.visit}
@@ -77,6 +77,16 @@ const PortfolioSingle = () => {
               </div>
             </Col>
           </Row>
+        </Row>
+
+        <Row className="px-5 mb-5">
+          <h4 className="fw-bold mb-4">Result</h4>
+
+          <div className="project-imgs-container">
+            {selectedProject?.subImgs?.map((obj, i) => (
+              <img src={obj.img} alt="proj-img" className="proj-img" key={i} />
+            ))}
+          </div>
         </Row>
       </Container>
     </>

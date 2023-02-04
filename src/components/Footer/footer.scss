@@ -1,13 +1,18 @@
 @import "../../style/mixins";
 
 .footer {
-  background: rgba(217, 223, 171, 0.3);
+  background: linear-gradient(
+    160deg,
+    rgba(237, 226, 185, 0.98) 0%,
+    rgba(217, 223, 171, 0.98) 100%
+  );
+  filter: drop-shadow(0 1px 4px rgb(15 15 20 / 10%));
   padding: 17px 30px 7px;
   display: flex;
   align-items: center;
   margin: 0 2rem;
   width: 94.2%;
-  height: 50px;
+  height: max-content;
   box-shadow: 0 1px 4px 0 rgb(15 15 20 / 10%);
   font-size: 12px;
 

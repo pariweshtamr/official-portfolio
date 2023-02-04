@@ -131,6 +131,14 @@
           height: 50px;
           border-radius: 40%;
           background: rgba(0, 0, 0, 0.6);
+
+          @include upToTablet() {
+            transform: translate(-320%, -180%);
+          }
+
+          @include mobile() {
+            transform: translate(-320%, -160%);
+          }
           &:hover {
             background: var(--color-secondaryLight);
             svg {
