@@ -11,12 +11,9 @@ import express from "../assets/express.png"
 import redux from "../assets/redux.png"
 import sass from "../assets/sass.png"
 import mongo from "../assets/mongo.png"
-import profile from "../assets/profile.png"
 import dev from "../assets/dev.png"
-import service from "../assets/serviceBG.jpg"
 import email from "../assets/email.png"
 import mobile from "../assets/mobile.png"
-import mern from "../assets/mern.png"
 import crown from "../assets/crown.png"
 import heroBg from "../assets/bg.jpeg"
 import logo from "../assets/Logo.png"
@@ -33,14 +30,11 @@ const images = {
   react,
   redux,
   sass,
-  profile,
   mongo,
-  service,
   email,
   mobile,
   crown,
   dev,
-  mern,
   heroBg,
   express,
   logo,
