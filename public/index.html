@@ -34,7 +34,7 @@
       rel="stylesheet"
     />
 
-    <title>Pariwesh</title>
+    <title>Pariwesh Tamrakar</title>
 
     <style>
       body {
@@ -48,37 +48,95 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #a0965c;
-        display: grid;
-        place-items: center;
+        background-color: #1e1e28;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .load-count::after {
+        color: #fff;
+        content: counter(count) "%";
+        animation: counter 2.5s linear;
+        counter-reset: count 0;
       }
 
       .loader {
-        border: 16px solid #e3e3e3;
-        border-top: 16px solid #3498db;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        animation: spin 1s linear infinite;
+        position: relative;
+        width: 20%;
+        height: 0.25rem;
+        background: #3f3f4c;
+        border-radius: 0;
       }
 
-      @keyframes spin {
+      .loader span {
+        background: #ffd369;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        animation: load 3s ease-in-out;
+      }
+
+      .logo {
+        width: 20%;
+      }
+      @keyframes load {
         0% {
-          transform: rotate(0deg);
+          width: 0;
         }
 
         100% {
-          transform: rotate(360deg);
+          width: 100%;
+        }
+      }
+
+      @keyframes counter {
+        0% {
+          counter-increment: count 0;
+        }
+        10% {
+          counter-increment: count 10;
+        }
+        20% {
+          counter-increment: count 20;
+        }
+        30% {
+          counter-increment: count 30;
+        }
+        40% {
+          counter-increment: count 40;
+        }
+        50% {
+          counter-increment: count 50;
+        }
+        60% {
+          counter-increment: count 60;
+        }
+        70% {
+          counter-increment: count 70;
+        }
+        80% {
+          counter-increment: count 80;
+        }
+        90% {
+          counter-increment: count 90;
+        }
+        100% {
+          counter-increment: count 100;
         }
       }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div class="loader-wrapper">
-        <div class="loader"></div>
-      </div>
+    <div id="root"></div>
+
+    <div class="loader-wrapper">
+      <img src="/images/logo.png" alt="my-logo" class="logo" />
+      <div class="load-count"></div>
+      <div class="loader"><span></span></div>
     </div>
   </body>
 </html>

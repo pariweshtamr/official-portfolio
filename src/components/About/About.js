@@ -2,6 +2,7 @@ import { MdSchool } from "react-icons/md"
 import { motion } from "framer-motion"
 import TimelineContent from "../Timeline/TimelineContent"
 import "./about.scss"
+
 const About = () => {
   return (
     <section id="about" className="about">

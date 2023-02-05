@@ -32,7 +32,7 @@ const projects = [
     description: "Full Stack MERN Library Management Application...",
     details:
       "This project is a Full Stack MERN Library Management Application where you can borrow and return books. You can select one of two user roles when registering. Depending on your role you can, if a user is a 'teacher', the user can add or delete books and view every transactions occured when borrowing and returning books from the library. If a user is a 'Student', the features are limited to borrowing, returning books and updating their info or password.",
-    image: "/images/12.png",
+    image: "/images/library-mgmt/12.png",
     start: "14.01.2023",
     end: "30.01.2023",
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
@@ -47,7 +47,7 @@ const projects = [
     description: "Full Stack MERN Expenses Tracker Application...",
     details:
       "This project is a Full Stack MERN Expenses Tracker Application. After registering and logging in, a user can start recording their income or expense and the amount along with a short name or description related to the transaction. All the transactions are listed in the table below the form.",
-    image: "/images/13.png",
+    image: "/images/expenses-tracker/13.png",
     start: "29.12.2022",
     end: "10.01.2023",
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
@@ -63,7 +63,7 @@ const projects = [
       "A beat-maker app where a user can create beautiful and catchy beats...",
     details:
       "This is a beat-maker app where a user can create beautiful and catchy beats. Users can mute specific sounds and increase or decrease the tempo (speed) of the sounds as well.",
-    image: "/images/7.png",
+    image: "/images/beatmaker/7.png",
     subImgs: [
       {
         img: "/images/beatmaker/1.png",
@@ -86,7 +86,18 @@ const projects = [
     description: "Portfolio website...",
     details:
       "Using React, this is one of my portfolio websites where I have made use of a few react hooks...",
-    image: "/images/6.png",
+    image: "/images/old-portfolio/6.png",
+    subImgs: [
+      {
+        img: "/images/old-portfolio/1.png",
+      },
+      {
+        img: "/images/old-portfolio/6.png",
+      },
+      {
+        img: "/images/old-portfolio/3.png",
+      },
+    ],
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/react-portfolio-website",
     visit: "https://my-portfolio-pariweshtamr.vercel.app/",
@@ -100,7 +111,7 @@ const projects = [
       "Amazon-prime clone app where data is fetched from Omdb api...",
     details:
       "This is an amazon-prime clone app where data is fetched from Omdb api... You can search for a movie and view the details.",
-    image: "/images/10.png",
+    image: "/images/movie-api/10.png",
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/react-redux-movie-app.git",
     visit: "",
@@ -113,7 +124,7 @@ const projects = [
     description: "Animated login/registration page...",
     details:
       "This is an animated login/registration page built using html, css and javaScript.",
-    image: "/images/11.png",
+    image: "/images/css/11.png",
     tags: ["HTML/CSS"],
     source: "https://github.com/pariweshtamr/animated-login-registration-form",
     visit: "",
@@ -126,7 +137,7 @@ const projects = [
     description: "JS Quiz Application...",
     details:
       "This is a quiz application where a user can test their knowledge on a famous european football club, Manchester United...",
-    image: "/images/8.png",
+    image: "/images/quiz/8.png",
     start: "22.09.2021",
     end: "23.09.2021",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
@@ -142,7 +153,7 @@ const projects = [
     description: "Contacts list application...",
     details:
       "This project is a contacts list app where a user can view a list of contacts and its details when a contact is clicked.",
-    image: "/images/3.png",
+    image: "/images/contact/3.png",
     start: "19.01.2022",
     end: "20.01.2022",
     tags: ["REACT JS"],
@@ -156,7 +167,7 @@ const projects = [
     description: "A to-do list application created using javaScript...",
     details:
       "This is a to-do list application created using javaScripy where a user can add, clear or mark-off items on their to-do list.",
-    image: "/images/9.png",
+    image: "/images/todo/9.png",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-not-to-do-list",
     visit: "https://pariweshtamr.github.io/js-todo-list/",
