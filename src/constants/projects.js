@@ -32,7 +32,18 @@ const projects = [
     description: "Full Stack MERN Library Management Application...",
     details:
       "This project is a Full Stack MERN Library Management Application where you can borrow and return books. You can select one of two user roles when registering. Depending on your role you can, if a user is a 'teacher', the user can add or delete books and view every transactions occured when borrowing and returning books from the library. If a user is a 'Student', the features are limited to borrowing, returning books and updating their info or password.",
-    image: "/images/library-mgmt/12.png",
+    image: "/images/library-mgmt/4.png",
+    subImgs: [
+      {
+        img: "/images/library-mgmt/1.png",
+      },
+      {
+        img: "/images/library-mgmt/3.png",
+      },
+      {
+        img: "/images/library-mgmt/2.png",
+      },
+    ],
     start: "14.01.2023",
     end: "30.01.2023",
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
@@ -47,7 +58,18 @@ const projects = [
     description: "Full Stack MERN Expenses Tracker Application...",
     details:
       "This project is a Full Stack MERN Expenses Tracker Application. After registering and logging in, a user can start recording their income or expense and the amount along with a short name or description related to the transaction. All the transactions are listed in the table below the form.",
-    image: "/images/expenses-tracker/13.png",
+    image: "/images/expenses/13.png",
+    subImgs: [
+      {
+        img: "/images/expenses/1.png",
+      },
+      {
+        img: "/images/expenses/2.png",
+      },
+      {
+        img: "/images/expenses/3.png",
+      },
+    ],
     start: "29.12.2022",
     end: "10.01.2023",
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
@@ -82,6 +104,7 @@ const projects = [
 
   {
     title: "Portfolio",
+    status: "Complete",
     category: "REACT JS",
     description: "Portfolio website...",
     details:
@@ -98,6 +121,8 @@ const projects = [
         img: "/images/old-portfolio/3.png",
       },
     ],
+    start: "20.07.2022",
+    end: "25.07.2022",
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/react-portfolio-website",
     visit: "https://my-portfolio-pariweshtamr.vercel.app/",
@@ -112,6 +137,16 @@ const projects = [
     details:
       "This is an amazon-prime clone app where data is fetched from Omdb api... You can search for a movie and view the details.",
     image: "/images/movie-api/10.png",
+    subImgs: [
+      {
+        img: "/images/movie-api/1.png",
+      },
+      {
+        img: "/images/movie-api/2.png",
+      },
+    ],
+    start: "06.03.2022",
+    end: "08.03.2022",
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/react-redux-movie-app.git",
     visit: "",
@@ -125,6 +160,8 @@ const projects = [
     details:
       "This is an animated login/registration page built using html, css and javaScript.",
     image: "/images/css/11.png",
+    start: "19.03.2022",
+    end: "19.03.2022",
     tags: ["HTML/CSS"],
     source: "https://github.com/pariweshtamr/animated-login-registration-form",
     visit: "",
@@ -168,22 +205,24 @@ const projects = [
     details:
       "This is a to-do list application created using javaScripy where a user can add, clear or mark-off items on their to-do list.",
     image: "/images/todo/9.png",
+    start: "27.09.2021",
+    end: "27.09.2021",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
-    source: "https://github.com/pariweshtamr/js-not-to-do-list",
+    source: "https://github.com/pariweshtamr/js-todo-list",
     visit: "https://pariweshtamr.github.io/js-todo-list/",
     id: "9",
   },
-  {
-    title: "Calculator",
-    status: "Complete",
-    category: "JAVASCRIPT",
-    description: "This is a calculator app without using eval() method.",
-    image: "/images/9.png",
-    tags: ["HTML", "CSS", "JAVASCRIPT"],
-    source: "https://github.com/pariweshtamr/js-not-to-do-list",
-    visit: "",
-    id: "10",
-  },
+  // {
+  //   title: "Calculator",
+  //   status: "Complete",
+  //   category: "JAVASCRIPT",
+  //   description: "This is a calculator app without using eval() method.",
+  //   image: "/images/9.png",
+  //   tags: ["HTML", "CSS", "JAVASCRIPT"],
+  //   source: "https://github.com/pariweshtamr/js-not-to-do-list",
+  //   visit: "",
+  //   id: "10",
+  // },
   {
     title: "Tesla Homepage Clone",
     status: "Complete",

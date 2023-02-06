@@ -2,7 +2,7 @@ import "./hero.scss"
 import { images } from "../../constants"
 import { Col, Container, Row } from "react-bootstrap"
 import { TypeAnimation } from "react-type-animation"
-import { FaAward, FaProjectDiagram } from "react-icons/fa"
+import { FaAward, FaProjectDiagram, FaUserGraduate } from "react-icons/fa"
 import Services from "../Services/Services"
 import { useNavigate } from "react-router-dom"
 import Mern from "../Mern/Mern"
@@ -88,7 +88,7 @@ const Hero = () => {
 
               <div>
                 <div className="info-item-container">
-                  <i className="fa-solid fa-award"></i>
+                  <FaUserGraduate />
                 </div>
                 <span>
                   <h6>Information Technology</h6>

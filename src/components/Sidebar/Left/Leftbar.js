@@ -89,22 +89,22 @@ const Leftbar = () => {
 
             <div className="leftbar-hard-skills">
               <div className="hard-skill-item">
-                <ProgressBar title={"html"} width={"85%"} text={"85%"} />
+                <ProgressBar title={"html"} width={"85%"} text={"85"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"css"} width={"80%"} text={"80%"} />
+                <ProgressBar title={"css"} width={"80%"} text={"80"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"javascript"} width={"65%"} text={"65%"} />
+                <ProgressBar title={"javascript"} width={"65%"} text={"65"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"react"} width={"75%"} text={"75%"} />
+                <ProgressBar title={"react"} width={"75%"} text={"75"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"node"} width={"60%"} text={"60%"} />
+                <ProgressBar title={"node"} width={"60%"} text={"60"} />
               </div>
               <div className="hard-skill-item">
-                <ProgressBar title={"mongo"} width={"60%"} text={"60%"} />
+                <ProgressBar title={"mongo"} width={"60%"} text={"60"} />
               </div>
             </div>
 

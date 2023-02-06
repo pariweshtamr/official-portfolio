@@ -1,17 +1,16 @@
-import { useState } from "react"
+import { useState, lazy, Suspense } from "react"
 import { Container } from "react-bootstrap"
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
-import Contact from "../Contact/Contact"
 import Footer from "../Footer/Footer"
-import Hero from "../Hero/Hero"
-import Journey from "../Journey/Journey"
 import Leftbar from "../Sidebar/Left/Leftbar"
 import Rightbar from "../Sidebar/Right/Rightbar"
-import Work from "../Work/Work"
 import { motion } from "framer-motion"
-
 import "./main.scss"
-import PortfolioSingle from "../SingleProject/PortfolioSingle"
+const Hero = lazy(() => import("../Hero/Hero"))
+const Contact = lazy(() => import("../Contact/Contact"))
+const Journey = lazy(() => import("../Journey/Journey"))
+const Work = lazy(() => import("../Work/Work"))
+const PortfolioSingle = lazy(() => import("../SingleProject/PortfolioSingle"))
 
 const Main = () => {
   const [showInfo, setShowInfo] = useState(false)
@@ -81,13 +80,38 @@ const Main = () => {
             >
               <Routes>
                 <Route path="/" element={<Hero />}></Route>
-                <Route path="/contact" element={<Contact />}></Route>
-                <Route path="/portfolio" element={<Work />}></Route>
+                <Route
+                  path="/contact"
+                  element={
+                    <Suspense>
+                      <Contact />
+                    </Suspense>
+                  }
+                ></Route>
+                <Route
+                  path="/portfolio"
+                  element={
+                    <Suspense>
+                      <Work />
+                    </Suspense>
+                  }
+                ></Route>
                 <Route
                   path="/portfolio/:id"
-                  element={<PortfolioSingle />}
+                  element={
+                    <Suspense>
+                      <PortfolioSingle />
+                    </Suspense>
+                  }
                 ></Route>
-                <Route path="/journey" element={<Journey />}></Route>
+                <Route
+                  path="/journey"
+                  element={
+                    <Suspense>
+                      <Journey />
+                    </Suspense>
+                  }
+                ></Route>
               </Routes>
               <Footer />
             </motion.div>

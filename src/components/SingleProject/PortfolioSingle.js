@@ -47,14 +47,35 @@ const PortfolioSingle = () => {
               <div className="project-description">
                 <h6 className="fw-bold">Description</h6>
                 <p>{selectedProject.details}</p>
-                <a
-                  className="project-link"
-                  href={selectedProject.visit}
-                  target="_blank"
-                  rel="noreferrer nofollow noopener"
-                >
-                  DEMO
-                </a>
+                {selectedProject?.visit && selectedProject?.source ? (
+                  <div className="project-links d-flex justify-content-between">
+                    <a
+                      className="project-link"
+                      href={selectedProject.visit}
+                      target="_blank"
+                      rel="noreferrer nofollow noopener"
+                    >
+                      DEMO
+                    </a>
+                    <a
+                      className="project-link"
+                      href={selectedProject.source}
+                      target="_blank"
+                      rel="noreferrer nofollow noopener"
+                    >
+                      SOURCE
+                    </a>
+                  </div>
+                ) : (
+                  <a
+                    className="project-link"
+                    href={selectedProject.source}
+                    target="_blank"
+                    rel="noreferrer nofollow noopener"
+                  >
+                    SOURCE
+                  </a>
+                )}
               </div>
             </Col>
 
@@ -79,15 +100,22 @@ const PortfolioSingle = () => {
           </Row>
         </Row>
 
-        <Row className="px-5 mb-5">
-          <h4 className="fw-bold mb-4">Result</h4>
+        {selectedProject?.subImgs && (
+          <Row className="px-5 mb-5">
+            <h4 className="fw-bold mb-4">Result</h4>
 
-          <div className="project-imgs-container">
-            {selectedProject?.subImgs?.map((obj, i) => (
-              <img src={obj.img} alt="proj-img" className="proj-img" key={i} />
-            ))}
-          </div>
-        </Row>
+            <div className="project-imgs-container">
+              {selectedProject?.subImgs?.map((obj, i) => (
+                <img
+                  src={obj.img}
+                  alt="proj-img"
+                  className="proj-img"
+                  key={i}
+                />
+              ))}
+            </div>
+          </Row>
+        )}
       </Container>
     </>
   )

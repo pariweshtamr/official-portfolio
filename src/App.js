@@ -16,7 +16,6 @@ function App() {
   useEffect(() => {
     showLoader().then(() => {
       const loaderElement = document.querySelector(".loader-wrapper")
-
       if (loaderElement) {
         loaderElement.remove()
         setIsLoading(!isLoading)

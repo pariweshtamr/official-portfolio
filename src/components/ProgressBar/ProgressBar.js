@@ -1,12 +1,11 @@
 import { motion } from "framer-motion"
-const ProgressBar = ({ title, width, text, completed }) => {
+const ProgressBar = ({ title, width, text }) => {
   return (
     <div className="progress-bar-container">
       <div className="hard-skill-header">
         <h6>{title}</h6>
       </div>
       <div className="hard-skill-progress">
-        {completed && <span>{`${width}%`}</span>}
         <div className="progress" style={{ width: width }}>
           <motion.span
             whileInView={{
@@ -26,7 +25,7 @@ const ProgressBar = ({ title, width, text, completed }) => {
           transition={{ duration: 2.5, delay: 0.5 }}
           className="progress-text"
         >
-          {text}
+          {text}%
         </motion.p>
       </div>
     </div>
