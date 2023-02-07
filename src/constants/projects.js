@@ -152,21 +152,21 @@ const projects = [
     visit: "",
     id: "5",
   },
-  {
-    title: "Animated Login/Registration Form",
-    status: "Complete",
-    category: "HTML",
-    description: "Animated login/registration page...",
-    details:
-      "This is an animated login/registration page built using html, css and javaScript.",
-    image: "/images/css/11.png",
-    start: "19.03.2022",
-    end: "19.03.2022",
-    tags: ["HTML/CSS"],
-    source: "https://github.com/pariweshtamr/animated-login-registration-form",
-    visit: "",
-    id: "6",
-  },
+  // {
+  //   title: "Animated Login/Registration Form",
+  //   status: "Complete",
+  //   category: "HTML",
+  //   description: "Animated login/registration page...",
+  //   details:
+  //     "This is an animated login/registration page built using html, css and javaScript.",
+  //   image: "/images/css/11.png",
+  //   start: "19.03.2022",
+  //   end: "19.03.2022",
+  //   tags: ["HTML/CSS"],
+  //   source: "https://github.com/pariweshtamr/animated-login-registration-form",
+  //   visit: "",
+  //   id: "6",
+  // },
   {
     title: "Quiz game",
     status: "Complete",
@@ -175,12 +175,20 @@ const projects = [
     details:
       "This is a quiz application where a user can test their knowledge on a famous european football club, Manchester United...",
     image: "/images/quiz/8.png",
+    subImgs: [
+      {
+        img: "/images/quiz/1.png",
+      },
+      {
+        img: "/images/quiz/2.png",
+      },
+    ],
     start: "22.09.2021",
     end: "23.09.2021",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-man-united-quiz-game.git",
     visit: "https://pariweshtamr.github.io/js-man-united-quiz-game/",
-    id: "7",
+    id: "6",
   },
 
   {
@@ -191,6 +199,14 @@ const projects = [
     details:
       "This project is a contacts list app where a user can view a list of contacts and its details when a contact is clicked.",
     image: "/images/contact/3.png",
+    subImgs: [
+      {
+        img: "/images/contact/3.png",
+      },
+      {
+        img: "/images/contact/1.png",
+      },
+    ],
     start: "19.01.2022",
     end: "20.01.2022",
     tags: ["REACT JS"],
@@ -210,7 +226,7 @@ const projects = [
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-todo-list",
     visit: "https://pariweshtamr.github.io/js-todo-list/",
-    id: "9",
+    id: "7",
   },
   // {
   //   title: "Calculator",
@@ -247,7 +263,33 @@ const projects = [
     end: "01.02.2023",
     source: "https://github.com/pariweshtamr/tesla-homepage-clone",
     visit: "",
-    id: "11",
+    id: "8",
+  },
+  {
+    title: "BharatPe Homepage Clone",
+    status: "Complete",
+    category: "NEXT JS",
+    description: "This is a clone of official BharatPe website home-page.",
+    details:
+      "This is a clone of official BharatPe website home-page. In this project I have tried to build only the home page of official BharatPe website using next js.",
+    image: "/images/bharatPe/1.png",
+    subImgs: [
+      {
+        img: "/images/bharatPe/2.png",
+      },
+      {
+        img: "/images/bharatPe/4.png",
+      },
+      {
+        img: "/images/bharatPe/3.png",
+      },
+    ],
+    tags: ["NEXT JS"],
+    start: "27.04.2022",
+    end: "03.05.2022",
+    source: "https://github.com/pariweshtamr/bharatPe-clone",
+    visit: "",
+    id: "9",
   },
 ]
 

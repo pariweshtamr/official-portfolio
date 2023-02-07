@@ -39,11 +39,9 @@ const Hero = () => {
                           sequence={[
                             "Web-Developer",
                             1000,
-                            "Full-Stack Developer",
+                            "MERN-Stack Developer",
                             1000,
                             "Enthusiastic Developer",
-                            1000,
-                            "Blogger",
                             1000,
                           ]}
                           repeat={Infinity}

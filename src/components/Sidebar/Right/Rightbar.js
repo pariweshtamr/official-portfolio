@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import "./rightbar.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { onTabChange } from "../../../redux/ActiveTab/TabSlice"
+import { MdLanguage } from "react-icons/md"
+import "./rightbar.scss"
 
 const Rightbar = () => {
   const dispatch = useDispatch()
@@ -100,7 +101,9 @@ const Rightbar = () => {
             </li>
           </ul>
 
-          <div className="right-menu-bar-footer"></div>
+          <div className="right-menu-bar-footer">
+            <MdLanguage /> <span>ENG</span>
+          </div>
         </div>
       </motion.div>
     </>

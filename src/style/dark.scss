@@ -236,6 +236,10 @@
           rgba(37, 37, 50, 0.98) 0%,
           rgba(35, 35, 45, 0.98) 100%
         );
+
+        span {
+          color: var(--font-color-yellow);
+        }
       }
     }
   }

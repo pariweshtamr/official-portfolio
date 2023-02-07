@@ -20,7 +20,7 @@ const PortfolioSingle = () => {
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
-      <Container fluid className="single-project-container">
+      <Container flutitle className="single-project-container">
         <Row className="p-5">
           <div className="project-section-title">
             <div className="title-frame">
@@ -104,7 +104,13 @@ const PortfolioSingle = () => {
           <Row className="px-5 mb-5">
             <h4 className="fw-bold mb-4">Result</h4>
 
-            <div className="project-imgs-container">
+            <div
+              className={
+                selectedProject?.subImgs.length > 2
+                  ? "project-imgs-container"
+                  : "project-imgs-container2"
+              }
+            >
               {selectedProject?.subImgs?.map((obj, i) => (
                 <img
                   src={obj.img}

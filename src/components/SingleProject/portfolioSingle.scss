@@ -139,4 +139,25 @@
       }
     }
   }
+
+  .project-imgs-container2 {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-areas: "img1 img2";
+
+    img {
+      width: 100%;
+      min-height: 100%;
+
+      &:nth-child(1) {
+        grid-area: img1;
+      }
+      &:nth-child(2) {
+        grid-area: img2;
+      }
+    }
+  }
 }

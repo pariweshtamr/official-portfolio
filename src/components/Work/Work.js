@@ -66,7 +66,7 @@ const Work = () => {
           </div>
 
           <div className="work-filter">
-            {["ALL", "HTML/CSS", "JAVASCRIPT", "REACT JS", "FULL-STACK"].map(
+            {["ALL", "JAVASCRIPT", "REACT JS", "NEXT JS", "MERN"].map(
               (item, i) => (
                 <div
                   className={`work-filter-item ${
