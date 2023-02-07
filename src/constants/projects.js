@@ -211,7 +211,7 @@ const projects = [
     end: "20.01.2022",
     tags: ["REACT JS"],
     source: "https://github.com/pariweshtamr/contacts-app.git",
-    id: "8",
+    id: "7",
   },
   {
     title: "To-do List",
@@ -226,7 +226,7 @@ const projects = [
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     source: "https://github.com/pariweshtamr/js-todo-list",
     visit: "https://pariweshtamr.github.io/js-todo-list/",
-    id: "7",
+    id: "8",
   },
   // {
   //   title: "Calculator",
@@ -263,7 +263,7 @@ const projects = [
     end: "01.02.2023",
     source: "https://github.com/pariweshtamr/tesla-homepage-clone",
     visit: "",
-    id: "8",
+    id: "9",
   },
   {
     title: "BharatPe Homepage Clone",
@@ -289,7 +289,7 @@ const projects = [
     end: "03.05.2022",
     source: "https://github.com/pariweshtamr/bharatPe-clone",
     visit: "",
-    id: "9",
+    id: "10",
   },
 ]
 
