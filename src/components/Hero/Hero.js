@@ -1,13 +1,13 @@
 import "./hero.scss"
 import { images } from "../../constants"
 import { Col, Container, Row } from "react-bootstrap"
-import { TypeAnimation } from "react-type-animation"
 import { FaAward, FaProjectDiagram, FaUserGraduate } from "react-icons/fa"
 import Services from "../Services/Services"
 import { useNavigate } from "react-router-dom"
 import Mern from "../Mern/Mern"
 import { useDispatch } from "react-redux"
 import { onTabChange } from "../../redux/ActiveTab/TabSlice"
+import Typewriter from "typewriter-effect"
 
 const Hero = () => {
   const dispatch = useDispatch()
@@ -34,18 +34,16 @@ const Hero = () => {
 
                     <div>
                       <span>
-                        <TypeAnimation
-                          cursor={true}
-                          sequence={[
-                            "Web-Developer",
-                            1000,
-                            "MERN-Stack Developer",
-                            1000,
-                            "Enthusiastic Developer",
-                            1000,
-                          ]}
-                          repeat={Infinity}
-                          className="type-animation"
+                        <Typewriter
+                          options={{
+                            strings: [
+                              "Web Developer",
+                              "MERN-Stack Developer",
+                              "Enthusiastic Developer",
+                            ],
+                            autoStart: true,
+                            loop: true,
+                          }}
                         />
                       </span>
                     </div>
