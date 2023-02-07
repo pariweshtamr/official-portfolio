@@ -3,6 +3,7 @@ import Main from "./components/Main/Main"
 import "./style/dark.scss"
 import "./App.scss"
 import { useEffect, useState } from "react"
+import { Helmet } from "react-helmet"
 
 function App() {
   const { lightMode } = useSelector((state) => state.lightMode)
@@ -36,6 +37,15 @@ function App() {
   }
   return (
     <div className={lightModeState === false ? "app dark" : "app"}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pariwesh Tamrakar</title>
+        <meta
+          name="description"
+          content="Explore the work and achievements of Pariwesh Tamrakar, a talented MERN-Stack DEveloper. From innovative Projects, to key Achievements/Accomplishments, get a glimpse into Pariwesh's skills and expertise. Discover Pariwesh's approach to web development today!"
+        />
+        <link rel="canonical" href="https://tamrpariwesh.com" />
+      </Helmet>
       <Main />
     </div>
   )

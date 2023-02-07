@@ -5,6 +5,7 @@ import "./contact.scss"
 import { FaUser } from "react-icons/fa"
 import { MdAttachEmail, MdMessage } from "react-icons/md"
 import { Container, Row } from "react-bootstrap"
+import { Helmet } from "react-helmet"
 
 const Contact = () => {
   const [loading, setLoading] = useState(false)
@@ -47,6 +48,13 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Pariwesh - Contact</title>
+        <meta
+          name="description"
+          content="Get in touch with Pariwesh, a MERN-Stack Developer. Contact Pariwesh if you have any job opportunities, or simply to say hello. Fill out the form or find Pariwesh's contact information on this page."
+        />
+      </Helmet>
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>

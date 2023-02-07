@@ -4,6 +4,7 @@ import { AiFillCloseCircle } from "react-icons/ai"
 import "./journey.scss"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { Helmet } from "react-helmet"
 
 const Journey = () => {
   const [open, setOpen] = useState(false)
@@ -15,6 +16,13 @@ const Journey = () => {
   }
   return (
     <>
+      <Helmet>
+        <title>Pariwesh - Journey</title>
+        <meta
+          name="description"
+          content="Follow Pariwesh's journey and education, from Info-Tech Degree and certification in web development to becoming a FUll-Stack Developer at RebbTech. Discover how Pariwesh became a developer and learn about his path to success. Explore Pariwesh's unique story today."
+        />
+      </Helmet>
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>

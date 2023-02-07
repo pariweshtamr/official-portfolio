@@ -7,6 +7,7 @@ import { Container } from "react-bootstrap"
 import { AiFillCloseCircle } from "react-icons/ai"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { Helmet } from "react-helmet"
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("ALL")
@@ -38,6 +39,13 @@ const Work = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Pariwesh - Portfolio</title>
+        <meta
+          name="description"
+          content="Discover Pariwesh's portfolio of innovative web-development projects. From vanilla javascript projects to Full-Stack E-commerce web-applications, get a comprehensive look at Pariwesh's skills and expertise. Explore Pariwesh's portfolio today."
+        />
+      </Helmet>
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
@@ -148,15 +156,6 @@ const Work = () => {
                   </motion.div>
                 </div>
               </div>
-
-              {/* <div className="work-content app-flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text">{work.description}</p>
-
-              <div className="work-tag app-flex">
-                <p className="p-text">{work.tags[0]}</p>
-              </div>
-            </div> */}
             </div>
           ))}
         </motion.div>
