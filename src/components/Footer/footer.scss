@@ -17,9 +17,17 @@
   font-size: 12px;
 
   .footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     p {
       margin-top: 7px;
       color: var(--color-gray);
+
+      &:nth-child(2) {
+        font-size: 0.6rem;
+      }
     }
   }
 
