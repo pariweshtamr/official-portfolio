@@ -93,8 +93,16 @@ const Contact = () => {
                     </span>
                   </li>
                   <li>
-                    <h6>Phone:</h6>
-                    <span>0468 *** ***</span>
+                    <h6>LinkedIn:</h6>
+                    <span>
+                      <a
+                        href="https://www.linkedin.com/in/pariwesh-tamrakar"
+                        target="_blank"
+                        rel="nofollow noreferrer noopener"
+                      >
+                        www.linkedin.com/in/pariwesh-tamrakar
+                      </a>
+                    </span>
                   </li>
                 </ul>
               </div>
