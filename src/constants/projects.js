@@ -266,7 +266,7 @@ const projects = [
     id: "9",
   },
   {
-    title: "BharatPe Homepage Clone",
+    title: "BharatPe Clone",
     status: "Complete",
     category: "NEXT JS",
     description: "This is a clone of official BharatPe website home-page.",

@@ -20,8 +20,8 @@ const PortfolioSingle = () => {
       <div className="top-bg">
         <div className="top-bg-overlay"></div>
       </div>
-      <Container flutitle className="single-project-container">
-        <Row className="p-5">
+      <Container fluid className="single-project-container">
+        <Row className="pb-5">
           <div className="project-section-title">
             <div className="title-frame">
               <h4 className="fw-bold">{selectedProject.title}</h4>
@@ -40,10 +40,10 @@ const PortfolioSingle = () => {
           </div>
         </Row>
 
-        <Row className="px-5">
-          <h4 className="fw-bold">Project details</h4>
-          <Row className="mb-5 g-3">
-            <Col md={8}>
+        <Row>
+          <h4 className="fw-bold mb-4">Project details</h4>
+          <Row className="mb-5 mx-auto">
+            <Col md={8} className="mb-2">
               <div className="project-description">
                 <h6 className="fw-bold">Description</h6>
                 <p>{selectedProject.details}</p>
@@ -101,7 +101,7 @@ const PortfolioSingle = () => {
         </Row>
 
         {selectedProject?.subImgs && (
-          <Row className="px-5 mb-5">
+          <Row className="mb-5">
             <h4 className="fw-bold mb-4">Result</h4>
 
             <div
