@@ -1,5 +1,31 @@
 const projects = [
   {
+    title: "Tours & Travel App",
+    status: "Complete",
+    category: "Full-Stack",
+    description: "Full Stack MERN Travel application...",
+    details:
+      "This project is a Full Stack MERN travel booking application. Packages like axios for requesting data from backend, react-toastify for notifying purposes, joi for validation, bcrypt for hashing password, jwt for token authorization and stripe for payment have been used in this project. A user can register, login, browse through the tour offers available, book a tour and pay for it using a fake card provided by stripe. Moreover, a client can login and check their booking history in their account section and can also update their password if needed. Overall, this is a complete travel booking built as a hobby.",
+    image: "/images/tours&travel/3.png",
+    subImgs: [
+      {
+        img: "/images/tours&travel/1.png",
+      },
+      {
+        img: "/images/tours&travel/2.png",
+      },
+      {
+        img: "/images/tours&travel/full.png",
+      },
+    ],
+    start: "03.02.2023",
+    end: "05.03.2023",
+    tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
+    source: "https://github.com/pariweshtamr/tours-travel-frontend",
+    visit: "https://toursntravel.vercel.app/",
+    id: "0",
+  },
+  {
     title: "E-Commerce",
     status: "Complete",
     category: "Full-Stack",
@@ -23,7 +49,7 @@ const projects = [
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/mern-soccer-store-frontend",
     visit: "https://mern-soccer-store.vercel.app/",
-    id: "0",
+    id: "1",
   },
   {
     title: "Library Management App",
@@ -49,7 +75,7 @@ const projects = [
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/mern-library-app-frontend",
     visit: "",
-    id: "1",
+    id: "2",
   },
   {
     title: "Expenses Tracker App",
@@ -75,7 +101,7 @@ const projects = [
     tags: ["MERN", "Mongo", "Express", "Node", "FULL-STACK"],
     source: "https://github.com/pariweshtamr/expenses-tracker-client",
     visit: "",
-    id: "2",
+    id: "3",
   },
   {
     title: "Beat Maker",
@@ -152,21 +178,7 @@ const projects = [
     visit: "",
     id: "5",
   },
-  // {
-  //   title: "Animated Login/Registration Form",
-  //   status: "Complete",
-  //   category: "HTML",
-  //   description: "Animated login/registration page...",
-  //   details:
-  //     "This is an animated login/registration page built using html, css and javaScript.",
-  //   image: "/images/css/11.png",
-  //   start: "19.03.2022",
-  //   end: "19.03.2022",
-  //   tags: ["HTML/CSS"],
-  //   source: "https://github.com/pariweshtamr/animated-login-registration-form",
-  //   visit: "",
-  //   id: "6",
-  // },
+
   {
     title: "Quiz game",
     status: "Complete",
@@ -228,17 +240,6 @@ const projects = [
     visit: "https://pariweshtamr.github.io/js-todo-list/",
     id: "8",
   },
-  // {
-  //   title: "Calculator",
-  //   status: "Complete",
-  //   category: "JAVASCRIPT",
-  //   description: "This is a calculator app without using eval() method.",
-  //   image: "/images/9.png",
-  //   tags: ["HTML", "CSS", "JAVASCRIPT"],
-  //   source: "https://github.com/pariweshtamr/js-not-to-do-list",
-  //   visit: "",
-  //   id: "10",
-  // },
   {
     title: "Tesla Homepage Clone",
     status: "Complete",
